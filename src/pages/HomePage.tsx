@@ -19,9 +19,7 @@ import luzPetroleo from '../assets/brand/luz-janela-petroleo.webp';
 import luzClaro from '../assets/brand/luz-janela-claro.webp';
 import logoRelevo from '../assets/brand/logo-relevo-petroleo.webp';
 
-// Para usar a sua foto na seção "Sobre": coloque o arquivo em src/assets/brand/marcia.jpg
-// e troque a linha abaixo por: import fotoMarcia from '../assets/brand/marcia.jpg';
-const fotoMarcia: string | null = null;
+import fotoMarcia from '../assets/brand/marcia-notebook.webp';
 
 const etapas = [
   { n: '01', titulo: 'Conversa', texto: 'Você me chama no WhatsApp e me conta sobre o seu trabalho e o que precisa.' },
@@ -354,9 +352,9 @@ export function HomePage() {
       <section className="grao bg-[#FBF8F3] border-y border-[#DCD2C6] py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <Reveal className="lg:col-span-5">
-            <div className="relative aspect-[4/5] rounded-[28px] overflow-hidden bg-[#0F3B40]">
+            <div className="relative aspect-[4/5] rounded-[28px] overflow-hidden bg-[#E9E2D8]">
               {fotoMarcia ? (
-                <img src={fotoMarcia} alt="Márcia, criadora da MLee Digital" className="w-full h-full object-cover" style={{ filter: 'saturate(0.92) sepia(0.06)' }} />
+                <img src={fotoMarcia} alt="Márcia, criadora da MLee Digital" className="w-full h-full object-cover object-top" style={{ filter: 'saturate(0.92) sepia(0.05)' }} />
               ) : (
                 <img src={logoRelevo} alt="" className="w-full h-full object-cover" />
               )}

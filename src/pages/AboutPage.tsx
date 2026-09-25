@@ -1,3 +1,4 @@
+import fotoMarciaSobre from '../assets/brand/marcia-em-pe.webp';
 import { Link } from 'react-router-dom';
 import { 
   Sparkles, 
@@ -71,7 +72,7 @@ export function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#0F3B40]/30 to-[#0F3B40]/20 rounded-3xl transform -rotate-2" />
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#DCD2C6] aspect-[4/5] bg-[#F4EFE8]">
                   <img 
-                    src={AUTHOR_IMG} 
+                    src={fotoMarciaSobre} 
                     alt={`${AUTHOR_NAME} - ${AUTHOR_ROLE}`} 
                     className="w-full h-full object-cover object-top"
                   />

@@ -1,0 +1,8 @@
+{
+  "name": "M.Lee Digital",
+  "description": "Plataforma oficial da M.Lee Digital. Criação de sites profissionais (Site Essencial e Multipágina) e desenvolvimento de sistemas e soluções web sob medida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

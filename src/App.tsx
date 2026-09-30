@@ -45,12 +45,15 @@ export function App() {
 
             {/* Segment Pages (SEO Clusters) */}
             <Route path="/sites-para-clinicas/" element={<SegmentDetailPage customSlug="sites-para-clinicas" />} />
-            <Route path="/sites-para-dentistas/" element={<SegmentDetailPage customSlug="sites-para-dentistas" />} />
             <Route path="/sites-para-esteticistas/" element={<SegmentDetailPage customSlug="sites-para-esteticistas" />} />
+            <Route path="/sites-para-arquitetos/" element={<SegmentDetailPage customSlug="sites-para-arquitetos" />} />
             <Route path="/sites-para-advogados/" element={<SegmentDetailPage customSlug="sites-para-advogados" />} />
-            <Route path="/sites-para-arquitetos-e-corretores/" element={<SegmentDetailPage customSlug="sites-para-arquitetos-e-corretores" />} />
-            <Route path="/sites-para-nail-designers/" element={<SegmentDetailPage customSlug="sites-para-nail-designers" />} />
-            <Route path="/sites-para-prestadores-de-servicos/" element={<SegmentDetailPage customSlug="sites-para-prestadores-de-servicos" />} />
+            <Route path="/catalogo-digital/" element={<SegmentDetailPage customSlug="catalogo-digital" />} />
+            {/* Endereços antigos levam para as páginas novas */}
+            <Route path="/sites-para-dentistas/" element={<Navigate to="/sites-para-clinicas/" replace />} />
+            <Route path="/sites-para-nail-designers/" element={<Navigate to="/sites-para-esteticistas/" replace />} />
+            <Route path="/sites-para-arquitetos-e-corretores/" element={<Navigate to="/sites-para-arquitetos/" replace />} />
+            <Route path="/sites-para-prestadores-de-servicos/" element={<Navigate to="/sites-profissionais/" replace />} />
 
             {/* Portfolio & Case Studies */}
             <Route path="/portfolio/" element={<PortfolioPage />} />

@@ -20,11 +20,11 @@ export function Cursor() {
     const xTo = gsap.quickTo(el, 'x', { duration: 0.35, ease: 'power3' });
     const yTo = gsap.quickTo(el, 'y', { duration: 0.35, ease: 'power3' });
     const mover = (e: MouseEvent) => {
-      el.style.opacity = '1';
       xTo(e.clientX); yTo(e.clientY);
       const alvo = (e.target as HTMLElement).closest('[data-cursor]') as HTMLElement | null;
-      if (alvo) { rotulo.textContent = alvo.dataset.cursor || ''; el.dataset.grande = '1'; }
-      else { delete el.dataset.grande; }
+      // O círculo só aparece sobre imagens e botões marcados; no resto, fica só a setinha normal.
+      if (alvo) { rotulo.textContent = alvo.dataset.cursor || ''; el.dataset.grande = '1'; el.style.opacity = '1'; }
+      else { delete el.dataset.grande; el.style.opacity = '0'; }
     };
     const sair = () => { el.style.opacity = '0'; };
     window.addEventListener('mousemove', mover);

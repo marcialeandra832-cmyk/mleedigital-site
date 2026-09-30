@@ -69,7 +69,7 @@ export function SegmentDetailPage({ customSlug }: SegmentDetailPageProps) {
           
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0F3B40]/15 border border-[#0F3B40]/30 text-[#A8675B] text-xs font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Solução Especializada para {segment.segmentName}</span>
+            <span>{segment.segmentName}</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-tight mb-6">
@@ -82,13 +82,13 @@ export function SegmentDetailPage({ customSlug }: SegmentDetailPageProps) {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <a
-              href={getWhatsAppLink(`Olá Márcia! Gostaria de um orçamento para o site da minha área de ${segment.segmentName}.`)}
+              href={getWhatsAppLink(`Olá Márcia! Vi a página de ${segment.segmentName} e quero um orçamento.`)}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-7 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-sm font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-all shadow-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-7 rounded-full bg-[#0F3B40] text-[#F4EFE8] text-sm font-semibold hover:bg-[#0A2C30] transition-all"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
-              <span>Solicitar Orçamento Especializado</span>
+              <span>Pedir orçamento no WhatsApp</span>
             </a>
           </div>
 
@@ -193,14 +193,14 @@ export function SegmentDetailPage({ customSlug }: SegmentDetailPageProps) {
       {/* Segment FAQ */}
       <section className="py-16 bg-[#FBF8F3]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FAQAccordion items={segment.faq} title={`Perguntas Frequentes sobre Sites para ${segment.segmentName}`} />
+          <FAQAccordion items={segment.faq} title="Perguntas frequentes" />
         </div>
       </section>
 
       <CTASection 
-        title={`Vamos criar o site perfeito para seu negócio de ${segment.segmentName}?`}
-        subtitle="Entre em contato direto no WhatsApp para tirar dúvidas e receber uma proposta personalizada."
-        whatsappMessage={`Olá Márcia! Gostaria de conversar sobre a criação do site para o meu negócio de ${segment.segmentName}.`}
+        title="Vamos criar o seu?"
+        subtitle="Me chama no WhatsApp e me conta sobre o seu trabalho. Quem responde sou eu."
+        whatsappMessage={`Olá Márcia! Vi a página de ${segment.segmentName} e quero conversar sobre o meu site.`}
       />
     </div>
   );

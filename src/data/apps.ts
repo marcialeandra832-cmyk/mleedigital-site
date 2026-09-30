@@ -1,8 +1,8 @@
 import { AppProduct } from '../types';
-import nailFinanceScreen from '../assets/images/nail_finance_screen_mockup_1785178437186.jpg';
-import nailFinanceDevices from '../assets/images/nail_finance_devices_1785175923602.jpg';
-import elasticFitScreen from '../assets/images/elastic_fit_screen_mockup_1785178450844.jpg';
-import elasticFitDevices from '../assets/images/elastic_fit_devices_1785175936006.jpg';
+import nailFinanceScreen from '../assets/apps/nail-finance.webp';
+import elasticFitScreen from '../assets/apps/elastic-fit.webp';
+const nailFinanceDevices = nailFinanceScreen;
+const elasticFitDevices = elasticFitScreen;
 
 export const appsData: AppProduct[] = [
   {

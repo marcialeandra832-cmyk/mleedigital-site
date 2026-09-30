@@ -140,6 +140,9 @@ export function BlogPostPage() {
               <p className="text-base text-[#6B7C7D] leading-relaxed">
                 {sec.body}
               </p>
+              {sec.extra?.map((par, i) => (
+                <p key={`e${i}`} className="text-base text-[#6B7C7D] leading-relaxed">{par}</p>
+              ))}
               {sec.list && (
                 <ul className="space-y-2 pl-2">
                   {sec.list.map((li, i) => (
@@ -150,6 +153,9 @@ export function BlogPostPage() {
                   ))}
                 </ul>
               )}
+              {sec.depois?.map((par, i) => (
+                <p key={`d${i}`} className="text-base text-[#6B7C7D] leading-relaxed">{par}</p>
+              ))}
             </div>
           ))}
 

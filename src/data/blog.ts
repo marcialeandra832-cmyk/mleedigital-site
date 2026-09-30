@@ -1,14 +1,108 @@
 import { BlogPost } from '../types';
 import { AUTHOR_NAME, AUTHOR_ROLE, AUTHOR_IMG } from './constants';
 import blogMetaTrial from '../assets/images/courtroom_trial_scene_1787690923250.jpg';
-import blogCustoSite from '../assets/images/blog_custo_site_1786749531857.jpg';
-import blogSiteInsta from '../assets/images/blog_site_insta_1786749546785.jpg';
-import blogGoogleSeo from '../assets/images/blog_google_seo_1786749561191.jpg';
-import blogOnepageCompleto from '../assets/images/blog_onepage_site_1786749574083.jpg';
-import blogPsicologoSite from '../assets/images/blog_psicologo_1786749584941.jpg';
-import blogEsteticaSite from '../assets/images/blog_estetica_1786749595990.jpg';
+import blogCustoSite from '../assets/images/blog-custo-site.webp';
+import blogSiteInsta from '../assets/images/blog-site-instagram.webp';
+import blogGoogleSeo from '../assets/images/blog-aparecer-google.webp';
+import blogOnepageCompleto from '../assets/images/blog-onepage-completo.webp';
+import blogPsicologoSite from '../assets/images/blog-psicologo.webp';
+import blogEsteticaSite from '../assets/images/blog-clinica-estetica.webp';
+import blogIaIndicacao from '../assets/images/blog-ia-indicacao.webp';
+import blogAvaliacoesGoogle from '../assets/images/blog-avaliacoes-google.webp';
 
 export const blogPostsData: BlogPost[] = [
+  {
+    id: "seu-paciente-ja-pergunta-para-a-ia",
+    slug: "seu-paciente-ja-pergunta-para-a-ia",
+    title: "Seu paciente já pergunta para a IA: como aparecer quando alguém pede uma indicação",
+    excerpt: "O Google agora responde em formato de conversa e muita gente já pede indicação de profissional para a IA. Veja o que faz o seu nome aparecer nessas respostas.",
+    coverImage: blogIaIndicacao,
+    category: "Sites e Google",
+    author: {
+      name: AUTHOR_NAME,
+      role: AUTHOR_ROLE,
+      avatar: AUTHOR_IMG
+    },
+    publishedAt: "30 de Setembro de 2026",
+    readTime: "5 min de leitura",
+    content: ["Até pouco tempo atrás, quem procurava uma dentista digitava algo curto no Google, como \"dentista Videira\". Aparecia uma lista de links e a pessoa ia abrindo um por um.", "Hoje a busca é outra. A pessoa escreve uma frase inteira: \"quero uma dentista em Videira que faça lentes de contato dental e atenda no sábado\". E recebe uma resposta pronta, com poucos nomes indicados.", "A diferença parece pequena, mas muda tudo. Antes você disputava um lugar na lista. Agora disputa um lugar na resposta, e nela cabem só dois ou três nomes."],
+    sections: [
+      {
+        heading: "O que é o Modo IA do Google",
+        body: "O Modo IA é a busca do Google em formato de conversa. Você faz uma pergunta completa, o Google divide essa pergunta em partes, pesquisa cada uma e monta uma resposta única com alguns links.",
+        extra: ["Ele chegou ao Brasil em português em setembro de 2025 e foi sendo liberado aos poucos. Hoje aparece como uma aba nos resultados, no computador e no aplicativo do Google.", "E o paciente já usa. Uma pesquisa da Simples Dental com 500 pacientes de todo o país mostrou que 3 em cada 10 já usaram inteligência artificial para buscar dentistas perto de casa. E 8 em cada 10 passam pelo Google antes de escolher um profissional ou clínica.", "Ou seja: o Google continua sendo a porta de entrada. Só que a porta agora conversa."]
+      },
+      {
+        heading: "Como a IA decide quem indicar",
+        body: "O próprio Google afirma que não existe código secreto nem arquivo especial para entrar nessas respostas. A IA simplesmente lê o que já existe sobre você na internet e junta as peças.",
+        extra: ["Por isso ela precisa encontrar informação clara, completa e que bata em todos os lugares. Na prática, olha para três coisas:"],
+        list: ["O que você faz, explicado por escrito. Uma foto bonita no Instagram não diz para a IA que você faz harmonização, em qual cidade atende e para quem. Um texto organizado diz.", "Onde você atende. Endereço, cidade, horário e forma de contato iguais no site, no perfil do Google e nas redes.", "O que dizem de você. Avaliações reais de pacientes, com detalhes sobre o atendimento."],
+        depois: ["O ponto de atenção é que as redes sociais mostram pouco do que você faz de forma organizada. Um perfil pode ter anos de posts e, mesmo assim, não deixar claro para a busca quais tratamentos você oferece e onde. Já um site com uma página para cada serviço é exatamente o tipo de fonte que a IA consegue ler e citar."]
+      },
+      {
+        heading: "O que fazer na prática",
+        body: "Seis atitudes que ajudam o seu nome a aparecer quando alguém pede uma indicação:",
+        list: ["Tenha uma página para cada tratamento. Quem faz botox, preenchimento e bioestimulador precisa de uma página explicando cada um: para quem é, como funciona e o que esperar. É isso que responde a pergunta longa do paciente.", "Escreva a cidade de forma natural. \"Atendimento em Videira e região\" no texto ajuda a IA a entender onde você está, sem precisar repetir a palavra dez vezes.", "Mantenha o Perfil da Empresa no Google completo. Categoria certa, fotos reais do espaço, horário atualizado e o link do seu site. Um cuidado: o nome do perfil deve ser o seu nome real. Colocar cidade ou serviço no nome pode levar à suspensão.", "Deixe as informações iguais em todo lugar. Se o telefone do site é um e o do Google é outro, a IA fica em dúvida e prefere indicar quem está com tudo em ordem.", "Peça avaliações depois de um bom atendimento. Uma mensagem simples com o link já resolve. As avaliações que contam como foi o atendimento valem mais do que as que só dão as estrelas.", "Responda perguntas reais no seu site. As dúvidas que você mais ouve no consultório viram conteúdo: quanto tempo dura, se dói, quantas sessões. Um texto que só você poderia escrever, com a sua experiência, tem muito mais chance de ser citado."],
+        depois: ["E lembre que isso é rotina, não tarefa de uma vez só. A busca se atualiza, as avaliações envelhecem e os concorrentes também publicam."]
+      },
+      {
+        heading: "Para fechar",
+        body: "A indicação continua sendo a forma mais forte de conquistar um paciente. O que mudou é quem indica: agora, além da amiga e da vizinha, o próprio Google e o ChatGPT recomendam nomes.",
+        extra: ["E eles só recomendam quem conseguem entender. Um perfil nas redes ajuda a pessoa a te conhecer. Mas é o seu site, com o seu conteúdo e no seu endereço, que dá à busca o material para dizer o seu nome."]
+      }
+    ],
+    tags: ["Modo IA do Google", "Inteligência artificial", "Como aparecer no Google", "Indicação de pacientes"],
+    relatedSlugs: ["avaliacoes-no-google-o-novo-boca-a-boca", "como-aparecer-no-google-com-pequena-empresa"],
+    ctaType: "whatsapp",
+    ctaTitle: "Quer que a IA consiga dizer o seu nome?",
+    ctaText: "Eu crio o seu site com uma página para cada tratamento, pronto para o Google entender o que você faz e onde atende.",
+    ctaButtonText: "Falar com a Márcia no WhatsApp"
+  },
+  {
+    id: "avaliacoes-no-google-o-novo-boca-a-boca",
+    slug: "avaliacoes-no-google-o-novo-boca-a-boca",
+    title: "Avaliações no Google: o novo boca a boca que decide a escolha do paciente",
+    excerpt: "A opinião de outros pacientes pesa mais do que a localização na hora de escolher um profissional. Veja como conquistar avaliações e o que fazer com elas.",
+    coverImage: blogAvaliacoesGoogle,
+    category: "Marketing Digital",
+    author: {
+      name: AUTHOR_NAME,
+      role: AUTHOR_ROLE,
+      avatar: AUTHOR_IMG
+    },
+    publishedAt: "30 de Setembro de 2026",
+    readTime: "5 min de leitura",
+    content: ["Pergunte a qualquer profissional de saúde de onde vêm os melhores pacientes e a resposta costuma ser a mesma: indicação.", "Isso continua verdade. O que mudou é onde a indicação acontece. Antes era uma conversa entre amigas. Hoje, mesmo quem recebeu a indicação costuma abrir o Google para conferir o nome antes de marcar.", "E o que ela encontra ali são as avaliações. Algumas estrelas e poucas frases de outros pacientes podem confirmar a indicação ou desfazer tudo em segundos."],
+    sections: [
+      {
+        heading: "O que os números mostram",
+        body: "O estudo Perfil do Paciente Digital, da Doctoralia, analisou mais de 255 milhões de visitas à plataforma. A conclusão chama atenção: a opinião de outros pacientes é o fator que mais pesa na escolha do profissional, acima da localização e do plano de saúde aceito.",
+        extra: ["Outro levantamento da mesma empresa, com milhões de opiniões de pacientes, mostrou o que os brasileiros mais valorizam nesses comentários. O atendimento humanizado apareceu em 63% dos casos, quase quatro vezes mais do que o diagnóstico em si.", "Isso diz muito. O paciente parte do princípio de que você é tecnicamente capaz. O que ele procura nas avaliações é outra coisa: se vai ser bem recebido, ouvido e tratado com cuidado."]
+      },
+      {
+        heading: "Como conquistar mais avaliações",
+        body: "A maioria dos pacientes satisfeitos não avalia porque ninguém pediu. Não é falta de vontade, é esquecimento. Algumas atitudes simples resolvem:",
+        list: ["Peça no momento certo. Logo depois de um retorno positivo ou quando o paciente elogia o resultado. É quando a experiência está mais viva.", "Facilite ao máximo. Envie pelo WhatsApp o link direto para a avaliação no seu perfil do Google. Quanto menos cliques, mais respostas.", "Oriente sem roteirizar. Você pode sugerir que a pessoa conte como foi o atendimento. Mas nunca escreva a avaliação por ela nem ofereça desconto em troca, o que vai contra as regras do Google.", "Responda todas. Um agradecimento curto e pessoal nas positivas mostra que existe alguém atento do outro lado.", "Nas negativas, responda com calma. Agradeça, mostre que ouviu e convide para conversar em particular. Quem lê a resposta depois julga mais a sua postura do que a reclamação."],
+        depois: ["Um cuidado importante: profissionais de saúde seguem as regras de publicidade do seu conselho. Na resposta, evite comentar detalhes do tratamento ou confirmar informações do paciente."]
+      },
+      {
+        heading: "Onde o site entra",
+        body: "A avaliação convence o paciente a clicar. Mas depois do clique ele quer saber mais: quem é você, como é o espaço, quais tratamentos faz, como agendar.",
+        extra: ["Se o link do perfil leva só para as redes sociais, essa resposta fica espalhada entre posts e stories. Se leva para um site, a pessoa encontra tudo em um só lugar, organizado para ela decidir.", "O site também é o espaço onde o atendimento humanizado aparece antes da primeira consulta. Uma foto real sua, um texto sobre como você trabalha e respostas para as dúvidas mais comuns fazem o paciente chegar já confiando em você.", "As redes mudam as regras a qualquer momento e o perfil do Google pertence ao Google. O site é o único desses lugares que é seu de verdade."]
+      },
+      {
+        heading: "Para fechar",
+        body: "Cada avaliação é uma indicação que continua trabalhando por você depois que o paciente vai embora. E ela fica disponível para todo mundo que pesquisar o seu nome.",
+        extra: ["Peça, responda e cuide dessas avaliações como parte do atendimento. E garanta que, depois de ler o que dizem de você, o paciente encontre um lugar à altura para te conhecer melhor."]
+      }
+    ],
+    tags: ["Avaliações no Google", "Perfil da Empresa no Google", "Atendimento humanizado", "Indicação de pacientes"],
+    relatedSlugs: ["seu-paciente-ja-pergunta-para-a-ia", "site-ou-instagram-qual-sua-empresa-precisa"],
+    ctaType: "whatsapp",
+    ctaTitle: "Depois da avaliação, para onde vai o paciente?",
+    ctaText: "Eu crio o site que recebe o paciente depois do clique: com a sua foto, os seus tratamentos e o contato a um toque.",
+    ctaButtonText: "Falar com a Márcia no WhatsApp"
+  },
   {
     id: "quem-manda-no-instagram-julgamento-meta",
     slug: "quem-manda-no-instagram-julgamento-meta",

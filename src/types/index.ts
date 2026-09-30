@@ -62,7 +62,9 @@ export interface BlogPost {
   sections: {
     heading: string;
     body: string;
+    extra?: string[];   // parágrafos seguintes, antes da lista
     list?: string[];
+    depois?: string[];  // parágrafos depois da lista
   }[];
   tags: string[];
   relatedSlugs: string[];

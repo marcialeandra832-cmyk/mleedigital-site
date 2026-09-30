@@ -20,13 +20,11 @@ const mais = [
 ];
 
 const segmentos = [
-  { label: 'Clínicas médicas', to: '/sites-para-clinicas/' },
-  { label: 'Dentistas', to: '/sites-para-dentistas/' },
+  { label: 'Clínicas médicas e odontológicas', to: '/sites-para-clinicas/' },
   { label: 'Estética e beleza', to: '/sites-para-esteticistas/' },
-  { label: 'Nail designers', to: '/sites-para-nail-designers/' },
-  { label: 'Advogados', to: '/sites-para-advogados/' },
-  { label: 'Arquitetos e corretores', to: '/sites-para-arquitetos-e-corretores/' },
-  { label: 'Prestadores de serviços', to: '/sites-para-prestadores-de-servicos/' },
+  { label: 'Arquitetura', to: '/sites-para-arquitetos/' },
+  { label: 'Advocacia', to: '/sites-para-advogados/' },
+  { label: 'Catálogo digital', to: '/catalogo-digital/' },
 ];
 
 export function Navbar() {

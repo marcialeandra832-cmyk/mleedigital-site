@@ -413,12 +413,11 @@ export function SitesProfissionaisPage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {[
-              { name: "Clínicas & Consultórios", slug: "sites-para-clinicas" },
-              { name: "Dentistas & Odontologia", slug: "sites-para-dentistas" },
-              { name: "Estética & Beleza", slug: "sites-para-esteticistas" },
-              { name: "Advogados & Escritórios", slug: "sites-para-advogados" },
-              { name: "Arquitetos & Corretores", slug: "sites-para-arquitetos-e-corretores" },
-              { name: "Prestadores de Serviços", slug: "sites-para-prestadores-de-servicos" }
+              { name: "Clínicas médicas e odontológicas", slug: "sites-para-clinicas" },
+              { name: "Estética e beleza", slug: "sites-para-esteticistas" },
+              { name: "Arquitetura", slug: "sites-para-arquitetos" },
+              { name: "Advocacia", slug: "sites-para-advogados" },
+              { name: "Catálogo digital", slug: "catalogo-digital" }
             ].map((seg, idx) => (
               <Link
                 key={idx}

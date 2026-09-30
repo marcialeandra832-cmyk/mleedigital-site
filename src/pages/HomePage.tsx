@@ -157,7 +157,6 @@ export function HomePage() {
 
   const artigos = [...blogPostsData]
     .filter((p) => p.slug !== 'quem-manda-no-instagram-julgamento-meta')
-    .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
     .slice(0, 3);
 
   return (
@@ -391,7 +390,10 @@ export function HomePage() {
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 border-t border-[#DCD2C6]">
             {appsData.map((a, i) => (
               <Reveal key={a.slug} atraso={i * 100} className={`py-8 border-b border-[#DCD2C6] ${i % 2 === 0 ? 'md:pr-10 md:border-r' : 'md:pl-10'}`}>
-                <Link to={`/apps/${a.slug}/`} className="group block">
+                <Link to={`/apps/${a.slug}/`} className="group block" data-cursor="Ver app">
+                  <div className="mb-6 overflow-hidden rounded-2xl aspect-[16/9] bg-[#E9E2D8] shadow-[0_30px_60px_-35px_rgba(15,59,64,0.5)]">
+                    <img src={a.screenImg} alt={`Tela do ${a.name}`} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]" />
+                  </div>
                   <h3 className="font-serif text-3xl group-hover:underline decoration-[#CC8A80] underline-offset-[6px] decoration-1">{a.name}</h3>
                   <p className="mt-3 text-[16px] text-[#3F5557] leading-relaxed max-w-md">{a.tagline}</p>
                 </Link>

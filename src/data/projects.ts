@@ -1,6 +1,6 @@
 import sorayAbbudCapa from '../assets/clientes/soray-abbud.webp';
 import { Project } from '../types';
-import vanguardaMockup from '../assets/images/figueiredo_advocacia_hero_1785179779839.jpg';
+import vanguardaMockup from '../assets/modelos/figueiredo-advocacia.webp';
 import clarenzaMockup from '../assets/images/clarenza_odontologia_hero_1786750937767.jpg';
 import draMariaJunqueiraMockup from '../assets/clientes/maria-junqueira.webp';
 import vivianeMengattoMockup from '../assets/clientes/viviane-mengatto.webp';

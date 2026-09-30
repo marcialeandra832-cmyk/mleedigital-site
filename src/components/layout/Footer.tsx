@@ -16,10 +16,11 @@ const colunas = [
     { label: 'Recomendados', to: '/recomendados/' },
   ] },
   { titulo: 'Por área', links: [
-    { label: 'Clínicas médicas', to: '/sites-para-clinicas/' },
-    { label: 'Dentistas', to: '/sites-para-dentistas/' },
+    { label: 'Clínicas médicas e odontológicas', to: '/sites-para-clinicas/' },
     { label: 'Estética e beleza', to: '/sites-para-esteticistas/' },
-    { label: 'Nail designers', to: '/sites-para-nail-designers/' },
+    { label: 'Arquitetura', to: '/sites-para-arquitetos/' },
+    { label: 'Advocacia', to: '/sites-para-advogados/' },
+    { label: 'Catálogo digital', to: '/catalogo-digital/' },
   ] },
 ];
 

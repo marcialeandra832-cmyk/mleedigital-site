@@ -49,7 +49,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "Como funciona a manutenção após a entrega?", a: "O desenvolvimento é um investimento único. Após a publicação, o plano de manutenção & hospedagem mensal (R$ 127/mês no Essencial ou R$ 197/mês no Profissional) garante a continuidade da infraestrutura em nuvem, backups, segurança SSL e suporte para atualizações de fotos e textos." }
     ],
     metaDescription: "Criação de sites profissionais para pequenas empresas e especialistas. Design exclusivo, SEO para o Google e foco em conversão no WhatsApp.",
-    relatedSegments: ["sites-para-clinicas", "sites-para-advogados", "sites-para-dentistas"]
+    relatedSegments: ["sites-para-clinicas", "sites-para-esteticistas", "sites-para-advogados"]
   },
   "sistemas-web": {
     slug: "sistemas-web",
@@ -96,6 +96,6 @@ export const servicesData: Record<string, ServiceDetail> = {
       { q: "É possível criar um sistema personalizado do zero para a minha empresa?", a: "Sim, desenvolvemos aplicações web sob medida de acordo com as necessidades específicas do seu negócio." }
     ],
     metaDescription: "Desenvolvimento de sistemas web sob medida e aplicações inteligentes. Automação de processos, painéis de gestão e produtos digitais.",
-    relatedSegments: ["sites-para-arquitetos-e-corretores", "sites-para-prestadores-de-servicos", "sites-para-clinicas"]
+    relatedSegments: ["sites-para-arquitetos", "catalogo-digital", "sites-para-clinicas"]
   }
 };

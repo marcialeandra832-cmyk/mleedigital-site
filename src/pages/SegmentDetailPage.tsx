@@ -1,20 +1,13 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
-import { 
-  CheckCircle2, 
-  ArrowRight, 
-  MessageCircle, 
-  Sparkles, 
-  ExternalLink,
-  ShieldCheck
-} from 'lucide-react';
+import { useParams, Navigate } from 'react-router-dom';
+import { MessageCircle, Sparkles } from 'lucide-react';
 import { SEOHead } from '../components/layout/SEOHead';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { PricingTable } from '../components/common/PricingTable';
 import { FAQAccordion } from '../components/common/FAQAccordion';
 import { CTASection } from '../components/common/CTASection';
 import { segmentsData } from '../data/segments';
-import { projectsData } from '../data/projects';
-import { appsData } from '../data/apps';
+import { destaquesArea } from '../data/destaquesArea';
+import { DestaqueArea } from '../components/common/DestaqueArea';
 import { getWhatsAppLink } from '../data/constants';
 
 interface SegmentDetailPageProps {
@@ -31,9 +24,7 @@ export function SegmentDetailPage({ customSlug }: SegmentDetailPageProps) {
     return <Navigate to="/" replace />;
   }
 
-  const relatedProject = segment.relatedProjectSlug 
-    ? projectsData.find(p => p.slug === segment.relatedProjectSlug)
-    : null;
+  const destaque = destaquesArea[segment.slug];
 
   const breadcrumbItems = [
     { label: "Segmentos", path: "/" },
@@ -95,6 +86,9 @@ export function SegmentDetailPage({ customSlug }: SegmentDetailPageProps) {
         </div>
       </section>
 
+      {/* Projeto em destaque da área */}
+      {destaque && <DestaqueArea destaque={destaque} nomeArea={segment.segmentName} />}
+
       {/* Why Need Site for this Segment */}
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,48 +135,6 @@ export function SegmentDetailPage({ customSlug }: SegmentDetailPageProps) {
               ))}
             </div>
           </div>
-
-          {/* Related Real Project / Case Study */}
-          {relatedProject && (
-            <div className="mb-16 bg-[#FBF8F3] text-[#0F3B40] rounded-2xl p-8 border border-[#0F3B40]/30 flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/2 rounded-xl overflow-hidden aspect-[16/10] bg-[#000]">
-                <img 
-                  src={relatedProject.img} 
-                  alt={relatedProject.client}
-                  className="w-full h-full object-cover" 
-                />
-              </div>
-
-              <div className="w-full md:w-1/2 space-y-4">
-                <span className="text-xs font-semibold text-[#A8675B] uppercase tracking-wider">
-                  Projeto de Referência
-                </span>
-                <h3 className="text-2xl font-serif text-[#0F3B40]">{relatedProject.client}</h3>
-                <p className="text-xs sm:text-sm text-[#3F5557] leading-relaxed">
-                  {relatedProject.tagline}
-                </p>
-
-                <div className="flex items-center gap-3 pt-2">
-                  <Link
-                    to={`/portfolio/${relatedProject.slug}/`}
-                    className="py-2.5 px-4 rounded-xl bg-[#0F3B40] text-[#F4EFE8] text-xs font-bold hover:brightness-110 transition-all"
-                  >
-                    Ver Detalhes do Projeto
-                  </Link>
-
-                  <a
-                    href={relatedProject.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="py-2.5 px-4 rounded-xl bg-[#0F3B40]/[0.04] text-[#0F3B40] text-xs font-medium hover:bg-[#0F3B40]/[0.04] transition-all inline-flex items-center gap-1"
-                  >
-                    <span>Ver site no ar</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          )}
 
         </div>
       </section>

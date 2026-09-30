@@ -26,17 +26,27 @@ export function DestaqueArea({ destaque, nomeArea }: { destaque: Destaque; nomeA
           {/* Prévia */}
           <div className="lg:col-span-7">
             {destaque.formato === 'celular' ? (
-              <div className="relative flex justify-center py-6">
-                <div aria-hidden className="absolute inset-x-6 inset-y-16 rounded-[2.5rem] bg-[#0F3B40]/[0.06]" />
-                <div className="relative w-[280px] sm:w-[300px] rounded-[2.6rem] bg-[#0F3B40] p-2.5 shadow-[0_40px_80px_-30px_rgba(15,59,64,0.55)]">
-                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-5 rounded-full bg-[#0F3B40] z-10" />
-                  <div className="rounded-[2.1rem] overflow-hidden bg-[#1A120B] h-[560px] sm:h-[600px]">
-                    <iframe
-                      src={destaque.link}
-                      title={`Site ${destaque.nome} ao vivo`}
-                      loading="lazy"
-                      className="w-full h-full border-0 pointer-events-none md:pointer-events-auto"
-                    />
+              <div className="relative flex justify-center py-4">
+                <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] max-w-full rounded-full bg-[#0F3B40]/[0.07] blur-2xl" />
+                <div className="relative w-[300px] rounded-[2.8rem] bg-[#0F3B40] p-[10px] shadow-[0_40px_80px_-30px_rgba(15,59,64,0.55)]">
+                  <div className="rounded-[2.2rem] overflow-hidden bg-[#1A120B]">
+                    {/* Barra de status com o recorte da câmera, sem cobrir o site */}
+                    <div className="h-8 flex items-center justify-center bg-[#1A120B]">
+                      <span className="w-20 h-[18px] rounded-full bg-[#0F3B40]" />
+                    </div>
+                    {/* Site mostrado na largura real de um celular (390px) e reduzido para caber */}
+                    <div className="relative overflow-hidden" style={{ width: 280, height: 560 }}>
+                      <iframe
+                        src={destaque.link}
+                        title={`Site ${destaque.nome} ao vivo`}
+                        loading="lazy"
+                        className="absolute top-0 left-0 border-0 pointer-events-none md:pointer-events-auto"
+                        style={{ width: 390, height: 560 / (280 / 390), transform: `scale(${280 / 390})`, transformOrigin: 'top left' }}
+                      />
+                    </div>
+                    <div className="h-6 flex items-center justify-center bg-[#1A120B]">
+                      <span className="w-24 h-1 rounded-full bg-white/40" />
+                    </div>
                   </div>
                 </div>
               </div>

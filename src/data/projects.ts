@@ -3,6 +3,7 @@ import { Project } from '../types';
 import vanguardaMockup from '../assets/modelos/figueiredo-advocacia.webp';
 import clarenzaMockup from '../assets/images/clarenza_odontologia_hero_1786750937767.jpg';
 import draMariaJunqueiraMockup from '../assets/clientes/maria-junqueira.webp';
+import draDanielleCarvaoMockup from '../assets/clientes/danielle-carvao.webp';
 import vivianeMengattoMockup from '../assets/clientes/viviane-mengatto.webp';
 import matrizGrillMockup from '../assets/clientes/matriz-grill.webp';
 import carlaFigmamMockup from '../assets/images/carla_figmam_preview_1786812678656.jpg';
@@ -62,6 +63,33 @@ export const projectsData: Project[] = [
     img: draMariaJunqueiraMockup,
     demo: "https://dramariajunqueira.vercel.app/",
     technologies: ["React", "Tailwind CSS", "Método CRIO 4D", "SEO para Estética", "WhatsApp Integration"],
+    featured: true
+  },
+  {
+    id: "dra-danielle-carvao",
+    slug: "dra-danielle-carvao",
+    client: "Dra. Danielle Carvão",
+    category: "Odontologia & Rejuvenescimento Facial",
+    planType: "SITE ESSENCIAL",
+    projectType: "real",
+    badge: "PROJETO REALIZADO • CLIENTE REAL",
+    tagline: "Rejuvenescimento facial com naturalidade 40+ e o Método DC Renova 360, no Rio de Janeiro.",
+    objective: "Desenvolvimento de site one page para a Dra. Danielle Carvão, dentista com 31 anos de experiência no Rio de Janeiro, apresentando o rejuvenescimento facial com naturalidade para mulheres 40+ e o método autoral DC Renova 360.",
+    challenge: "Reunir em uma única página o que antes estava espalhado em um link na bio: quem é a Dra. Dani, como funciona o método, os tratamentos e o caminho para agendar, com uma identidade fiel à marca que ela já usava.",
+    solution: "Página única com paleta extraída do material da própria cliente (dourado envelhecido, marfim e marrom profundo), seção dedicada ao Método DC Renova 360, tratamentos, antes e depois, depoimentos, perguntas frequentes e botão direto para o WhatsApp do consultório.",
+    structure: [
+      "Abertura com a proposta 'Rejuvenescimento facial com naturalidade 40+' e foto profissional",
+      "Sobre a Dra. Dani: 31 anos de odontologia e a forma de trabalhar",
+      "Método DC Renova 360: cuidar do agora, pensando no depois",
+      "Tratamentos de rejuvenescimento, harmonização natural e alinhadores",
+      "Antes e depois, depoimentos de pacientes e perguntas frequentes",
+      "Instagram, localização no Largo do Machado e agendamento pelo WhatsApp"
+    ],
+    style: "Visual elegante em dourado envelhecido, marfim e marrom profundo, com tipografia serifada clássica e fotos profissionais da própria doutora.",
+    results: "Site publicado no domínio próprio da cliente, substituindo o link na bio por uma apresentação completa com canal direto de agendamento.",
+    img: draDanielleCarvaoMockup,
+    demo: "https://dradanicarvao.com.br/",
+    technologies: ["React", "Tailwind CSS", "Método DC Renova 360", "One Page", "WhatsApp Direct"],
     featured: true
   },
   {

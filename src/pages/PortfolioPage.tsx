@@ -33,17 +33,17 @@ export function PortfolioPage() {
             alt={project.client} 
             className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
-            <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md border shadow-sm ${
+          <div className="absolute top-3 left-3 right-3 flex flex-wrap items-start justify-between gap-1.5">
+            <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md border shadow-sm whitespace-nowrap ${
               project.projectType === 'real'
                 ? 'bg-[#F4EFE8]/90 backdrop-blur-md text-[#A8675B] border-[#0F3B40]/40'
                 : 'bg-[#E9E2D8]/90 backdrop-blur-md text-[#3F5557] border-[#DCD2C6]'
             }`}>
               {project.badge}
             </span>
-          </div>
-          <div className="absolute top-3 right-3 bg-[#0F3B40]/[0.04] text-[#0F3B40] text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
-            {project.planType}
+            <span className="bg-[#0F3B40] text-[#F4EFE8] text-[10px] font-bold px-2.5 py-1 rounded-md border border-[#0F3B40] shadow-sm whitespace-nowrap">
+              {project.planType}
+            </span>
           </div>
         </div>
 
@@ -173,7 +173,7 @@ export function PortfolioPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {realProjects.map(renderProjectCard)}
               </div>
             </div>

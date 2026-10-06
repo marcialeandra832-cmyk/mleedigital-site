@@ -42,12 +42,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/sites-para-dentistas/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://mleedigital.com.br/sites-para-esteticistas/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -60,20 +54,14 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/sites-para-arquitetos-e-corretores/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://mleedigital.com.br/sites-para-arquitetos/</loc>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/sites-para-nail-designers/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://mleedigital.com.br/sites-para-prestadores-de-servicos/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <loc>https://mleedigital.com.br/catalogo-digital/</loc>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -81,7 +69,7 @@
   <!-- Portfólio -->
   <url>
     <loc>https://mleedigital.com.br/portfolio/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -163,9 +151,27 @@
   <!-- Blog -->
   <url>
     <loc>https://mleedigital.com.br/blog/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mleedigital.com.br/blog/seu-paciente-ja-pergunta-para-a-ia/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://mleedigital.com.br/blog/avaliacoes-no-google-o-novo-boca-a-boca/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://mleedigital.com.br/blog/quem-manda-no-instagram-julgamento-meta/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://mleedigital.com.br/blog/quanto-custa-criar-um-site-profissional/</loc>

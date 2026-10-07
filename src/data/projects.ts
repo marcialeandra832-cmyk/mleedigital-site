@@ -5,7 +5,8 @@ import clarenzaMockup from '../assets/images/clarenza_odontologia_hero_178675093
 import draMariaJunqueiraMockup from '../assets/clientes/maria-junqueira.webp';
 import draDanielleCarvaoMockup from '../assets/clientes/danielle-carvao.webp';
 import vivianeMengattoMockup from '../assets/clientes/viviane-mengatto.webp';
-import matrizGrillMockup from '../assets/clientes/matriz-grill.webp';
+// GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
+// import matrizGrillMockup from '../assets/clientes/matriz-grill.webp';
 import carlaFigmamMockup from '../assets/images/carla_figmam_preview_1786812678656.jpg';
 import auraEsteticaMockup from '../assets/images/aura_estetica_preview_1786812029262.jpg';
 
@@ -119,33 +120,34 @@ export const projectsData: Project[] = [
     technologies: ["React", "Tailwind CSS", "Design Dark Luxury", "SEO Estética", "WhatsApp Direct"],
     featured: true
   },
-  {
-    id: "matriz-grill",
-    slug: "matriz-grill",
-    client: "Matriz Grill",
-    category: "Gastronomia, Restaurante & Bar",
-    planType: "SITE ESSENCIAL",
-    projectType: "real",
-    badge: "PROJETO REALIZADO • CLIENTE REAL",
-    tagline: "Música ao vivo de alta qualidade, hambúrgueres artesanais, porções na chapa e o chopp mais gelado da região.",
-    objective: "Desenvolvimento de site institucional e cardápio digital para a Matriz Grill, localizada na esquina mais badalada da cidade, com destaque para música ao vivo, combos de hambúrgueres artesanais, porções na chapa, vinhos de inverno, sopas e cremes reconfortantes e chopp gelado.",
-    challenge: "Transmitir a atmosfera vibrante da casa, organizar as opções do cardápio gastronômico e facilitar reservas de mesas e localização para os clientes.",
-    solution: "Layout contemporâneo com fotografias apetitosas em destaque, atmosfera acolhedora noturna, programação musical atualizada, cardápio digital e integração direta para reservas no WhatsApp.",
-    structure: [
-      "Hero visual com gastronomia, chopp artesanal e atmosfera noturna",
-      "Apresentação da casa na esquina mais badalada e acolhedora da cidade",
-      "Cardápio com combos artesanais, porções na chapa, sopas, cremes e vinhos selecionados",
-      "Programação de música ao vivo de alta qualidade e eventos",
-      "Horários de funcionamento, localização com mapa interativo e reservas",
-      "Botão direto no WhatsApp para reservas de mesas e atendimento"
-    ],
-    style: "Identidade gastronômica calorosa em tons escuros e âmbar, tipografia marcante e fotografias apetitosas em alta definição.",
-    results: "Site publicado com cardápio completo, agenda de shows, localização e canal direto de reservas via WhatsApp.",
-    img: matrizGrillMockup,
-    demo: "https://matrizgrillvideira.vercel.app/",
-    technologies: ["React", "Tailwind CSS", "Cardápio Digital", "SEO Local", "WhatsApp Direct"],
-    featured: true
-  },
+// GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
+//   {
+//     id: "matriz-grill",
+//     slug: "matriz-grill",
+//     client: "Matriz Grill",
+//     category: "Gastronomia, Restaurante & Bar",
+//     planType: "SITE ESSENCIAL",
+//     projectType: "real",
+//     badge: "PROJETO REALIZADO • CLIENTE REAL",
+//     tagline: "Música ao vivo de alta qualidade, hambúrgueres artesanais, porções na chapa e o chopp mais gelado da região.",
+//     objective: "Desenvolvimento de site institucional e cardápio digital para a Matriz Grill, localizada na esquina mais badalada da cidade, com destaque para música ao vivo, combos de hambúrgueres artesanais, porções na chapa, vinhos de inverno, sopas e cremes reconfortantes e chopp gelado.",
+//     challenge: "Transmitir a atmosfera vibrante da casa, organizar as opções do cardápio gastronômico e facilitar reservas de mesas e localização para os clientes.",
+//     solution: "Layout contemporâneo com fotografias apetitosas em destaque, atmosfera acolhedora noturna, programação musical atualizada, cardápio digital e integração direta para reservas no WhatsApp.",
+//     structure: [
+//       "Hero visual com gastronomia, chopp artesanal e atmosfera noturna",
+//       "Apresentação da casa na esquina mais badalada e acolhedora da cidade",
+//       "Cardápio com combos artesanais, porções na chapa, sopas, cremes e vinhos selecionados",
+//       "Programação de música ao vivo de alta qualidade e eventos",
+//       "Horários de funcionamento, localização com mapa interativo e reservas",
+//       "Botão direto no WhatsApp para reservas de mesas e atendimento"
+//     ],
+//     style: "Identidade gastronômica calorosa em tons escuros e âmbar, tipografia marcante e fotografias apetitosas em alta definição.",
+//     results: "Site publicado com cardápio completo, agenda de shows, localização e canal direto de reservas via WhatsApp.",
+//     img: matrizGrillMockup,
+//     demo: "https://matrizgrillvideira.vercel.app/",
+//     technologies: ["React", "Tailwind CSS", "Cardápio Digital", "SEO Local", "WhatsApp Direct"],
+//     featured: true
+//   },
 
   // MODELOS DE REFERÊNCIA — DEMONSTRATIVOS
   {

@@ -4,7 +4,8 @@ import sorayAbbud from '../assets/clientes/soray-abbud.webp';
 import mariaJunqueira from '../assets/clientes/maria-junqueira.webp';
 import danielleCarvao from '../assets/clientes/danielle-carvao.webp';
 import vivianeMengatto from '../assets/clientes/viviane-mengatto.webp';
-import matrizGrill from '../assets/clientes/matriz-grill.webp';
+// GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
+// import matrizGrill from '../assets/clientes/matriz-grill.webp';
 
 export type ClienteDestaque = {
   cliente: string;
@@ -19,5 +20,6 @@ export const clientesDestaque: ClienteDestaque[] = [
   { cliente: 'Dra. Maria Junqueira', area: 'Biomedicina estética', img: mariaJunqueira, link: 'https://dramariajunqueira.vercel.app/', slug: 'dra-maria-junqueira' },
   { cliente: 'Dra. Danielle Carvão', area: 'Odontologia e rejuvenescimento facial', img: danielleCarvao, link: 'https://dradanicarvao.com.br/', slug: 'dra-danielle-carvao' },
   { cliente: 'Dra. Viviane Mengatto', area: 'Estética avançada', img: vivianeMengatto, link: 'https://dra-viviane-mengatto.vercel.app/', slug: 'dra-viviane-mengatto' },
-  { cliente: 'Matriz Grill', area: 'Restaurante e bar', img: matrizGrill, link: 'https://matrizgrillvideira.vercel.app/', slug: 'matriz-grill' },
+// GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
+//   { cliente: 'Matriz Grill', area: 'Restaurante e bar', img: matrizGrill, link: 'https://matrizgrillvideira.vercel.app/', slug: 'matriz-grill' },
 ];

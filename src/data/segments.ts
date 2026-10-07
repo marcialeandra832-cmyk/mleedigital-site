@@ -259,7 +259,8 @@ export const segmentsData: Record<string, SegmentInfo> = {
       { q: "Como faço para trocar produtos e preços?", a: "Você me manda as mudanças e eu atualizo. Isso já está incluso na manutenção mensal." },
       { q: "O cliente paga pelo catálogo?", a: "O pedido chega no seu WhatsApp e o pagamento é combinado com você, do jeito que você já trabalha." }
     ],
-    relatedProjectSlug: "matriz-grill",
+// GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
+//     relatedProjectSlug: "matriz-grill",
     metaDescription: "Catálogo digital para lojas, restaurantes e negócios que vendem produtos: itens organizados, fotos e pedido direto pelo WhatsApp. Criado pela Márcia, da MLee Digital.",
     keywords: ["catálogo digital", "catálogo online WhatsApp", "cardápio digital", "catálogo de produtos online"]
   }

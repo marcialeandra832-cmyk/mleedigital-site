@@ -45,8 +45,8 @@ function Capa({ p, grande = false }: { p: Project; grande?: boolean; key?: Key }
 }
 
 export function PortfolioPage() {
-  // Clientes primeiro; quem já tem estudo de caso completo aparece no topo.
-  const clientes = projectsData.filter((p) => p.projectType === 'real').sort((a, b) => Number(!!b.caso) - Number(!!a.caso));
+  // O projeto da capa grande é escolhido aqui; os demais seguem a ordem da lista de projetos.
+  const clientes = projectsData.filter((p) => p.projectType === 'real');
   // Modelos: a lista do portfólio e, depois, os que só existem na lista de projetos (sem repetir).
   const modelos = [
     ...modelosPortfolio,
@@ -54,7 +54,8 @@ export function PortfolioPage() {
       .filter((p) => p.projectType === 'model' && !modelosPortfolio.some((m) => m.nome === p.client))
       .map((p) => ({ nome: p.client, area: p.category, img: p.img, link: p.demo })),
   ];
-  const [destaque, ...demais] = clientes;
+  const destaque = clientes.find((p) => p.slug === 'dra-viviane-mengatto') ?? clientes[0];
+  const demais = clientes.filter((p) => p !== destaque);
 
   const schema = {
     '@context': 'https://schema.org',

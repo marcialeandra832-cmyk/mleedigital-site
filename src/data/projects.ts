@@ -1,6 +1,10 @@
 import sorayAbbudCapa from '../assets/clientes/soray-abbud.webp';
 import { Project } from '../types';
 import { casoViviane } from './casos/viviane';
+import { casoSoray } from './casos/soray';
+import { casoMaria } from './casos/maria';
+import { casoDanielle } from './casos/danielle';
+import { casoNicole } from './casos/nicole';
 import vanguardaMockup from '../assets/modelos/figueiredo-advocacia.webp';
 import draMariaJunqueiraMockup from '../assets/clientes/maria-junqueira.webp';
 import draDanielleCarvaoMockup from '../assets/clientes/danielle-carvao.webp';
@@ -16,7 +20,7 @@ export const projectsData: Project[] = [
     id: "dra-soraya-abbud",
     slug: "dra-soraya-abbud",
     client: "Dra. Soray Abbud",
-    category: "Médica Especialista / Saúde & Estética",
+    category: "Odontologia Estética & Estética Avançada",
     planType: "SITE ESSENCIAL",
     projectType: "real",
     badge: "PROJETO REALIZADO • CLIENTE REAL",
@@ -37,7 +41,8 @@ export const projectsData: Project[] = [
     img: sorayAbbudCapa,
     demo: "https://www.drasorayabbud.com.br/",
     technologies: ["React", "Tailwind CSS", "SEO Local", "Google Maps API", "WhatsApp Integration"],
-    featured: true
+    featured: true,
+    caso: casoSoray
   },
   {
     id: "dra-maria-junqueira",
@@ -64,7 +69,8 @@ export const projectsData: Project[] = [
     img: draMariaJunqueiraMockup,
     demo: "https://dramariajunqueira.vercel.app/",
     technologies: ["React", "Tailwind CSS", "Método CRIO 4D", "SEO para Estética", "WhatsApp Integration"],
-    featured: true
+    featured: true,
+    caso: casoMaria
   },
   {
     id: "dra-danielle-carvao",
@@ -91,7 +97,8 @@ export const projectsData: Project[] = [
     img: draDanielleCarvaoMockup,
     demo: "https://dradanicarvao.com.br/",
     technologies: ["React", "Tailwind CSS", "Método DC Renova 360", "One Page", "WhatsApp Direct"],
-    featured: true
+    featured: true,
+    caso: casoDanielle
   },
   {
     id: "dra-viviane-mengatto",
@@ -146,7 +153,8 @@ export const projectsData: Project[] = [
     img: nicoleBordignonCapa,
     demo: "https://nicolebordignon.mleedigital.com.br/",
     technologies: ["Página única", "Design responsivo", "WhatsApp direto"],
-    featured: true
+    featured: true,
+    caso: casoNicole
   },
 // GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
 //   {

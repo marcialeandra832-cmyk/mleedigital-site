@@ -55,14 +55,14 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
         </h1>
         <p className="mt-6 sm:mt-8 text-[18px] sm:text-[21px] leading-relaxed text-[#3F5557] max-w-2xl">{caso.resumo}</p>
 
-        <dl className="mt-10 sm:mt-14 pt-5 border-t border-[#0F3B40] grid grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-6">
+        <dl className={`mt-10 sm:mt-14 pt-5 border-t border-[#0F3B40] grid grid-cols-2 ${caso.ficha.length >= 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4'} gap-x-6 gap-y-6`}>
           {caso.ficha.map((f) => (
             <div key={f.rotulo}>
               <dt className="text-[14px] text-[#3F5557]">{f.rotulo}</dt>
               <dd className="mt-1 text-[17px]">{f.valor}</dd>
             </div>
           ))}
-          <div className="col-span-2 lg:col-span-1 lg:text-right">
+          <div className={`${caso.ficha.length % 2 === 0 ? 'col-span-2' : ''} lg:col-span-1 lg:text-right`}>
             <dt className="text-[14px] text-[#3F5557]">Endereço</dt>
             <dd className="mt-1 text-[17px]">
               <a href={project.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 underline decoration-[#CC8A80] underline-offset-4 hover:decoration-2 break-all">
@@ -77,22 +77,26 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
       <section aria-label={`Site de ${project.client} no computador e no celular`} className="px-5 sm:px-8 lg:px-14 pt-10 sm:pt-20 pb-16 sm:pb-24" style={{ background: caso.palco.fundo }}>
         <div className="relative max-w-6xl mx-auto pb-[14%] sm:pb-[6%] pr-0 sm:pr-[9%]">
           <JanelaNavegador endereco={endereco}>
-            <video
-              className="block w-full aspect-[1280/736] object-cover bg-black"
-              src={caso.video.src}
-              poster={caso.video.poster}
-              muted
-              playsInline
-              loop
-              autoPlay={!reduz}
-              controls={reduz}
-              preload="metadata"
-            />
+            {caso.video ? (
+              <video
+                className="block w-full aspect-[1280/736] object-cover bg-black"
+                src={caso.video.src}
+                poster={caso.video.poster}
+                muted
+                playsInline
+                loop
+                autoPlay={!reduz}
+                controls={reduz}
+                preload="metadata"
+              />
+            ) : (
+              <img src={project.img} alt={`Abertura do site de ${project.client}`} className="block w-full h-auto" />
+            )}
           </JanelaNavegador>
           <Celular
             src={caso.capaCelular}
             alt={`Abertura do site de ${project.client} no celular`}
-            cor="#2E2E2E"
+            cor={caso.palco.moldura || '#2E2E2E'}
             className="absolute right-[3%] sm:right-0 bottom-0 w-[30%] sm:w-[19%]"
           />
         </div>
@@ -127,9 +131,9 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
         </ul>
 
         <div className="px-5 sm:px-8 lg:px-14 mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end">
-          <p aria-hidden="true" className="lg:col-span-4 text-[120px] sm:text-[200px] leading-[0.8] text-[#0F3B40]" style={{ fontFamily: caso.fonte.css, fontWeight: 300 }}>Aa</p>
+          <p aria-hidden="true" className="lg:col-span-4 text-[120px] sm:text-[200px] leading-[0.8] text-[#0F3B40]" style={{ fontFamily: caso.fonte.css, fontWeight: caso.fonte.peso ?? 400 }}>Aa</p>
           <div className="lg:col-span-7 lg:col-start-6 border-t border-[#DCD2C6] pt-6">
-            <p className="text-[26px] sm:text-[38px] leading-[1.15] uppercase" style={{ fontFamily: caso.fonte.css, fontWeight: 300, letterSpacing: '-0.01em' }}>{caso.fonte.amostra}</p>
+            <p className={`text-[26px] sm:text-[38px] leading-[1.15] ${caso.fonte.maiusculas ? 'uppercase' : ''}`} style={{ fontFamily: caso.fonte.css, fontWeight: caso.fonte.peso ?? 400, letterSpacing: '-0.01em' }}>{caso.fonte.amostra}</p>
             <p className="mt-5 text-[16px] text-[#3F5557] leading-relaxed">
               <span className="text-[#0F3B40]">{caso.fonte.nome}.</span> {caso.fonte.uso}
             </p>
@@ -167,7 +171,7 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
         <ul className="mt-12 sm:mt-16 flex md:justify-center gap-6 md:gap-12 px-5 sm:px-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {caso.celular.telas.map((t, i) => (
             <li key={t.legenda} className={`shrink-0 snap-center w-[64vw] max-w-[280px] md:w-[250px] ${i % 2 === 1 ? 'md:mt-16' : ''}`}>
-              <Celular src={t.img} alt={`${t.legenda} no celular`} cor={caso.palco.fundo} />
+              <Celular src={t.img} alt={`${t.legenda} no celular`} cor={caso.palco.fundo} proporcao={caso.celular.proporcao} />
               <p className="mt-4 text-[15px] text-center">{t.legenda}</p>
             </li>
           ))}

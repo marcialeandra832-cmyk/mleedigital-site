@@ -1,15 +1,15 @@
 // Estudo de caso completo (página no estilo Behance). Opcional: projeto sem "caso" usa a página simples.
 export interface Caso {
   resumo: string;                               // frase logo abaixo do nome
-  ficha: { rotulo: string; valor: string }[];   // área, local, entrega...
-  palco: { fundo: string; destaque: string };   // cores da cliente usadas na capa
-  video: { src: string; poster: string };       // gravação do site no computador
+  ficha: { rotulo: string; valor: string }[];   // área, local, plano...
+  palco: { fundo: string; moldura?: string };   // cor da cliente usada na capa e cor da moldura do celular
+  video?: { src: string; poster: string };      // gravação do site no computador (se não houver, a capa usa a imagem do projeto)
   capaCelular: string;                          // tela do celular que aparece na capa
   contexto: string[];                           // parágrafos de "O ponto de partida"
   cores: { texto: string; paleta: { nome: string; hex: string; escura?: boolean }[] };
-  fonte: { nome: string; uso: string; amostra: string; css: string; link: string };
+  fonte: { nome: string; uso: string; amostra: string; css: string; link: string; peso?: number; maiusculas?: boolean };
   telas: { img: string; titulo: string; texto: string }[];
-  celular: { texto: string; fundo: string; telas: { img: string; legenda: string }[] };
+  celular: { texto: string; fundo: string; proporcao?: string; telas: { img: string; legenda: string }[] };
   entregas: string[];
 }
 

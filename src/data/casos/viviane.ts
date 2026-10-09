@@ -19,7 +19,7 @@ export const casoViviane: Caso = {
     { rotulo: 'Plano', valor: 'Site Essencial' },
     { rotulo: 'No ar desde', valor: 'Setembro de 2026' },
   ],
-  palco: { fundo: '#1A1A1A', destaque: '#D6B67B' },
+  palco: { fundo: '#1A1A1A', moldura: '#2E2E2E' },
   video: { src: '/showreel/viviane-desktop.mp4', poster: '/showreel/viviane-desktop.jpg' },
   capaCelular: celularTopo,
   contexto: [
@@ -41,6 +41,8 @@ export const casoViviane: Caso = {
     uso: 'Uma única família de letras em todo o site: fina nos títulos, regular nos textos.',
     amostra: 'Realce sua beleza com naturalidade',
     css: '"Raleway", sans-serif',
+    peso: 300,
+    maiusculas: true,
     link: 'https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap',
   },
   telas: [

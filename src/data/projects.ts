@@ -5,6 +5,7 @@ import vanguardaMockup from '../assets/modelos/figueiredo-advocacia.webp';
 import draMariaJunqueiraMockup from '../assets/clientes/maria-junqueira.webp';
 import draDanielleCarvaoMockup from '../assets/clientes/danielle-carvao.webp';
 import vivianeMengattoMockup from '../assets/clientes/viviane-mengatto.webp';
+import nicoleBordignonCapa from '../assets/clientes/nicole-bordignon.webp';
 // GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
 // import matrizGrillMockup from '../assets/clientes/matriz-grill.webp';
 import carlaFigmamMockup from '../assets/images/carla_figmam_preview_1786812678656.jpg';
@@ -119,6 +120,33 @@ export const projectsData: Project[] = [
     technologies: ["React", "Tailwind CSS", "Design Dark Luxury", "SEO Estética", "WhatsApp Direct"],
     featured: true,
     caso: casoViviane
+  },
+  {
+    id: "nicole-bordignon",
+    slug: "nicole-bordignon",
+    client: "Nicole Bordignon",
+    category: "Sobrancelhas e maquiagem",
+    planType: "SITE ESSENCIAL",
+    projectType: "real",
+    badge: "PROJETO REALIZADO • CLIENTE REAL",
+    tagline: "Sobrancelhas e maquiagem em Videira, com agendamento direto pelo WhatsApp.",
+    objective: "Site de página única para a Nicole Bordignon, designer de sobrancelhas e maquiadora em Videira, SC, apresentando os serviços e levando a cliente direto para o agendamento.",
+    challenge: "Mostrar o trabalho de quem até então não tinha site, com a foto dela em destaque e textos curtos, sem depender de fotos de antes e depois.",
+    solution: "Abertura em tela cheia com a foto e o nome dela em letras grandes, lista dos serviços com uma explicação simples de cada um, área para noivas e botão de agendamento pelo WhatsApp em toda a página.",
+    structure: [
+      "Abertura em tela cheia com foto e nome",
+      "Serviços: design e reconstrução de sobrancelhas, brow lamination, lash lifting, henna ou tintura",
+      "Maquiagem profissional para festas, formaturas, eventos e ensaios",
+      "Área dedicada a noivas",
+      "Como ela atende: avaliação antes de qualquer procedimento, sempre com horário marcado",
+      "Endereço em Videira e agendamento pelo WhatsApp"
+    ],
+    style: "Tons de marrom, nude e vinho, com tipografia grande e fotos ocupando a tela inteira.",
+    results: "Site publicado, com os serviços organizados e o agendamento a um toque pelo WhatsApp.",
+    img: nicoleBordignonCapa,
+    demo: "https://nicolebordignon.mleedigital.com.br/",
+    technologies: ["Página única", "Design responsivo", "WhatsApp direto"],
+    featured: true
   },
 // GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
 //   {

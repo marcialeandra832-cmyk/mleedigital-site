@@ -116,7 +116,7 @@ export const projectsData: Project[] = [
     style: "Design dark luxury em tons de grafite profundo, detalhes em dourado champagne e tipografia moderna e elegante.",
     results: "Presença digital marcante com estética de luxo, autoridade biomédica reforçada e direcionamento ágil para agendamentos.",
     img: vivianeMengattoMockup,
-    demo: "https://dra-viviane-mengatto.vercel.app/",
+    demo: "https://www.dravivianemengatto.com.br/",
     technologies: ["React", "Tailwind CSS", "Design Dark Luxury", "SEO Estética", "WhatsApp Direct"],
     featured: true
   },

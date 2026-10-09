@@ -19,7 +19,7 @@ export const clientesDestaque: ClienteDestaque[] = [
   { cliente: 'Dra. Soray Abbud', area: 'Estética avançada', img: sorayAbbud, link: 'https://www.drasorayabbud.com.br/', slug: 'dra-soraya-abbud' },
   { cliente: 'Dra. Maria Junqueira', area: 'Biomedicina estética', img: mariaJunqueira, link: 'https://dramariajunqueira.vercel.app/', slug: 'dra-maria-junqueira' },
   { cliente: 'Dra. Danielle Carvão', area: 'Odontologia e rejuvenescimento facial', img: danielleCarvao, link: 'https://dradanicarvao.com.br/', slug: 'dra-danielle-carvao' },
-  { cliente: 'Dra. Viviane Mengatto', area: 'Estética avançada', img: vivianeMengatto, link: 'https://dra-viviane-mengatto.vercel.app/', slug: 'dra-viviane-mengatto' },
+  { cliente: 'Dra. Viviane Mengatto', area: 'Estética avançada', img: vivianeMengatto, link: 'https://www.dravivianemengatto.com.br/', slug: 'dra-viviane-mengatto' },
 // GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
 //   { cliente: 'Matriz Grill', area: 'Restaurante e bar', img: matrizGrill, link: 'https://matrizgrillvideira.vercel.app/', slug: 'matriz-grill' },
 ];

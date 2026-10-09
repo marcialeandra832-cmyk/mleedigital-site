@@ -104,7 +104,7 @@ export function PortfolioPage() {
             {catalogos.map((c) => (
               <li key={c.nome} className="w-[200px]">
                 <a href={c.link} target="_blank" rel="noopener noreferrer" data-cursor="Abrir" className="group block">
-                  <Celular src={c.img} alt={`${c.tipo}: ${c.nome}`} />
+                  <Celular src={c.img} alt={`${c.tipo}: ${c.nome}`} proporcao="9 / 16" />
                   <span className="mt-5 flex items-start justify-between gap-2">
                     <span className="font-serif text-[22px] leading-snug group-hover:underline decoration-[#CC8A80] decoration-1 underline-offset-[5px]">{c.nome}</span>
                     <ArrowUpRight className="w-5 h-5 mt-1 shrink-0 text-[#3F5557]" aria-hidden="true" />

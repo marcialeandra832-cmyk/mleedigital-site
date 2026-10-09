@@ -2,6 +2,7 @@
 // Catálogo novo: coloque o print do celular em src/assets/catalogos/ e acrescente um item em "catalogos".
 // App novo: acrescente um item em "apps" (o "slug" é o endereço da página do app em /apps/).
 import cardapioMatrizGrill from '../assets/catalogos/cardapio-matriz-grill.webp';
+import moniqueNailDesigner from '../assets/catalogos/monique-nail-designer.webp';
 import nailFinance from '../assets/apps/nail-finance.webp';
 import elasticFit from '../assets/apps/elastic-fit.webp';
 
@@ -10,6 +11,7 @@ export type AppPortfolio = { nome: string; resumo: string; img: string; slug: st
 
 export const catalogos: Catalogo[] = [
   { nome: 'Matriz Grill', tipo: 'Cardápio digital de cliente', img: cardapioMatrizGrill, link: 'https://cardapio-matrizgrill.vercel.app/' },
+  { nome: 'Monique Nail Designer', tipo: 'Catálogo de demonstração', img: moniqueNailDesigner, link: 'https://moniquenaildesigner.vercel.app/' },
 ];
 
 export const apps: AppPortfolio[] = [

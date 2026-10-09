@@ -19,12 +19,21 @@ export function JanelaNavegador({ endereco, children, className = '' }: { endere
   );
 }
 
-export function Celular({ src, alt, className = '', cor = '#0F3B40' }: { src: string; alt: string; className?: string; cor?: string }) {
+export function Celular({ src, alt, className = '', cor = '#0F3B40', proporcao }: { src: string; alt: string; className?: string; cor?: string; proporcao?: string }) {
   // A moldura fica numa camada interna para a borda acompanhar a largura do próprio celular.
+  // "proporcao" (ex.: "9 / 16") deixa vários celulares lado a lado com a mesma altura, cortando a sobra de baixo.
   return (
     <div className={className}>
       <div className="rounded-[13%/6.2%] p-[3.2%] shadow-[0_40px_80px_-35px_rgba(0,0,0,0.6)]" style={{ background: cor }}>
-        <img src={src} alt={alt} loading="lazy" width={640} height={1385} className="block w-full h-auto rounded-[10.5%/4.9%]" />
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          width={640}
+          height={1385}
+          className={`block w-full rounded-[10.5%/4.9%] ${proporcao ? 'object-cover object-top' : 'h-auto'}`}
+          style={proporcao ? { aspectRatio: proporcao } : undefined}
+        />
       </div>
     </div>
   );

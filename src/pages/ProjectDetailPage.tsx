@@ -14,6 +14,7 @@ import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { CTASection } from '../components/common/CTASection';
 import { projectsData } from '../data/projects';
 import { getWhatsAppLink } from '../data/constants';
+import { CasoProjeto } from './CasoProjeto';
 
 export function ProjectDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -21,6 +22,11 @@ export function ProjectDetailPage() {
 
   if (!project) {
     return <Navigate to="/portfolio/" replace />;
+  }
+
+  // Projeto com estudo de caso completo usa a página nova; os demais seguem na página simples abaixo.
+  if (project.caso) {
+    return <CasoProjeto project={project} caso={project.caso} />;
   }
 
   const breadcrumbItems = [

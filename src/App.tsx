@@ -1,10 +1,12 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { ScrollToTop } from './components/common/ScrollToTop';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { WhatsAppFloat } from './components/layout/WhatsAppFloat';
 import { SmoothScroll } from './components/motion/SmoothScroll';
 import { Cursor } from './components/motion/Cursor';
+import { CabecalhoPortfolio } from './components/portfolio/CabecalhoPortfolio';
+import { RodapePortfolio } from './components/portfolio/RodapePortfolio';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -24,6 +26,17 @@ import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfUsePage } from './pages/TermsOfUsePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
+// As páginas de portfólio têm cabeçalho e rodapé próprios, mais enxutos,
+// para o link poder ser enviado sozinho a quem pede para ver os trabalhos.
+function Cabecalho() {
+  const { pathname } = useLocation();
+  return pathname.startsWith('/portfolio') ? <CabecalhoPortfolio /> : <Navbar />;
+}
+function Rodape() {
+  const { pathname } = useLocation();
+  return pathname.startsWith('/portfolio') ? <RodapePortfolio /> : <Footer />;
+}
+
 export function App() {
   return (
     <Router>
@@ -31,7 +44,7 @@ export function App() {
       <SmoothScroll />
       <Cursor />
       <div className="min-h-screen flex flex-col bg-[#FBF8F3] text-[#0F3B40] font-sans antialiased selection:bg-[#0F3B40]/30 selection:text-[#F4EFE8]">
-        <Navbar />
+        <Cabecalho />
         
         <main className="flex-1">
           <Routes>
@@ -82,7 +95,7 @@ export function App() {
           </Routes>
         </main>
 
-        <Footer />
+        <Rodape />
         <WhatsAppFloat />
       </div>
     </Router>

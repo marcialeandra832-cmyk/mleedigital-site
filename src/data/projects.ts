@@ -1,5 +1,6 @@
 import sorayAbbudCapa from '../assets/clientes/soray-abbud.webp';
 import { Project } from '../types';
+import { casoViviane } from './casos/viviane';
 import vanguardaMockup from '../assets/modelos/figueiredo-advocacia.webp';
 import clarenzaMockup from '../assets/images/clarenza_odontologia_hero_1786750937767.jpg';
 import draMariaJunqueiraMockup from '../assets/clientes/maria-junqueira.webp';
@@ -118,7 +119,8 @@ export const projectsData: Project[] = [
     img: vivianeMengattoMockup,
     demo: "https://www.dravivianemengatto.com.br/",
     technologies: ["React", "Tailwind CSS", "Design Dark Luxury", "SEO Estética", "WhatsApp Direct"],
-    featured: true
+    featured: true,
+    caso: casoViviane
   },
 // GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
 //   {

@@ -1,217 +1,124 @@
-import { useState } from 'react';
+import type { Key } from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, ArrowRight, Sparkles, CheckCircle, Layout } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { SEOHead } from '../components/layout/SEOHead';
-import { Breadcrumbs } from '../components/common/Breadcrumbs';
-import { CTASection } from '../components/common/CTASection';
 import { projectsData } from '../data/projects';
+import { clientesDestaque } from '../data/clientesDestaque';
+import { getWhatsAppLink } from '../data/constants';
 import { Project } from '../types';
+import luzPetroleo from '../assets/brand/luz-janela-petroleo.webp';
 
-export function PortfolioPage() {
-  const [activeFilter, setActiveFilter] = useState<'TODOS' | 'REAL' | 'MODEL'>('TODOS');
+// Portfólio: sites de clientes em capas grandes e, abaixo, os modelos de demonstração.
+// Este link pode ser enviado sozinho a quem pede para ver os trabalhos.
+const area = (p: Project) => clientesDestaque.find((c) => c.slug === p.slug)?.area || p.category;
 
-  const realProjects = projectsData.filter(p => p.projectType === 'real');
-  const modelProjects = projectsData.filter(p => p.projectType === 'model');
-
-  const portfolioSchema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Portfólio & Modelos de Referência | MLee Digital",
-    "description": "Conheça projetos realizados para clientes e modelos demonstrativos criados pela MLee Digital.",
-    "url": "https://mleedigital.com.br/portfolio/"
-  };
-
-  const renderProjectCard = (project: Project) => (
-    <div 
-      key={project.id}
-      className="bg-[#FBF8F3] rounded-2xl overflow-hidden border border-[#DCD2C6] flex flex-col justify-between hover:shadow-xl transition-all duration-300 group"
-    >
-      <div>
-        <div className="relative aspect-[16/10] overflow-hidden bg-[#111]">
-          <img 
-            src={project.img} 
-            alt={project.client} 
-            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-          />
-          <div className="absolute top-3 left-3 right-3 flex flex-wrap items-start justify-between gap-1.5">
-            <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md border shadow-sm whitespace-nowrap ${
-              project.projectType === 'real'
-                ? 'bg-[#F4EFE8]/90 backdrop-blur-md text-[#A8675B] border-[#0F3B40]/40'
-                : 'bg-[#E9E2D8]/90 backdrop-blur-md text-[#3F5557] border-[#DCD2C6]'
-            }`}>
-              {project.badge}
-            </span>
-            <span className="bg-[#0F3B40] text-[#F4EFE8] text-[10px] font-bold px-2.5 py-1 rounded-md border border-[#0F3B40] shadow-sm whitespace-nowrap">
-              {project.planType}
-            </span>
-          </div>
-        </div>
-
-        <div className="p-6 space-y-3">
-          <div className="text-xs text-[#A8675B] font-medium">{project.category}</div>
-          <h3 className="text-2xl font-serif text-[#0F3B40]">{project.client}</h3>
-          <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
-            {project.objective}
-          </p>
-
-          <div className="pt-2 flex flex-wrap gap-1.5">
-            {project.technologies.slice(0, 3).map((tech, i) => (
-              <span key={i} className="text-[10px] bg-[#FBF8F3] text-[#3F5557] px-2 py-0.5 rounded">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="p-6 pt-0 flex items-center justify-between border-t border-[#DCD2C6] mt-4">
-        <Link
-          to={`/portfolio/${project.slug}/`}
-          className="text-xs font-semibold text-[#0F3B40] hover:text-[#A8675B] inline-flex items-center gap-1 transition-colors"
-        >
-          <span>Ver Detalhes</span>
-          <ArrowRight className="w-3 h-3" />
-        </Link>
-
-        <a
-          href={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs font-semibold text-[#A8675B] hover:text-[#F4EFE8] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0F3B40]/10 hover:bg-[#0F3B40]/20 border border-[#0F3B40]/30 transition-all"
-        >
-          <span>Ver projeto</span>
-          <ExternalLink className="w-3.5 h-3.5" />
-        </a>
-      </div>
-    </div>
-  );
-
+function Capa({ p, grande = false }: { p: Project; grande?: boolean; key?: Key }) {
   return (
-    <div className="w-full">
-      <SEOHead
-        title="Portfólio & Modelos de Referência"
-        description="Conheça projetos realizados para clientes e modelos demonstrativos criados pela MLee Digital."
-        canonicalPath="/portfolio/"
-        schemaJson={portfolioSchema}
-      />
-
-      <Breadcrumbs items={[{ label: "Portfólio & Modelos" }]} />
-
-      {/* Header */}
-      <section className="pt-10 pb-16 bg-gradient-to-b from-[#FBF8F3] to-white border-b border-[#DCD2C6] text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-3 inline-block">
-            EXCELÊNCIA EM CADA DETALHE
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-tight mb-4">
-            Portfólio & Modelos de Referência
-          </h1>
-          <p className="text-base text-[#6B7C7D] font-light max-w-2xl mx-auto">
-            Conheça projetos realizados para clientes e modelos demonstrativos criados pela MLee Digital.
-          </p>
-
-          {/* Category Filter Pills */}
-          <div className="flex items-center justify-center gap-2 mt-8 flex-wrap">
-            <button
-              type="button"
-              onClick={() => setActiveFilter('TODOS')}
-              className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
-                activeFilter === 'TODOS'
-                  ? 'bg-[#F4EFE8] text-[#0F3B40] shadow-sm'
-                  : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
-              }`}
-            >
-              Todos os Projetos ({projectsData.length})
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveFilter('REAL')}
-              className={`px-4 py-2 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
-                activeFilter === 'REAL'
-                  ? 'bg-[#F4EFE8] text-[#A8675B] shadow-sm'
-                  : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
-              }`}
-            >
-              <CheckCircle className="w-3.5 h-3.5 text-[#A8675B]" />
-              <span>Projetos Realizados ({realProjects.length})</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveFilter('MODEL')}
-              className={`px-4 py-2 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
-                activeFilter === 'MODEL'
-                  ? 'bg-[#F4EFE8] text-[#0F3B40] shadow-sm'
-                  : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
-              }`}
-            >
-              <Layout className="w-3.5 h-3.5 text-[#A8675B]" />
-              <span>Modelos de Referência ({modelProjects.length})</span>
-            </button>
-          </div>
+    <article>
+      <Link to={`/portfolio/${p.slug}/`} data-cursor="Ver" className="group block overflow-hidden rounded-2xl aspect-[16/9] bg-[#E9E2D8]">
+        <img
+          src={p.img}
+          alt={`Site de ${p.client}`}
+          loading={grande ? 'eager' : 'lazy'}
+          className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
+        />
+      </Link>
+      <div className="mt-5 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+        <div>
+          <h3 className={`font-serif leading-tight ${grande ? 'text-[32px] sm:text-[48px]' : 'text-[26px] sm:text-[30px]'}`}>
+            <Link to={`/portfolio/${p.slug}/`} className="hover:underline decoration-[#CC8A80] decoration-1 underline-offset-[6px]">{p.client}</Link>
+          </h3>
+          <p className="mt-1 text-[15px] text-[#3F5557]">{area(p)}</p>
         </div>
-      </section>
-
-      {/* Main Content Area */}
-      <section className="py-16 bg-white space-y-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
-          {/* CATEGORIA 1: PROJETOS REALIZADOS (CLIENTES REAIS) */}
-          {(activeFilter === 'TODOS' || activeFilter === 'REAL') && (
-            <div className="space-y-8">
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-[#DCD2C6] pb-4">
-                <div>
-                  <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#A8675B] uppercase tracking-wider mb-1">
-                    <CheckCircle className="w-4 h-4 text-[#A8675B]" />
-                    <span>Clientes Reais</span>
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl font-serif text-[#0F3B40]">
-                    Projetos Realizados
-                  </h2>
-                </div>
-                <p className="text-xs sm:text-sm text-[#3F5557] mt-2 sm:mt-0 max-w-md">
-                  Sites desenvolvidos e publicados para clientes da MLee Digital.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {realProjects.map(renderProjectCard)}
-              </div>
-            </div>
-          )}
-
-          {/* CATEGORIA 2: MODELOS DE REFERÊNCIA (DEMONSTRATIVOS) */}
-          {(activeFilter === 'TODOS' || activeFilter === 'MODEL') && (
-            <div className="space-y-8">
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-[#DCD2C6] pb-4">
-                <div>
-                  <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#6B7C7D] uppercase tracking-wider mb-1">
-                    <Layout className="w-4 h-4 text-[#A8675B]" />
-                    <span>Estruturas Demonstrativas</span>
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl font-serif text-[#0F3B40]">
-                    Modelos de Referência
-                  </h2>
-                </div>
-                <p className="text-xs sm:text-sm text-[#3F5557] mt-2 sm:mt-0 max-w-md">
-                  Modelos visuais demonstrativos desenvolvidos como referência para novos projetos.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
-                {modelProjects.map(renderProjectCard)}
-              </div>
-            </div>
-          )}
-
+        <div className="flex gap-5 text-[15px]">
+          <Link to={`/portfolio/${p.slug}/`} className="underline decoration-[#CC8A80] underline-offset-4 hover:decoration-2">Ver o projeto</Link>
+          <a href={p.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#3F5557] hover:text-[#0F3B40]">
+            Abrir o site <ArrowUpRight className="w-4 h-4" />
+          </a>
         </div>
-      </section>
-
-      <CTASection 
-        title="Gostou dos projetos? Vamos criar o seu agora."
-        subtitle="Conversamos sobre o seu negócio e apresentamos uma proposta transparente."
-        whatsappMessage="Olá Márcia! Vi os projetos no portfólio e gostaria de um site semelhante para o meu negócio."
-      />
-    </div>
+      </div>
+    </article>
   );
 }
 
+export function PortfolioPage() {
+  // Clientes primeiro; quem já tem estudo de caso completo aparece no topo.
+  const clientes = projectsData.filter((p) => p.projectType === 'real').sort((a, b) => Number(!!b.caso) - Number(!!a.caso));
+  const modelos = projectsData.filter((p) => p.projectType === 'model');
+  const [destaque, ...demais] = clientes;
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Portfólio | MLee Digital',
+    description: 'Sites criados e publicados pela MLee Digital para clientes, com as telas e o que foi feito em cada projeto.',
+    url: 'https://mleedigital.com.br/portfolio/',
+  };
+
+  return (
+    <div className="w-full bg-[#F4EFE8] text-[#0F3B40]">
+      <SEOHead
+        title="Portfólio"
+        description="Sites criados e publicados pela MLee Digital para clientes, com as telas e o que foi feito em cada projeto."
+        canonicalPath="/portfolio/"
+        schemaJson={schema}
+      />
+
+      <header className="px-5 sm:px-8 lg:px-14 pt-12 sm:pt-20 pb-10 sm:pb-14 grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+        <h1 className="lg:col-span-7 font-serif text-[clamp(56px,11vw,176px)] leading-[0.9] tracking-[-0.035em]" style={{ fontVariationSettings: '"opsz" 96' }}>
+          Portfólio
+        </h1>
+        <p className="lg:col-span-4 lg:col-start-9 text-[18px] sm:text-[19px] leading-relaxed text-[#3F5557] lg:pb-3">
+          Sites que eu criei e publiquei para clientes. Abra cada projeto para ver as telas e o que foi feito.
+        </p>
+      </header>
+
+      <section aria-label="Sites de clientes" className="px-5 sm:px-8 lg:px-14 pb-20 sm:pb-28">
+        <div className="border-t border-[#0F3B40] pt-8 sm:pt-10">
+          {destaque && <Capa p={destaque} grande />}
+          <div className={`mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-2 ${demais.length % 3 === 0 ? 'lg:grid-cols-3' : ''} gap-x-8 lg:gap-x-10 gap-y-14`}>
+            {demais.map((p) => <Capa key={p.slug} p={p} />)}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#FBF8F3] border-y border-[#DCD2C6] px-5 sm:px-8 lg:px-14 py-20 sm:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+          <h2 className="lg:col-span-6 font-serif text-[36px] sm:text-[52px] leading-[1.02] tracking-[-0.02em]">Modelos de demonstração</h2>
+          <p className="lg:col-span-5 lg:col-start-8 text-[17px] leading-relaxed text-[#3F5557]">
+            Sites de exemplo que eu criei para mostrar como ficaria em cada área. Não são de clientes.
+          </p>
+        </div>
+        <ul className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+          {modelos.map((p) => (
+            <li key={p.slug}>
+              <Link to={`/portfolio/${p.slug}/`} className="group block">
+                <span className="block overflow-hidden rounded-xl aspect-[16/10] bg-[#E9E2D8]">
+                  <img src={p.img} alt={`Modelo ${p.client}`} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]" />
+                </span>
+                <span className="mt-4 block font-serif text-[22px] leading-snug group-hover:underline decoration-[#CC8A80] decoration-1 underline-offset-[5px]">{p.client}</span>
+                <span className="mt-1 block text-[14px] text-[#3F5557]">{p.category}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="text-[#F4EFE8] px-5 sm:px-8 lg:px-14 pt-24 sm:pt-32 pb-16" style={{ backgroundColor: '#0F3B40', backgroundImage: `url(${luzPetroleo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <h2 className="font-serif text-[clamp(48px,9vw,160px)] leading-[0.9] tracking-[-0.035em]">Vamos criar o seu?</h2>
+        <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
+          <a
+            href={getWhatsAppLink('Olá Márcia! Vi o seu portfólio e quero conversar sobre o meu site.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cursor="Oi!"
+            className="inline-flex items-center self-start rounded-full bg-[#F4EFE8] text-[#0F3B40] px-9 py-5 text-[17px] hover:bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F4EFE8]"
+          >
+            Falar no WhatsApp
+          </a>
+          <p className="text-[16px] text-[#F4EFE8]/75 max-w-sm leading-relaxed">Me conta sobre o seu trabalho. Quem responde sou eu, a Márcia.</p>
+        </div>
+      </section>
+    </div>
+  );
+}

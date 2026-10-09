@@ -144,7 +144,7 @@ export const projectsData: Project[] = [
 //     style: "Identidade gastronômica calorosa em tons escuros e âmbar, tipografia marcante e fotografias apetitosas em alta definição.",
 //     results: "Site publicado com cardápio completo, agenda de shows, localização e canal direto de reservas via WhatsApp.",
 //     img: matrizGrillMockup,
-//     demo: "https://matrizgrillvideira.vercel.app/",
+//     demo: "https://www.matrizgrillvideira.com.br/",
 //     technologies: ["React", "Tailwind CSS", "Cardápio Digital", "SEO Local", "WhatsApp Direct"],
 //     featured: true
 //   },

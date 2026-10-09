@@ -5,6 +5,8 @@ import { SEOHead } from '../components/layout/SEOHead';
 import { projectsData } from '../data/projects';
 import { clientesDestaque } from '../data/clientesDestaque';
 import { modelosPortfolio } from '../data/modelos';
+import { catalogos, apps } from '../data/tambemFaco';
+import { Celular } from '../components/portfolio/Molduras';
 import { getWhatsAppLink } from '../data/constants';
 import { Project } from '../types';
 import luzPetroleo from '../assets/brand/luz-janela-petroleo.webp';
@@ -80,12 +82,58 @@ export function PortfolioPage() {
         </p>
       </header>
 
-      <section aria-label="Sites de clientes" className="px-5 sm:px-8 lg:px-14 pb-20 sm:pb-28">
+      <section aria-label="Sites de clientes" className="px-5 sm:px-8 lg:px-14 pb-16 sm:pb-24">
         <div className="border-t border-[#0F3B40] pt-8 sm:pt-10">
           {destaque && <Capa p={destaque} grande />}
           <div className={`mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-2 ${demais.length % 3 === 0 ? 'lg:grid-cols-3' : ''} gap-x-8 lg:gap-x-10 gap-y-14`}>
             {demais.map((p) => <Capa key={p.slug} p={p} />)}
           </div>
+        </div>
+      </section>
+
+      {/* TAMBÉM FAÇO: catálogos, cardápios e apps */}
+      <section className="px-5 sm:px-8 lg:px-14 pb-20 sm:pb-28">
+        <h2 className="border-t border-[#0F3B40] pt-8 sm:pt-10 font-serif text-[36px] sm:text-[52px] leading-[1.02] tracking-[-0.02em]">Também faço</h2>
+
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-4">
+            <h3 className="font-serif text-[28px] sm:text-[32px] leading-tight">Catálogos e cardápios</h3>
+            <p className="mt-3 text-[17px] leading-relaxed text-[#3F5557] max-w-[34ch]">Um link só com todos os produtos ou pratos, feito para abrir no celular.</p>
+          </div>
+          <ul className="lg:col-span-7 lg:col-start-6 flex flex-wrap gap-x-10 gap-y-12">
+            {catalogos.map((c) => (
+              <li key={c.nome} className="w-[200px]">
+                <a href={c.link} target="_blank" rel="noopener noreferrer" data-cursor="Abrir" className="group block">
+                  <Celular src={c.img} alt={`${c.tipo}: ${c.nome}`} />
+                  <span className="mt-5 flex items-start justify-between gap-2">
+                    <span className="font-serif text-[22px] leading-snug group-hover:underline decoration-[#CC8A80] decoration-1 underline-offset-[5px]">{c.nome}</span>
+                    <ArrowUpRight className="w-5 h-5 mt-1 shrink-0 text-[#3F5557]" aria-hidden="true" />
+                  </span>
+                  <span className="mt-1 block text-[15px] text-[#3F5557]">{c.tipo}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-16 sm:mt-24 pt-10 sm:pt-12 border-t border-[#DCD2C6] grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-4">
+            <h3 className="font-serif text-[28px] sm:text-[32px] leading-tight">Apps</h3>
+            <p className="mt-3 text-[17px] leading-relaxed text-[#3F5557] max-w-[34ch]">Aplicativos que eu criei do zero, do desenho à publicação.</p>
+          </div>
+          <ul className="lg:col-span-7 lg:col-start-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+            {apps.map((a) => (
+              <li key={a.slug}>
+                <Link to={`/apps/${a.slug}/`} data-cursor="Ver" className="group block">
+                  <span className="block overflow-hidden rounded-xl aspect-[16/9] bg-[#E9E2D8] border border-[#DCD2C6]">
+                    <img src={a.img} alt={`Tela do app ${a.nome}`} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]" />
+                  </span>
+                  <span className="mt-4 block font-serif text-[22px] leading-snug group-hover:underline decoration-[#CC8A80] decoration-1 underline-offset-[5px]">{a.nome}</span>
+                  <span className="mt-1 block text-[15px] text-[#3F5557]">{a.resumo}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

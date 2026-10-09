@@ -2,14 +2,12 @@ import sorayAbbudCapa from '../assets/clientes/soray-abbud.webp';
 import { Project } from '../types';
 import { casoViviane } from './casos/viviane';
 import vanguardaMockup from '../assets/modelos/figueiredo-advocacia.webp';
-import clarenzaMockup from '../assets/images/clarenza_odontologia_hero_1786750937767.jpg';
 import draMariaJunqueiraMockup from '../assets/clientes/maria-junqueira.webp';
 import draDanielleCarvaoMockup from '../assets/clientes/danielle-carvao.webp';
 import vivianeMengattoMockup from '../assets/clientes/viviane-mengatto.webp';
 // GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
 // import matrizGrillMockup from '../assets/clientes/matriz-grill.webp';
 import carlaFigmamMockup from '../assets/images/carla_figmam_preview_1786812678656.jpg';
-import auraEsteticaMockup from '../assets/images/aura_estetica_preview_1786812029262.jpg';
 
 export const projectsData: Project[] = [
   // PROJETOS REALIZADOS — CLIENTES REAIS
@@ -177,60 +175,6 @@ export const projectsData: Project[] = [
     img: carlaFigmamMockup,
     demo: "https://carlafigmam.vercel.app/",
     technologies: ["React", "Tailwind CSS", "Simulador de Consórcios", "SEO Local", "WhatsApp Direct"],
-    featured: true
-  },
-  {
-    id: "clarenza-odontologia",
-    slug: "clarenza-odontologia",
-    client: "Clarenza Odontologia e Sorrisos",
-    category: "Odontologia & Estética Dental",
-    planType: "SITE ESSENCIAL",
-    projectType: "model",
-    badge: "MODELO DE REFERÊNCIA • DEMONSTRATIVO",
-    tagline: "Estrutura visual moderna com catálogo de tratamentos, alinhadores e canal direto para contato.",
-    objective: "Modelo demonstrativo desenvolvido para consultórios e clínicas odontológicas que buscam apresentar tratamentos como implantes, próteses, ortodontia estética e clareamento.",
-    challenge: "Apresentar procedimentos clínicos e biossegurança com clareza visual e canais ágeis de contato.",
-    solution: "Página fluida com catálogo de tratamentos, tecnologia do consultório, localização com mapa interativo e botão direto para o WhatsApp.",
-    structure: [
-      "Hero marcante com apresentação do consultório e chamada para contato",
-      "Catálogo completo de tratamentos e especialidades odontológicas",
-      "Diferenciais de conforto, biossegurança e atendimento humanizado",
-      "Apresentação do cirurgião-dentista e registro no CRO",
-      "Localização física com mapa interativo e facilidade de acesso",
-      "Canal direto no WhatsApp para tirar dúvidas e agendar consultas"
-    ],
-    style: "Design clean, luminoso, tipografia moderna e paleta refinada para saúde e estética bucal.",
-    results: "Estrutura visual completa e organizada para clínicas odontológicas apresentarem suas especialidades e canais de contato.",
-    img: clarenzaMockup,
-    demo: "https://clarenzaodontologiaesorrisos.vercel.app/",
-    technologies: ["React", "Tailwind CSS", "SEO Odontológico", "Google Maps", "WhatsApp Direct"],
-    featured: true
-  },
-  {
-    id: "aura-estetica",
-    slug: "aura-estetica",
-    client: "Aura Estética & Bem-Estar",
-    category: "Estética Avançada, Beleza & Bem-Estar",
-    planType: "SITE ESSENCIAL",
-    projectType: "model",
-    badge: "MODELO DE REFERÊNCIA • DEMONSTRATIVO",
-    tagline: "Estrutura visual editorial e contemporânea para clínicas de estética, micropigmentação e cuidados exclusivos.",
-    objective: "Estrutura demonstrativa criada para profissionais de beleza e estética que buscam um site sofisticado para exibir portfólio de procedimentos e agendamentos.",
-    challenge: "Equilibrar elegância estética, portfólio visual refinado e caminho direto e intuitivo para o WhatsApp do studio.",
-    solution: "Layout editorial com paleta suave e contemporânea, seções de procedimentos, galeria de trabalhos, ambiente do studio e botão de agendamento.",
-    structure: [
-      "Hero editorial com conceito de beleza personalizada e acolhimento",
-      "Menu de procedimentos e serviços especializados",
-      "Galeria visual com técnicas e diferenciais de atendimento",
-      "Apresentação da especialista e certificações",
-      "Localização com mapa integrado e horários de atendimento",
-      "Botão direto para WhatsApp para consultas e agendamentos"
-    ],
-    style: "Estética refinada em tons neutros quentes e nude rosado, tipografia elegante e sensação de exclusividade.",
-    results: "Modelo demonstrativo com excelente apelo visual e navegação otimizada para o público feminino e de estética.",
-    img: auraEsteticaMockup,
-    demo: "https://aura-demo-five.vercel.app/",
-    technologies: ["React", "Tailwind CSS", "Galeria Editorial", "SEO Local", "WhatsApp Integration"],
     featured: true
   },
   {

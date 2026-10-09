@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { SEOHead } from '../components/layout/SEOHead';
 import { projectsData } from '../data/projects';
 import { clientesDestaque } from '../data/clientesDestaque';
+import { modelosPortfolio } from '../data/modelos';
 import { getWhatsAppLink } from '../data/constants';
 import { Project } from '../types';
 import luzPetroleo from '../assets/brand/luz-janela-petroleo.webp';
@@ -44,7 +45,13 @@ function Capa({ p, grande = false }: { p: Project; grande?: boolean; key?: Key }
 export function PortfolioPage() {
   // Clientes primeiro; quem já tem estudo de caso completo aparece no topo.
   const clientes = projectsData.filter((p) => p.projectType === 'real').sort((a, b) => Number(!!b.caso) - Number(!!a.caso));
-  const modelos = projectsData.filter((p) => p.projectType === 'model');
+  // Modelos: a lista do portfólio e, depois, os que só existem na lista de projetos (sem repetir).
+  const modelos = [
+    ...modelosPortfolio,
+    ...projectsData
+      .filter((p) => p.projectType === 'model' && !modelosPortfolio.some((m) => m.nome === p.client))
+      .map((p) => ({ nome: p.client, area: p.category, img: p.img, link: p.demo })),
+  ];
   const [destaque, ...demais] = clientes;
 
   const schema = {
@@ -86,19 +93,22 @@ export function PortfolioPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
           <h2 className="lg:col-span-6 font-serif text-[36px] sm:text-[52px] leading-[1.02] tracking-[-0.02em]">Modelos de demonstração</h2>
           <p className="lg:col-span-5 lg:col-start-8 text-[17px] leading-relaxed text-[#3F5557]">
-            Sites de exemplo que eu criei para mostrar como ficaria em cada área. Não são de clientes.
+            Sites de exemplo que eu criei para mostrar como ficaria em cada área. Não são de clientes. Toque para abrir.
           </p>
         </div>
-        <ul className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
-          {modelos.map((p) => (
-            <li key={p.slug}>
-              <Link to={`/portfolio/${p.slug}/`} className="group block">
-                <span className="block overflow-hidden rounded-xl aspect-[16/10] bg-[#E9E2D8]">
-                  <img src={p.img} alt={`Modelo ${p.client}`} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]" />
+        <ul className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+          {modelos.map((m) => (
+            <li key={m.nome}>
+              <a href={m.link} target="_blank" rel="noopener noreferrer" data-cursor="Abrir" className="group block">
+                <span className="block overflow-hidden rounded-xl aspect-[16/9] bg-[#E9E2D8]">
+                  <img src={m.img} alt={`Modelo ${m.nome}`} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]" />
                 </span>
-                <span className="mt-4 block font-serif text-[22px] leading-snug group-hover:underline decoration-[#CC8A80] decoration-1 underline-offset-[5px]">{p.client}</span>
-                <span className="mt-1 block text-[14px] text-[#3F5557]">{p.category}</span>
-              </Link>
+                <span className="mt-4 flex items-start justify-between gap-3">
+                  <span className="font-serif text-[24px] leading-snug group-hover:underline decoration-[#CC8A80] decoration-1 underline-offset-[5px]">{m.nome}</span>
+                  <ArrowUpRight className="w-5 h-5 mt-1.5 shrink-0 text-[#3F5557]" aria-hidden="true" />
+                </span>
+                <span className="mt-1 block text-[15px] text-[#3F5557]">{m.area}</span>
+              </a>
             </li>
           ))}
         </ul>

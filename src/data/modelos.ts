@@ -4,6 +4,7 @@ import helenaMartins from '../assets/modelos/helena-martins.webp';
 import figueiredoAdvocacia from '../assets/modelos/figueiredo-advocacia.webp';
 import lumeStudio from '../assets/modelos/lume-studio.webp';
 import cleanArquitetura from '../assets/modelos/clean-arquitetura.webp';
+import essenciaStudio from '../assets/modelos/essencia-studio.webp';
 
 export type Modelo = { nome: string; area: string; img?: string; link?: string };
 
@@ -21,4 +22,5 @@ export const modelosPortfolio: Modelo[] = [
   { nome: 'Clean Arquitetura', area: 'Arquitetura', img: cleanArquitetura, link: 'https://clean-arquitetura.vercel.app/' },
   { nome: 'Lume Studio', area: 'Arquitetura e interiores', img: lumeStudio, link: 'https://v0-lumestudio.vercel.app/' },
   { nome: 'Figueiredo Advocacia', area: 'Advocacia', img: figueiredoAdvocacia, link: 'https://figueiredoadvocacia.vercel.app/' },
+  { nome: 'Essencia Studio', area: 'Salão de beleza', img: essenciaStudio, link: 'https://essencia-studio.vercel.app/' },
 ];

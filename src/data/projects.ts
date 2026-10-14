@@ -5,13 +5,13 @@ import { casoSoray } from './casos/soray';
 import { casoMaria } from './casos/maria';
 import { casoDanielle } from './casos/danielle';
 import { casoNicole } from './casos/nicole';
+import { casoMatriz } from './casos/matriz';
 import vanguardaMockup from '../assets/modelos/figueiredo-advocacia.webp';
 import draMariaJunqueiraMockup from '../assets/clientes/maria-junqueira.webp';
 import draDanielleCarvaoMockup from '../assets/clientes/danielle-carvao.webp';
 import vivianeMengattoMockup from '../assets/clientes/viviane-mengatto.webp';
 import nicoleBordignonCapa from '../assets/clientes/nicole-bordignon.webp';
-// GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
-// import matrizGrillMockup from '../assets/clientes/matriz-grill.webp';
+import matrizGrillMockup from '../assets/clientes/matriz-grill.webp';
 import carlaFigmamMockup from '../assets/images/carla_figmam_preview_1786812678656.jpg';
 
 export const projectsData: Project[] = [
@@ -156,34 +156,35 @@ export const projectsData: Project[] = [
     featured: true,
     caso: casoNicole
   },
-// GUARDADO — Matriz Grill: fora do ar por enquanto. Para voltar a exibir, basta tirar as barras (//) deste trecho.
-//   {
-//     id: "matriz-grill",
-//     slug: "matriz-grill",
-//     client: "Matriz Grill",
-//     category: "Gastronomia, Restaurante & Bar",
-//     planType: "SITE ESSENCIAL",
-//     projectType: "real",
-//     badge: "PROJETO REALIZADO • CLIENTE REAL",
-//     tagline: "Música ao vivo de alta qualidade, hambúrgueres artesanais, porções na chapa e o chopp mais gelado da região.",
-//     objective: "Desenvolvimento de site institucional e cardápio digital para a Matriz Grill, localizada na esquina mais badalada da cidade, com destaque para música ao vivo, combos de hambúrgueres artesanais, porções na chapa, vinhos de inverno, sopas e cremes reconfortantes e chopp gelado.",
-//     challenge: "Transmitir a atmosfera vibrante da casa, organizar as opções do cardápio gastronômico e facilitar reservas de mesas e localização para os clientes.",
-//     solution: "Layout contemporâneo com fotografias apetitosas em destaque, atmosfera acolhedora noturna, programação musical atualizada, cardápio digital e integração direta para reservas no WhatsApp.",
-//     structure: [
-//       "Hero visual com gastronomia, chopp artesanal e atmosfera noturna",
-//       "Apresentação da casa na esquina mais badalada e acolhedora da cidade",
-//       "Cardápio com combos artesanais, porções na chapa, sopas, cremes e vinhos selecionados",
-//       "Programação de música ao vivo de alta qualidade e eventos",
-//       "Horários de funcionamento, localização com mapa interativo e reservas",
-//       "Botão direto no WhatsApp para reservas de mesas e atendimento"
-//     ],
-//     style: "Identidade gastronômica calorosa em tons escuros e âmbar, tipografia marcante e fotografias apetitosas em alta definição.",
-//     results: "Site publicado com cardápio completo, agenda de shows, localização e canal direto de reservas via WhatsApp.",
-//     img: matrizGrillMockup,
-//     demo: "https://www.matrizgrillvideira.com.br/",
-//     technologies: ["React", "Tailwind CSS", "Cardápio Digital", "SEO Local", "WhatsApp Direct"],
-//     featured: true
-//   },
+  {
+    id: "matriz-grill",
+    slug: "matriz-grill",
+    client: "Matriz Grill",
+    category: "Gastronomia, Restaurante & Bar",
+    planType: "SITE ESSENCIAL",
+    projectType: "real",
+    badge: "PROJETO REALIZADO • CLIENTE REAL",
+    tagline: "Música ao vivo toda sexta, tábuas na chapa e chopp gelado. 30 anos na mesma esquina, em Videira.",
+    objective: "Site do Matriz Grill, o antigo Bar do Seco, em Videira, SC: apresentar a casa, a agenda de shows, o cardápio e o delivery, e levar a pessoa direto para a reserva de mesa.",
+    challenge: "Falar com quem frequenta a casa há 30 anos e com quem está procurando onde sair, mantendo agenda e cardápio fáceis de atualizar toda semana.",
+    solution: "Abertura com vídeos reais da casa cheia e os nomes Matriz Grill e Bar do Seco lado a lado, agenda com os cantores do mês, cardápio por categoria, área de delivery pelo AiPede e reserva pelo WhatsApp em todas as páginas.",
+    structure: [
+      "Abertura com vídeos da casa e os dois nomes em destaque",
+      "Agenda com os shows de sexta do mês e horários da casa",
+      "Cardápio: tábuas, hambúrgueres, porções, petiscos, sobremesas e bar",
+      "Delivery pelo aplicativo AiPede",
+      "Fotos e vídeos separados por ao vivo, cozinha e casa",
+      "A casa: história desde 1996 e foto de antes e depois da esquina",
+      "Endereço com mapa, contato e reserva pelo WhatsApp"
+    ],
+    style: "Carvão e madeira escura com detalhes cor de mel, títulos altos e condensados como letreiro de bar e fotos reais da casa.",
+    results: "Site publicado no domínio próprio, com agenda e cardápio atualizados e reserva de mesa a um toque pelo WhatsApp.",
+    img: matrizGrillMockup,
+    demo: "https://www.matrizgrillvideira.com.br/",
+    technologies: ["Agenda de shows", "Cardápio por categoria", "Delivery AiPede", "WhatsApp direto", "Domínio próprio"],
+    featured: true,
+    caso: casoMatriz
+  },
 
   // MODELOS DE REFERÊNCIA — DEMONSTRATIVOS
   {

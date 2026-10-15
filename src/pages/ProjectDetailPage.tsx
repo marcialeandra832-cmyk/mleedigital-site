@@ -65,18 +65,18 @@ export function ProjectDetailPage() {
           
           <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 border ${
             project.projectType === 'real'
-              ? 'bg-[#F4EFE8] border-[#0F3B40]/40 text-[#A8675B]'
-              : 'bg-[#E9E2D8] border-[#DCD2C6] text-[#3F5557]'
+              ? 'bg-[#F4EFE8] border-[#111819]/40 text-[#A8675B]'
+              : 'bg-[#E9E2D8] border-[#DCD2C6] text-[#4A5153]'
           }`}>
             <Sparkles className="w-3.5 h-3.5 text-[#A8675B]" />
             <span>{project.badge}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-4">
             {project.client}
           </h1>
 
-          <p className="text-base sm:text-lg text-[#6B7C7D] font-light leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-base sm:text-lg text-[#767D7F] font-light leading-relaxed max-w-2xl mx-auto mb-8">
             {project.tagline}
           </p>
 
@@ -85,7 +85,7 @@ export function ProjectDetailPage() {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#F4EFE8] text-[#A8675B] text-xs sm:text-sm font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-all shadow-md border border-[#0F3B40]/30"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#F4EFE8] text-[#A8675B] text-xs sm:text-sm font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-all shadow-md border border-[#111819]/30"
             >
               <span>Ver projeto</span>
               <ExternalLink className="w-4 h-4" />
@@ -95,7 +95,7 @@ export function ProjectDetailPage() {
               href={getWhatsAppLink(`Olá Márcia! Gostei muito do projeto ${project.client} e gostaria de um site semelhante.`)}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-white border border-[#DCD2C6] text-[#0F3B40] text-xs sm:text-sm font-semibold hover:border-[#0F3B40] hover:text-[#A8675B] transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-white border border-[#DCD2C6] text-[#111819] text-xs sm:text-sm font-semibold hover:border-[#111819] hover:text-[#A8675B] transition-all"
             >
               <MessageCircle className="w-4 h-4 text-[#25D366]" />
               <span>Quero um Projeto Semelhante</span>
@@ -125,15 +125,15 @@ export function ProjectDetailPage() {
           {/* Objective & Challenge */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <h2 className="text-xl font-serif text-[#0F3B40]">Objetivo do Projeto</h2>
-              <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
+              <h2 className="text-xl font-serif text-[#111819]">Objetivo do Projeto</h2>
+              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
                 {project.objective}
               </p>
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <h2 className="text-xl font-serif text-[#0F3B40]">Desafio & Estratégia</h2>
-              <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
+              <h2 className="text-xl font-serif text-[#111819]">Desafio & Estratégia</h2>
+              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
                 {project.challenge}
               </p>
             </div>
@@ -142,8 +142,8 @@ export function ProjectDetailPage() {
           {/* Solution & Structure */}
           <div className="bg-white p-8 rounded-2xl border border-[#DCD2C6] space-y-6">
             <div>
-              <h2 className="text-2xl font-serif text-[#0F3B40] mb-2">A Solução Implementada</h2>
-              <p className="text-sm text-[#6B7C7D] leading-relaxed">
+              <h2 className="text-2xl font-serif text-[#111819] mb-2">A Solução Implementada</h2>
+              <p className="text-sm text-[#767D7F] leading-relaxed">
                 {project.solution}
               </p>
             </div>
@@ -154,7 +154,7 @@ export function ProjectDetailPage() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {project.structure.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 text-xs text-[#6B7C7D]">
+                  <div key={idx} className="flex items-start gap-2.5 text-xs text-[#767D7F]">
                     <CheckCircle2 className="w-4 h-4 text-[#A8675B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
@@ -162,14 +162,14 @@ export function ProjectDetailPage() {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#DCD2C6] flex flex-wrap items-center justify-between gap-4 text-xs text-[#3F5557]">
+            <div className="pt-4 border-t border-[#DCD2C6] flex flex-wrap items-center justify-between gap-4 text-xs text-[#4A5153]">
               <div>
                 <strong>Estilo & Design:</strong> {project.style}
               </div>
               <div className="flex items-center gap-1.5">
                 <strong>Tecnologias:</strong>
                 {project.technologies.map((t, i) => (
-                  <span key={i} className="bg-[#FBF8F3] px-2 py-0.5 rounded text-[#6B7C7D]">
+                  <span key={i} className="bg-[#FBF8F3] px-2 py-0.5 rounded text-[#767D7F]">
                     {t}
                   </span>
                 ))}
@@ -182,7 +182,7 @@ export function ProjectDetailPage() {
             <span className="text-xs font-bold text-[#A8675B] uppercase tracking-wider">
               Estrutura & Entrega
             </span>
-            <p className="text-sm sm:text-base text-[#0F3B40] font-serif leading-relaxed max-w-xl mx-auto">
+            <p className="text-sm sm:text-base text-[#111819] font-serif leading-relaxed max-w-xl mx-auto">
               “{project.results}”
             </p>
           </div>

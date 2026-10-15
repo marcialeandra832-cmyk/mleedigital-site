@@ -43,7 +43,7 @@ export function App() {
       <ScrollToTop />
       <SmoothScroll />
       <Cursor />
-      <div className="min-h-screen flex flex-col bg-[#FBF8F3] text-[#0F3B40] font-sans antialiased selection:bg-[#0F3B40]/30 selection:text-[#F4EFE8]">
+      <div className="min-h-screen flex flex-col bg-[#FBF8F3] text-[#111819] font-sans antialiased selection:bg-[#111819]/30 selection:text-[#F4EFE8]">
         <Cabecalho />
         
         <main className="flex-1">

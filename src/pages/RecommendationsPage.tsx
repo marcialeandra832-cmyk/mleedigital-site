@@ -48,10 +48,10 @@ export function RecommendationsPage({ customCategory }: RecommendationsPageProps
           <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-3 inline-block">
             CURADORIA CRITERIOSA & TRANSPARENTE
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-4">
             Ferramentas & Recursos Recomendados
           </h1>
-          <p className="text-base text-[#6B7C7D] font-light max-w-2xl mx-auto">
+          <p className="text-base text-[#767D7F] font-light max-w-2xl mx-auto">
             Uma seleção prática dos softwares, ferramentas digitais, equipamentos de ergonomia e gravação que usamos e recomendamos.
           </p>
 
@@ -63,8 +63,8 @@ export function RecommendationsPage({ customCategory }: RecommendationsPageProps
                 to={cat.path}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
                   activeCategory === cat.id
-                    ? 'bg-[#F4EFE8] text-[#0F3B40] shadow-sm'
-                    : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
+                    ? 'bg-[#F4EFE8] text-[#111819] shadow-sm'
+                    : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
                 }`}
               >
                 {cat.label}
@@ -77,10 +77,10 @@ export function RecommendationsPage({ customCategory }: RecommendationsPageProps
       {/* Transparency Note */}
       <section className="py-6 bg-[#FBF8F3] border-b border-[#DCD2C6]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start gap-3 text-xs text-[#3F5557] leading-relaxed">
+          <div className="flex items-start gap-3 text-xs text-[#4A5153] leading-relaxed">
             <Info className="w-4 h-4 text-[#A8675B] shrink-0 mt-0.5" />
             <p>
-              <strong className="text-[#0F3B40]">Transparência em primeiro lugar:</strong> Esta página contém links afiliados de parceiros selecionados. Isso significa que ao comprar por esses links, nós podemos receber uma comissão sem que você pague nada a mais por isso. Indicamos apenas ferramentas de confiança comprovada.
+              <strong className="text-[#111819]">Transparência em primeiro lugar:</strong> Esta página contém links afiliados de parceiros selecionados. Isso significa que ao comprar por esses links, nós podemos receber uma comissão sem que você pague nada a mais por isso. Indicamos apenas ferramentas de confiança comprovada.
             </p>
           </div>
         </div>
@@ -110,7 +110,7 @@ export function RecommendationsPage({ customCategory }: RecommendationsPageProps
                       referrerPolicy="no-referrer"
                     />
                     {prod.badge && (
-                      <div className="absolute top-3 left-3 bg-[#F4EFE8]/90 text-[#A8675B] text-[10px] font-bold px-2.5 py-1 rounded-md border border-[#0F3B40]/30 shadow-sm backdrop-blur-xs">
+                      <div className="absolute top-3 left-3 bg-[#F4EFE8]/90 text-[#A8675B] text-[10px] font-bold px-2.5 py-1 rounded-md border border-[#111819]/30 shadow-sm backdrop-blur-xs">
                         {prod.badge}
                       </div>
                     )}
@@ -118,12 +118,12 @@ export function RecommendationsPage({ customCategory }: RecommendationsPageProps
 
                   <div className="p-6 space-y-3">
                     <div className="text-[11px] text-[#A8675B] font-medium">{prod.categoryLabel}</div>
-                    <h2 className="text-lg font-serif text-[#0F3B40] font-medium leading-snug">{prod.name}</h2>
-                    <p className="text-xs text-[#6B7C7D] leading-relaxed">
+                    <h2 className="text-lg font-serif text-[#111819] font-medium leading-snug">{prod.name}</h2>
+                    <p className="text-xs text-[#767D7F] leading-relaxed">
                       {prod.shortDesc}
                     </p>
 
-                    <div className="p-3 bg-[#FBF8F3] rounded-xl text-[11px] text-[#3F5557] space-y-1">
+                    <div className="p-3 bg-[#FBF8F3] rounded-xl text-[11px] text-[#4A5153] space-y-1">
                       <div><strong>Para quem é:</strong> {prod.forWho}</div>
                       <div><strong>Por que indicamos:</strong> {prod.indication}</div>
                     </div>
@@ -132,14 +132,14 @@ export function RecommendationsPage({ customCategory }: RecommendationsPageProps
 
                 <div className="p-6 pt-0 border-t border-[#DCD2C6] mt-4 flex items-center justify-between">
                   {prod.priceRange && (
-                    <span className="text-xs font-semibold text-[#0F3B40]">{prod.priceRange}</span>
+                    <span className="text-xs font-semibold text-[#111819]">{prod.priceRange}</span>
                   )}
                   
                   <a
                     href={prod.affiliateUrl}
                     target="_blank"
                     rel="sponsored noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 py-2.5 px-4 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-xs font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-all ml-auto"
+                    className="inline-flex items-center gap-1.5 py-2.5 px-4 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-all ml-auto"
                   >
                     <span>{prod.buttonText}</span>
                     <ExternalLink className="w-3.5 h-3.5" />

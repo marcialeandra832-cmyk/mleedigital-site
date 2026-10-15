@@ -51,10 +51,10 @@ export function AboutPage() {
           <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-3 inline-block">
             PROPÓSITO & MÉTODO DE TRABALHO
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-6">
             Design que encanta, tecnologia que funciona e foco real em resultados.
           </h1>
-          <p className="text-base sm:text-lg text-[#6B7C7D] font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[#767D7F] font-light leading-relaxed max-w-2xl mx-auto">
             A MLee Digital nasceu com o compromisso de oferecer uma experiência digital refinada para quem não tem tempo a perder com burocracias técnicas.
           </p>
         </div>
@@ -68,14 +68,14 @@ export function AboutPage() {
             {/* Founder Image */}
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-sm">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#0F3B40]/30 to-[#0F3B40]/20 rounded-3xl transform -rotate-2" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#111819]/30 to-[#111819]/20 rounded-3xl transform -rotate-2" />
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#DCD2C6] aspect-[4/5] bg-[#F4EFE8]">
                   <img 
                     src={AUTHOR_IMG} 
                     alt={`${AUTHOR_NAME} - ${AUTHOR_ROLE}`} 
                     className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#F4EFE8] p-4 text-[#0F3B40]">
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#F4EFE8] p-4 text-[#111819]">
                     <div className="text-base font-serif font-medium">{AUTHOR_NAME}</div>
                     <div className="text-xs text-[#A8675B]">{AUTHOR_ROLE}</div>
                   </div>
@@ -84,21 +84,21 @@ export function AboutPage() {
             </div>
 
             {/* Founder Text */}
-            <div className="lg:col-span-7 space-y-5 text-[#0F3B40]">
+            <div className="lg:col-span-7 space-y-5 text-[#111819]">
               <div>
                 <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-2 block">
                   FUNDADORA & DESENVOLVEDORA
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-serif text-[#0F3B40]">
+                <h2 className="text-3xl sm:text-4xl font-serif text-[#111819]">
                   Por trás da MLee Digital
                 </h2>
               </div>
 
-              <p className="text-sm sm:text-base text-[#6B7C7D] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#767D7F] leading-relaxed">
                 Durante anos acompanhando médicos, psicólogos, advogados, donas de estúdios e empreendedores, percebi uma dor constante: profissionais excelentes em suas áreas sentiam-se perdidos em meio a orçamentos exorbitantes de agências tradicionais ou reféns de ferramentas automáticas complicadas que não entregavam nenhum resultado.
               </p>
 
-              <p className="text-sm sm:text-base text-[#6B7C7D] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#767D7F] leading-relaxed">
                 Na MLee Digital, o processo é direto e acolhedor. Você fala diretamente com quem planeja e programa o seu projeto. Não há intermediários ou termos técnicos incompreensíveis. Cuidamos do código, do design e da otimização para que você possa se dedicar ao que faz de melhor: atender seus clientes.
               </p>
 
@@ -107,7 +107,7 @@ export function AboutPage() {
                   href={getWhatsAppLink("Olá Márcia! Gostaria de conversar sobre um projeto.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 py-3 px-6 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-xs font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-all"
+                  className="inline-flex items-center gap-2 py-3 px-6 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-all"
                 >
                   <MessageCircle className="w-4 h-4 fill-current text-[#25D366]" />
                   <span>Conversar Comigo no WhatsApp</span>
@@ -117,7 +117,7 @@ export function AboutPage() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 py-3 px-5 rounded-xl bg-white border border-[#DCD2C6] text-[#0F3B40] text-xs font-semibold hover:text-[#A8675B] transition-all"
+                  className="inline-flex items-center gap-2 py-3 px-5 rounded-xl bg-white border border-[#DCD2C6] text-[#111819] text-xs font-semibold hover:text-[#A8675B] transition-all"
                 >
                   <Instagram className="w-4 h-4 text-[#E1306C]" />
                   <span>Instagram</span>
@@ -136,38 +136,38 @@ export function AboutPage() {
             <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-2 block">
               NOSSOS PILARES
             </span>
-            <h2 className="text-2xl sm:text-3xl font-serif text-[#0F3B40]">
+            <h2 className="text-2xl sm:text-3xl font-serif text-[#111819]">
               Como garantimos excelência em cada entrega
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0F3B40]/15 text-[#A8675B] flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#111819]/15 text-[#A8675B] flex items-center justify-center font-bold">
                 1
               </div>
-              <h3 className="text-lg font-serif text-[#0F3B40]">Transparência e Respeito</h3>
-              <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
+              <h3 className="text-lg font-serif text-[#111819]">Transparência e Respeito</h3>
+              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
                 Preços fixos, prazos cumpridos à risca e zero surpresas ou taxas escondidas. Você sabe exatamente o que vai receber.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0F3B40]/15 text-[#A8675B] flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#111819]/15 text-[#A8675B] flex items-center justify-center font-bold">
                 2
               </div>
-              <h3 className="text-lg font-serif text-[#0F3B40]">Estética de Alto Padrão</h3>
-              <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
+              <h3 className="text-lg font-serif text-[#111819]">Estética de Alto Padrão</h3>
+              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
                 Nada de templates genéricos ou layouts poluídos. Cada projeto é calibrado com tipografia nobre e hierarquia visual harmoniosa.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0F3B40]/15 text-[#A8675B] flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#111819]/15 text-[#A8675B] flex items-center justify-center font-bold">
                 3
               </div>
-              <h3 className="text-lg font-serif text-[#0F3B40]">Velocidade e SEO Técnico</h3>
-              <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
+              <h3 className="text-lg font-serif text-[#111819]">Velocidade e SEO Técnico</h3>
+              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
                 Código moderno em React e Tailwind que abre instantaneamente em celulares e segue todas as diretrizes de indexação do Google.
               </p>
             </div>

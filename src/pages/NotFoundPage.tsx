@@ -15,18 +15,18 @@ export function NotFoundPage() {
       <div className="max-w-md mx-auto space-y-6">
         <span className="text-6xl font-serif text-[#A8675B] font-bold">404</span>
 
-        <h1 className="text-3xl font-serif text-[#0F3B40]">
+        <h1 className="text-3xl font-serif text-[#111819]">
           Página não encontrada
         </h1>
 
-        <p className="text-sm text-[#6B7C7D] leading-relaxed">
+        <p className="text-sm text-[#767D7F] leading-relaxed">
           O link que você seguiu pode ter mudado ou a página foi reorganizada na nova estrutura do site.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
           <Link
             to="/"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-xs font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-all"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-all"
           >
             <Home className="w-4 h-4" />
             <span>Voltar ao Início</span>
@@ -36,7 +36,7 @@ export function NotFoundPage() {
             href={getWhatsAppLink("Olá! Tive uma dúvida ao navegar pelo site da MLee Digital.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-white border border-[#DCD2C6] text-[#0F3B40] text-xs font-semibold hover:border-[#0F3B40] hover:text-[#A8675B] transition-all"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-white border border-[#DCD2C6] text-[#111819] text-xs font-semibold hover:border-[#111819] hover:text-[#A8675B] transition-all"
           >
             <MessageCircle className="w-4 h-4 text-[#25D366]" />
             <span>Suporte no WhatsApp</span>

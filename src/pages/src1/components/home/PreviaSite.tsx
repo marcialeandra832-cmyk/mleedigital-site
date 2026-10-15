@@ -186,10 +186,10 @@ export function PreviaSite() {
           {/* Chamada */}
           <div className="lg:col-span-5 lg:row-start-1">
             <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Experimente</p>
-            <h2 className="text-[40px] sm:text-5xl lg:text-[56px] font-serif text-[#0F3B40] leading-[1.02] tracking-[-0.01em]">
+            <h2 className="text-[40px] sm:text-5xl lg:text-[56px] font-serif text-[#111819] leading-[1.02] tracking-[-0.01em]">
               Veja o seu site antes de contratar.
             </h2>
-            <p className="mt-5 text-[17px] text-[#3F5557] leading-relaxed max-w-md">
+            <p className="mt-5 text-[17px] text-[#4A5153] leading-relaxed max-w-md">
               Digite o nome do seu negócio e escolha a sua área. A prévia muda na hora, do jeito que o seu cliente veria.
             </p>
           </div>
@@ -198,29 +198,29 @@ export function PreviaSite() {
           <div className="lg:col-span-5 lg:row-start-2 space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
               <label className="sm:col-span-3 block">
-                <span className="block text-sm text-[#0F3B40] mb-1.5">Nome do seu negócio</span>
+                <span className="block text-sm text-[#111819] mb-1.5">Nome do seu negócio</span>
                 <input
                   value={nome}
                   onChange={(e) => setNome(e.target.value)}
                   placeholder={NOME_EXEMPLO}
                   maxLength={40}
-                  className="w-full rounded-lg bg-white border border-[#DCD2C6] px-4 py-3.5 text-[#0F3B40] placeholder:text-[#8A9A9B] focus:outline-none focus:border-[#0F3B40] focus:ring-1 focus:ring-[#0F3B40]"
+                  className="w-full rounded-lg bg-white border border-[#DCD2C6] px-4 py-3.5 text-[#111819] placeholder:text-[#9AA0A2] focus:outline-none focus:border-[#111819] focus:ring-1 focus:ring-[#111819]"
                 />
               </label>
               <label className="sm:col-span-2 block">
-                <span className="block text-sm text-[#0F3B40] mb-1.5">Cidade</span>
+                <span className="block text-sm text-[#111819] mb-1.5">Cidade</span>
                 <input
                   value={cidade}
                   onChange={(e) => setCidade(e.target.value)}
                   placeholder="Videira-SC"
                   maxLength={30}
-                  className="w-full rounded-lg bg-white border border-[#DCD2C6] px-4 py-3.5 text-[#0F3B40] placeholder:text-[#8A9A9B] focus:outline-none focus:border-[#0F3B40] focus:ring-1 focus:ring-[#0F3B40]"
+                  className="w-full rounded-lg bg-white border border-[#DCD2C6] px-4 py-3.5 text-[#111819] placeholder:text-[#9AA0A2] focus:outline-none focus:border-[#111819] focus:ring-1 focus:ring-[#111819]"
                 />
               </label>
             </div>
 
             <fieldset>
-              <legend className="text-sm text-[#0F3B40] mb-2">Sua área</legend>
+              <legend className="text-sm text-[#111819] mb-2">Sua área</legend>
               <div className="flex flex-wrap gap-2">
                 {areas.map((a) => (
                   <button
@@ -231,10 +231,10 @@ export function PreviaSite() {
                       setCorEscolhida(null);
                     }}
                     aria-pressed={a.id === areaId}
-                    className={`px-3.5 py-2 rounded-full text-sm border transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0F3B40] ${
+                    className={`px-3.5 py-2 rounded-full text-sm border transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#111819] ${
                       a.id === areaId
-                        ? 'bg-[#0F3B40] text-[#F4EFE8] border-[#0F3B40]'
-                        : 'bg-transparent text-[#0F3B40] border-[#DCD2C6] hover:border-[#0F3B40]'
+                        ? 'bg-[#111819] text-[#F4EFE8] border-[#111819]'
+                        : 'bg-transparent text-[#111819] border-[#DCD2C6] hover:border-[#111819]'
                     }`}
                   >
                     {a.nome}
@@ -244,7 +244,7 @@ export function PreviaSite() {
             </fieldset>
 
             <fieldset>
-              <legend className="text-sm text-[#0F3B40] mb-2">Cor da sua marca</legend>
+              <legend className="text-sm text-[#111819] mb-2">Cor da sua marca</legend>
               <div className="flex flex-wrap items-center gap-2.5">
                 {[area.cor, ...coresExtras].map((c, i) => (
                   <button
@@ -253,15 +253,15 @@ export function PreviaSite() {
                     onClick={() => setCorEscolhida(i === 0 ? null : c)}
                     aria-label={i === 0 ? 'Cor sugerida para a área' : `Cor ${c}`}
                     aria-pressed={cor === c}
-                    className="w-8 h-8 rounded-full border-2 transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F3B40]"
+                    className="w-8 h-8 rounded-full border-2 transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111819]"
                     style={{
                       background: c,
-                      borderColor: cor === c ? '#0F3B40' : 'transparent', boxShadow: cor === c ? 'inset 0 0 0 2px #FBF8F3' : undefined,
+                      borderColor: cor === c ? '#111819' : 'transparent', boxShadow: cor === c ? 'inset 0 0 0 2px #FBF8F3' : undefined,
                       transform: cor === c ? 'scale(1.12)' : undefined,
                     }}
                   />
                 ))}
-                <label className="relative w-8 h-8 rounded-full border border-dashed border-[#0F3B40]/40 flex items-center justify-center text-[#3F5557] text-lg cursor-pointer hover:border-[#0F3B40]" title="Escolher outra cor">
+                <label className="relative w-8 h-8 rounded-full border border-dashed border-[#111819]/40 flex items-center justify-center text-[#4A5153] text-lg cursor-pointer hover:border-[#111819]" title="Escolher outra cor">
                   +
                   <input
                     type="color"
@@ -279,7 +279,7 @@ export function PreviaSite() {
           <div className="lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:row-span-3 relative lg:pb-10">
 
             {/* Computador (só telas maiores) */}
-            <div className="hidden sm:block sm:mr-20 lg:mr-24 rounded-xl overflow-hidden border border-[#DCD2C6] shadow-[0_40px_80px_-35px_rgba(15,59,64,0.5)] bg-white">
+            <div className="hidden sm:block sm:mr-20 lg:mr-24 rounded-xl overflow-hidden border border-[#DCD2C6] shadow-[0_40px_80px_-35px_rgba(17,24,25,0.5)] bg-white">
               <div className="flex items-center gap-3 px-4 py-2.5 bg-[#EDEDED] border-b border-black/10">
                 <div className="flex gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" />
@@ -375,7 +375,7 @@ export function PreviaSite() {
             </div>
 
             {/* Celular */}
-            <div className="mx-auto sm:mx-0 w-[250px] sm:w-[190px] sm:absolute sm:-bottom-6 sm:right-0 rounded-[2rem] bg-[#0F3B40] p-2 shadow-[0_30px_60px_-20px_rgba(15,59,64,0.6)]">
+            <div className="mx-auto sm:mx-0 w-[250px] sm:w-[190px] sm:absolute sm:-bottom-6 sm:right-0 rounded-[2rem] bg-[#111819] p-2 shadow-[0_30px_60px_-20px_rgba(17,24,25,0.6)]">
               <div className="rounded-[1.6rem] overflow-hidden" style={{ background: p.fundo, color: p.texto, ...trocaSuave }}>
                 <div className="flex items-center justify-between px-3.5 pt-3 pb-2.5 border-b" style={{ borderColor: p.suave }}>
                   <div className="flex items-center gap-1.5 min-w-0">
@@ -416,12 +416,12 @@ export function PreviaSite() {
               href={getWhatsAppLink(msg)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-8 py-4 rounded-full bg-[#0F3B40] text-[#F4EFE8] text-[16px] hover:bg-[#0A2C30] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F3B40]"
+              className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-8 py-4 rounded-full bg-[#111819] text-[#F4EFE8] text-[16px] hover:bg-[#0A0F10] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111819]"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
               Quero o meu site assim
             </a>
-            <p className="text-[13px] text-[#3F5557] leading-relaxed max-w-sm">
+            <p className="text-[13px] text-[#4A5153] leading-relaxed max-w-sm">
               Isto é uma prévia rápida. O seu site é feito do zero, com as suas fotos, os seus textos e a identidade da sua marca.
             </p>
           </div>

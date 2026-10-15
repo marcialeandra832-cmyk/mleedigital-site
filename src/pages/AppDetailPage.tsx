@@ -58,16 +58,16 @@ export function AppDetailPage() {
       <section className="pt-8 pb-16 bg-gradient-to-b from-[#FBF8F3] to-white border-b border-[#DCD2C6]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0F3B40]/15 border border-[#0F3B40]/30 text-[#A8675B] text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111819]/15 border border-[#111819]/30 text-[#A8675B] text-xs font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             <span>{app.badge}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-4">
             {app.name}
           </h1>
 
-          <p className="text-base sm:text-lg text-[#6B7C7D] font-light leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-base sm:text-lg text-[#767D7F] font-light leading-relaxed max-w-2xl mx-auto mb-8">
             {app.tagline}
           </p>
 
@@ -76,7 +76,7 @@ export function AppDetailPage() {
               href={app.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-7 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-xs sm:text-sm font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-all shadow-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-7 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs sm:text-sm font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-all shadow-lg"
             >
               <span>{app.ctaText}</span>
               <ExternalLink className="w-4 h-4" />
@@ -86,7 +86,7 @@ export function AppDetailPage() {
               href={getWhatsAppLink(`Olá Márcia! Gostaria de conversar sobre o aplicativo ${app.name}.`)}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-white border border-[#DCD2C6] text-[#0F3B40] text-xs sm:text-sm font-semibold hover:border-[#0F3B40] hover:text-[#A8675B] transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-white border border-[#DCD2C6] text-[#111819] text-xs sm:text-sm font-semibold hover:border-[#111819] hover:text-[#A8675B] transition-all"
             >
               <MessageCircle className="w-4 h-4 text-[#25D366]" />
               <span>Falar com a Desenvolvedora</span>
@@ -125,15 +125,15 @@ export function AppDetailPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <h2 className="text-xl font-serif text-[#0F3B40]">O Problema que Resolve</h2>
-              <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
+              <h2 className="text-xl font-serif text-[#111819]">O Problema que Resolve</h2>
+              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
                 {app.problem}
               </p>
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <h2 className="text-xl font-serif text-[#0F3B40]">A Solução Inteligente</h2>
-              <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
+              <h2 className="text-xl font-serif text-[#111819]">A Solução Inteligente</h2>
+              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
                 {app.solution}
               </p>
             </div>
@@ -141,10 +141,10 @@ export function AppDetailPage() {
 
           {/* Para Quem É */}
           <div className="bg-white p-8 rounded-2xl border border-[#DCD2C6]">
-            <h2 className="text-xl font-serif text-[#0F3B40] mb-4">Para quem foi desenvolvido:</h2>
+            <h2 className="text-xl font-serif text-[#111819] mb-4">Para quem foi desenvolvido:</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {app.forWho.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#6B7C7D]">
+                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#767D7F]">
                   <CheckCircle2 className="w-4 h-4 text-[#A8675B] shrink-0 mt-0.5" />
                   <span>{item}</span>
                 </div>
@@ -154,15 +154,15 @@ export function AppDetailPage() {
 
           {/* How It Works Steps */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-serif text-[#0F3B40] text-center">Como Funciona na Prática</h2>
+            <h2 className="text-2xl font-serif text-[#111819] text-center">Como Funciona na Prática</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {app.howItWorks.map((step, idx) => (
                 <div key={idx} className="p-5 rounded-xl bg-white border border-[#DCD2C6] space-y-2">
-                  <span className="text-xs font-bold text-[#A8675B] bg-[#0F3B40]/15 px-2 py-0.5 rounded">
+                  <span className="text-xs font-bold text-[#A8675B] bg-[#111819]/15 px-2 py-0.5 rounded">
                     {step.step}
                   </span>
-                  <div className="font-serif text-base text-[#0F3B40] font-medium">{step.title}</div>
-                  <p className="text-xs text-[#3F5557] leading-relaxed">{step.text}</p>
+                  <div className="font-serif text-base text-[#111819] font-medium">{step.title}</div>
+                  <p className="text-xs text-[#4A5153] leading-relaxed">{step.text}</p>
                 </div>
               ))}
             </div>

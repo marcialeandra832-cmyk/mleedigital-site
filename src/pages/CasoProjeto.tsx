@@ -39,7 +39,7 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
   };
 
   return (
-    <article className="w-full bg-[#F4EFE8] text-[#0F3B40]">
+    <article className="w-full bg-[#F4EFE8] text-[#111819]">
       <SEOHead
         title={`${project.client} | Portfólio`}
         description={caso.resumo}
@@ -53,17 +53,17 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
         <h1 className="font-serif text-[clamp(44px,9vw,152px)] leading-[0.92] tracking-[-0.03em] text-balance" style={{ fontVariationSettings: '"opsz" 96' }}>
           {project.client}
         </h1>
-        <p className="mt-6 sm:mt-8 text-[18px] sm:text-[21px] leading-relaxed text-[#3F5557] max-w-2xl">{caso.resumo}</p>
+        <p className="mt-6 sm:mt-8 text-[18px] sm:text-[21px] leading-relaxed text-[#4A5153] max-w-2xl">{caso.resumo}</p>
 
-        <dl className={`mt-10 sm:mt-14 pt-5 border-t border-[#0F3B40] grid grid-cols-2 ${caso.ficha.length >= 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4'} gap-x-6 gap-y-6`}>
+        <dl className={`mt-10 sm:mt-14 pt-5 border-t border-[#111819] grid grid-cols-2 ${caso.ficha.length >= 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4'} gap-x-6 gap-y-6`}>
           {caso.ficha.map((f) => (
             <div key={f.rotulo}>
-              <dt className="text-[14px] text-[#3F5557]">{f.rotulo}</dt>
+              <dt className="text-[14px] text-[#4A5153]">{f.rotulo}</dt>
               <dd className="mt-1 text-[17px]">{f.valor}</dd>
             </div>
           ))}
           <div className={`${caso.ficha.length % 2 === 0 ? 'col-span-2' : ''} lg:col-span-1 lg:text-right`}>
-            <dt className="text-[14px] text-[#3F5557]">Endereço</dt>
+            <dt className="text-[14px] text-[#4A5153]">Endereço</dt>
             <dd className="mt-1 text-[17px]">
               <a href={project.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 underline decoration-[#CC8A80] underline-offset-4 hover:decoration-2 break-all">
                 {endereco} <ArrowUpRight className="w-4 h-4 shrink-0" />
@@ -105,7 +105,7 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
       {/* PONTO DE PARTIDA */}
       <section className="px-5 sm:px-8 lg:px-14 py-20 sm:py-28 grid grid-cols-1 lg:grid-cols-12 gap-8">
         <h2 className={`${h2} lg:col-span-4`}>O ponto de partida</h2>
-        <div className="lg:col-span-7 lg:col-start-6 space-y-5 text-[19px] sm:text-[21px] leading-relaxed text-[#0F3B40]">
+        <div className="lg:col-span-7 lg:col-start-6 space-y-5 text-[19px] sm:text-[21px] leading-relaxed text-[#111819]">
           {caso.contexto.map((p) => <p key={p}>{p}</p>)}
         </div>
       </section>
@@ -131,11 +131,11 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
         </ul>
 
         <div className="px-5 sm:px-8 lg:px-14 mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end">
-          <p aria-hidden="true" className="lg:col-span-4 text-[120px] sm:text-[200px] leading-[0.8] text-[#0F3B40]" style={{ fontFamily: caso.fonte.css, fontWeight: caso.fonte.peso ?? 400 }}>Aa</p>
+          <p aria-hidden="true" className="lg:col-span-4 text-[120px] sm:text-[200px] leading-[0.8] text-[#111819]" style={{ fontFamily: caso.fonte.css, fontWeight: caso.fonte.peso ?? 400 }}>Aa</p>
           <div className="lg:col-span-7 lg:col-start-6 border-t border-[#DCD2C6] pt-6">
             <p className={`text-[26px] sm:text-[38px] leading-[1.15] ${caso.fonte.maiusculas ? 'uppercase' : ''}`} style={{ fontFamily: caso.fonte.css, fontWeight: caso.fonte.peso ?? 400, letterSpacing: '-0.01em' }}>{caso.fonte.amostra}</p>
-            <p className="mt-5 text-[16px] text-[#3F5557] leading-relaxed">
-              <span className="text-[#0F3B40]">{caso.fonte.nome}.</span> {caso.fonte.uso}
+            <p className="mt-5 text-[16px] text-[#4A5153] leading-relaxed">
+              <span className="text-[#111819]">{caso.fonte.nome}.</span> {caso.fonte.uso}
             </p>
           </div>
         </div>
@@ -149,12 +149,12 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
             const larga = i % 3 === 0;
             return (
               <figure key={t.titulo} className={larga ? 'md:col-span-2' : ''}>
-                <JanelaNavegador endereco={endereco} className="!shadow-[0_40px_80px_-45px_rgba(15,59,64,0.55)] border border-[#DCD2C6]">
+                <JanelaNavegador endereco={endereco} className="!shadow-[0_40px_80px_-45px_rgba(17,24,25,0.55)] border border-[#DCD2C6]">
                   <img src={t.img} alt={`${t.titulo} no site de ${project.client}`} loading="lazy" width={1600} height={1000} className="block w-full h-auto" />
                 </JanelaNavegador>
                 <figcaption className={`mt-6 ${larga ? 'grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8' : ''}`}>
                   <h3 className={`font-serif text-[26px] sm:text-[30px] leading-tight ${larga ? 'md:col-span-4' : ''}`}>{t.titulo}</h3>
-                  <p className={`text-[17px] text-[#3F5557] leading-relaxed ${larga ? 'md:col-span-7 md:col-start-6' : 'mt-2 max-w-[46ch]'}`}>{t.texto}</p>
+                  <p className={`text-[17px] text-[#4A5153] leading-relaxed ${larga ? 'md:col-span-7 md:col-start-6' : 'mt-2 max-w-[46ch]'}`}>{t.texto}</p>
                 </figcaption>
               </figure>
             );
@@ -182,11 +182,11 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
       <section className="px-5 sm:px-8 lg:px-14 py-20 sm:py-28 grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-4">
           <h2 className={h2}>O que foi entregue</h2>
-          <a href={project.demo} target="_blank" rel="noopener noreferrer" data-cursor="Abrir" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#0F3B40] text-[#F4EFE8] px-7 py-3.5 text-[16px] hover:bg-[#0A2C30] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F3B40]">
+          <a href={project.demo} target="_blank" rel="noopener noreferrer" data-cursor="Abrir" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#111819] text-[#F4EFE8] px-7 py-3.5 text-[16px] hover:bg-[#0A0F10] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111819]">
             Ver o site no ar <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
-        <ul className="lg:col-span-7 lg:col-start-6 border-t border-[#0F3B40]">
+        <ul className="lg:col-span-7 lg:col-start-6 border-t border-[#111819]">
           {caso.entregas.map((e) => (
             <li key={e} className="py-4 border-b border-[#DCD2C6] text-[17px] sm:text-[18px] leading-snug">{e}</li>
           ))}
@@ -196,9 +196,9 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
       {/* PRÓXIMO PROJETO */}
       {proximo && proximo.slug !== project.slug && (
         <section className="px-5 sm:px-8 lg:px-14 pb-20 sm:pb-28">
-          <Link to={`/portfolio/${proximo.slug}/`} data-cursor="Ver" className="group grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center border-t border-[#0F3B40] pt-8">
+          <Link to={`/portfolio/${proximo.slug}/`} data-cursor="Ver" className="group grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center border-t border-[#111819] pt-8">
             <div className="md:col-span-7">
-              <p className="text-[15px] text-[#3F5557]">Próximo projeto</p>
+              <p className="text-[15px] text-[#4A5153]">Próximo projeto</p>
               <p className="mt-2 font-serif text-[40px] sm:text-[72px] leading-[0.98] tracking-[-0.02em] group-hover:underline decoration-[#CC8A80] decoration-1 underline-offset-[10px]">{proximo.client}</p>
             </div>
             <div className="md:col-span-5 overflow-hidden rounded-2xl aspect-[16/9] bg-[#E9E2D8]">
@@ -209,7 +209,7 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
       )}
 
       {/* CHAMADA FINAL */}
-      <section className="text-[#F4EFE8] px-5 sm:px-8 lg:px-14 pt-24 sm:pt-32 pb-16" style={{ backgroundColor: '#0F3B40', backgroundImage: `url(${luzPetroleo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="text-[#F4EFE8] px-5 sm:px-8 lg:px-14 pt-24 sm:pt-32 pb-16" style={{ backgroundColor: '#111819', backgroundImage: `url(${luzPetroleo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <h2 className="font-serif text-[clamp(48px,9vw,160px)] leading-[0.9] tracking-[-0.035em]">Quer um site assim?</h2>
         <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
           <a
@@ -217,7 +217,7 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
             target="_blank"
             rel="noopener noreferrer"
             data-cursor="Oi!"
-            className="inline-flex items-center self-start rounded-full bg-[#F4EFE8] text-[#0F3B40] px-9 py-5 text-[17px] hover:bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F4EFE8]"
+            className="inline-flex items-center self-start rounded-full bg-[#F4EFE8] text-[#111819] px-9 py-5 text-[17px] hover:bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F4EFE8]"
           >
             Falar no WhatsApp
           </a>

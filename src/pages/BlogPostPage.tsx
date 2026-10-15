@@ -75,21 +75,21 @@ export function BlogPostPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex items-center gap-2 mb-4">
-            <span className="text-xs font-semibold text-[#A8675B] bg-[#0F3B40]/15 px-2.5 py-1 rounded-md">
+            <span className="text-xs font-semibold text-[#A8675B] bg-[#111819]/15 px-2.5 py-1 rounded-md">
               {post.category}
             </span>
-            <span className="text-xs text-[#3F5557]">•</span>
-            <span className="text-xs text-[#3F5557] flex items-center gap-1">
+            <span className="text-xs text-[#4A5153]">•</span>
+            <span className="text-xs text-[#4A5153] flex items-center gap-1">
               <Clock className="w-3.5 h-3.5" />
               {post.readTime}
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-[1.2] mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-[1.2] mb-6">
             {post.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-[#6B7C7D] font-light leading-relaxed mb-6">
+          <p className="text-base sm:text-lg text-[#767D7F] font-light leading-relaxed mb-6">
             {post.excerpt}
           </p>
 
@@ -98,11 +98,11 @@ export function BlogPostPage() {
             <img 
               src={post.author.avatar} 
               alt={post.author.name} 
-              className="w-10 h-10 rounded-full object-cover border border-[#0F3B40]/30"
+              className="w-10 h-10 rounded-full object-cover border border-[#111819]/30"
             />
             <div>
-              <div className="text-xs font-semibold text-[#0F3B40]">{post.author.name}</div>
-              <div className="text-[11px] text-[#3F5557]">{post.author.role} • {post.publishedAt}</div>
+              <div className="text-xs font-semibold text-[#111819]">{post.author.name}</div>
+              <div className="text-[11px] text-[#4A5153]">{post.author.role} • {post.publishedAt}</div>
             </div>
           </div>
 
@@ -123,7 +123,7 @@ export function BlogPostPage() {
 
       {/* Main Content Body */}
       <article className="pb-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-[#0F3B40] leading-relaxed">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-[#111819] leading-relaxed">
           
           {post.content.map((par, idx) => (
             <p key={idx} className="text-base sm:text-lg font-light text-[#404040] leading-relaxed">
@@ -134,27 +134,27 @@ export function BlogPostPage() {
           {/* Sections */}
           {post.sections.map((sec, idx) => (
             <div key={idx} className="pt-6 space-y-4">
-              <h2 className="text-2xl font-serif text-[#0F3B40] font-normal">
+              <h2 className="text-2xl font-serif text-[#111819] font-normal">
                 {sec.heading}
               </h2>
-              <p className="text-base text-[#6B7C7D] leading-relaxed">
+              <p className="text-base text-[#767D7F] leading-relaxed">
                 {sec.body}
               </p>
               {sec.extra?.map((par, i) => (
-                <p key={`e${i}`} className="text-base text-[#6B7C7D] leading-relaxed">{par}</p>
+                <p key={`e${i}`} className="text-base text-[#767D7F] leading-relaxed">{par}</p>
               ))}
               {sec.list && (
                 <ul className="space-y-2 pl-2">
                   {sec.list.map((li, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-sm sm:text-base text-[#6B7C7D]">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#0F3B40] mt-2.5 shrink-0" />
+                    <li key={i} className="flex items-start gap-2.5 text-sm sm:text-base text-[#767D7F]">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#111819] mt-2.5 shrink-0" />
                       <span>{li}</span>
                     </li>
                   ))}
                 </ul>
               )}
               {sec.depois?.map((par, i) => (
-                <p key={`d${i}`} className="text-base text-[#6B7C7D] leading-relaxed">{par}</p>
+                <p key={`d${i}`} className="text-base text-[#767D7F] leading-relaxed">{par}</p>
               ))}
             </div>
           ))}
@@ -162,18 +162,18 @@ export function BlogPostPage() {
           {/* Sources and References */}
           {post.sources && post.sources.length > 0 && (
             <div className="pt-8 border-t border-[#DCD2C6] space-y-3">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-[#0F3B40]">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-[#111819]">
                 Fontes & Referências da Cobertura:
               </h3>
               <ul className="space-y-2">
                 {post.sources.map((src, i) => (
-                  <li key={i} className="text-xs sm:text-sm text-[#3F5557] flex items-start gap-2">
+                  <li key={i} className="text-xs sm:text-sm text-[#4A5153] flex items-start gap-2">
                     <span className="text-[#A8675B]">•</span>
                     <a
                       href={src.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#A8675B] hover:text-[#0F3B40] hover:underline inline-flex items-center gap-1 transition-colors"
+                      className="text-[#A8675B] hover:text-[#111819] hover:underline inline-flex items-center gap-1 transition-colors"
                     >
                       <span>{src.label}</span>
                       <ExternalLink className="w-3 h-3 shrink-0 opacity-70" />
@@ -187,7 +187,7 @@ export function BlogPostPage() {
           {/* Tags */}
           <div className="pt-8 border-t border-[#DCD2C6] flex flex-wrap gap-2">
             {post.tags.map((tag, i) => (
-              <span key={i} className="text-xs bg-[#FBF8F3] text-[#6B7C7D] px-3 py-1 rounded-full">
+              <span key={i} className="text-xs bg-[#FBF8F3] text-[#767D7F] px-3 py-1 rounded-full">
                 #{tag}
               </span>
             ))}
@@ -198,14 +198,14 @@ export function BlogPostPage() {
             <span className="text-xs font-bold text-[#A8675B] uppercase tracking-wider">
               {post.ctaTitle || "Transforme seu negócio com a MLee Digital"}
             </span>
-            <p className="text-sm text-[#6B7C7D] leading-relaxed">
+            <p className="text-sm text-[#767D7F] leading-relaxed">
               {post.ctaText || "Desenvolvemos sites elegantes, rápidos e focados em gerar contatos reais no WhatsApp."}
             </p>
 
             {post.ctaUrl ? (
               <Link
                 to={post.ctaUrl}
-                className="inline-flex items-center gap-2 py-3 px-5 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-xs font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-5 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-colors"
               >
                 <span>{post.ctaButtonText || "Conhecer Solução"}</span>
                 <ArrowRight className="w-4 h-4" />
@@ -215,7 +215,7 @@ export function BlogPostPage() {
                 href={getWhatsAppLink(`Olá Márcia! Li o artigo "${post.title}" e gostaria de orientações para o meu projeto.`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 py-3 px-5 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-xs font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-5 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-colors"
               >
                 <MessageCircle className="w-4 h-4 text-[#25D366]" />
                 <span>{post.ctaButtonText || "Conversar no WhatsApp"}</span>
@@ -230,7 +230,7 @@ export function BlogPostPage() {
       {relatedPosts.length > 0 && (
         <section className="py-16 bg-[#FBF8F3] border-t border-[#DCD2C6]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-serif text-[#0F3B40] mb-8 text-center">
+            <h2 className="text-2xl font-serif text-[#111819] mb-8 text-center">
               Artigos Relacionados
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -241,12 +241,12 @@ export function BlogPostPage() {
                 >
                   <div>
                     <div className="text-[11px] text-[#A8675B] font-medium mb-1">{rel.category}</div>
-                    <h3 className="text-lg font-serif text-[#0F3B40] leading-snug">
+                    <h3 className="text-lg font-serif text-[#111819] leading-snug">
                       <Link to={`/blog/${rel.slug}/`} className="hover:text-[#A8675B] transition-colors">
                         {rel.title}
                       </Link>
                     </h3>
-                    <p className="text-xs text-[#6B7C7D] mt-2 line-clamp-2">{rel.excerpt}</p>
+                    <p className="text-xs text-[#767D7F] mt-2 line-clamp-2">{rel.excerpt}</p>
                   </div>
 
                   <Link

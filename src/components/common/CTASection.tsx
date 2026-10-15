@@ -30,7 +30,7 @@ export function CTASection({
   const isCustomExternal = Boolean(buttonUrl);
 
   return (
-    <section className="py-20 bg-[#F4EFE8] text-[#0F3B40] relative overflow-hidden">
+    <section className="py-20 bg-[#F4EFE8] text-[#111819] relative overflow-hidden">
       {/* Decorative subtle aura */}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -38,17 +38,17 @@ export function CTASection({
           DÊ O PRÓXIMO PASSO
         </span>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-[#0F3B40] leading-tight mb-6">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-[#111819] leading-tight mb-6">
           {title}
         </h2>
 
-        <p className="text-base sm:text-lg text-[#3F5557] font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-base sm:text-lg text-[#4A5153] font-light max-w-2xl mx-auto mb-10 leading-relaxed">
           {subtitle}
         </p>
 
         {/* Highlights */}
         {highlights.length > 0 && (
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10 text-xs sm:text-sm text-[#0F3B40]">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10 text-xs sm:text-sm text-[#111819]">
             {highlights.map((item, idx) => (
               <div key={idx} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#A8675B]" />
@@ -63,7 +63,7 @@ export function CTASection({
             href={targetUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 py-4 px-8 rounded-xl bg-gradient-to-r from-[#0F3B40] to-[#0F3B40] text-[#F4EFE8] font-semibold text-sm sm:text-base hover:brightness-110 transition-all duration-300 shadow-xl"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 py-4 px-8 rounded-xl bg-gradient-to-r from-[#111819] to-[#111819] text-[#F4EFE8] font-semibold text-sm sm:text-base hover:brightness-110 transition-all duration-300 shadow-xl"
           >
             {isCustomExternal ? (
               <ExternalLink className="w-5 h-5" />
@@ -79,7 +79,7 @@ export function CTASection({
               href={secondaryButtonUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-[#0F3B40]/[0.04] border border-[#0F3B40]/10 text-[#0F3B40] font-semibold text-sm sm:text-base hover:bg-[#0F3B40]/[0.04] hover:border-[#0F3B40] transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-[#111819]/[0.04] border border-[#111819]/10 text-[#111819] font-semibold text-sm sm:text-base hover:bg-[#111819]/[0.04] hover:border-[#111819] transition-all"
             >
               <MessageCircle className="w-4 h-4 text-[#25D366]" />
               <span>{secondaryButtonText}</span>

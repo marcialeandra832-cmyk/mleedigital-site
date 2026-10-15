@@ -60,10 +60,10 @@ export function ContactPage() {
           <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-3 inline-block">
             ATENDIMENTO RÁPIDO & HUMANIZADO
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-4">
             Vamos conversar sobre o seu projeto?
           </h1>
-          <p className="text-base text-[#6B7C7D] font-light max-w-2xl mx-auto">
+          <p className="text-base text-[#767D7F] font-light max-w-2xl mx-auto">
             Sem formulários chatos ou robôs de atendimento. Você conversa diretamente comigo pelo canal que preferir.
           </p>
         </div>
@@ -82,10 +82,10 @@ export function ContactPage() {
                   <img 
                     src={AUTHOR_IMG} 
                     alt={AUTHOR_NAME} 
-                    className="w-12 h-12 rounded-full object-cover border border-[#0F3B40]/30"
+                    className="w-12 h-12 rounded-full object-cover border border-[#111819]/30"
                   />
                   <div>
-                    <div className="font-serif text-lg text-[#0F3B40]">{AUTHOR_NAME}</div>
+                    <div className="font-serif text-lg text-[#111819]">{AUTHOR_NAME}</div>
                     <div className="text-xs text-[#A8675B] font-medium">Fundadora & Desenvolvedora</div>
                   </div>
                 </div>
@@ -101,8 +101,8 @@ export function ContactPage() {
                       <MessageCircle className="w-5 h-5 fill-current" />
                     </div>
                     <div>
-                      <div className="text-xs text-[#3F5557]">WhatsApp Direto</div>
-                      <div className="text-sm font-semibold text-[#0F3B40] group-hover:text-[#25D366] transition-colors">
+                      <div className="text-xs text-[#4A5153]">WhatsApp Direto</div>
+                      <div className="text-sm font-semibold text-[#111819] group-hover:text-[#25D366] transition-colors">
                         (49) 99961-9123
                       </div>
                     </div>
@@ -118,15 +118,15 @@ export function ContactPage() {
                       <Instagram className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="text-xs text-[#3F5557]">Instagram Oficial</div>
-                      <div className="text-sm font-semibold text-[#0F3B40] group-hover:text-[#E1306C] transition-colors">
+                      <div className="text-xs text-[#4A5153]">Instagram Oficial</div>
+                      <div className="text-sm font-semibold text-[#111819] group-hover:text-[#E1306C] transition-colors">
                         {INSTAGRAM_HANDLE}
                       </div>
                     </div>
                   </a>
                 </div>
 
-                <div className="pt-2 flex items-center gap-2 text-xs text-[#3F5557]">
+                <div className="pt-2 flex items-center gap-2 text-xs text-[#4A5153]">
                   <Clock className="w-4 h-4 text-[#A8675B] shrink-0" />
                   <span>Atendimento ágil de segunda a sexta, das 09h às 18h.</span>
                 </div>
@@ -142,17 +142,17 @@ export function ContactPage() {
                   <span className="text-xs font-bold text-[#A8675B] uppercase tracking-wider block mb-1">
                     PREFERE ENVIAR UM RESUMO DO SEU PROJETO?
                   </span>
-                  <h2 className="text-2xl font-serif text-[#0F3B40]">
+                  <h2 className="text-2xl font-serif text-[#111819]">
                     Simulador Rápido de Orçamento
                   </h2>
-                  <p className="text-xs sm:text-sm text-[#6B7C7D] mt-1">
+                  <p className="text-xs sm:text-sm text-[#767D7F] mt-1">
                     Preencha os campos abaixo e nosso sistema abrirá a mensagem formatada para envio no seu WhatsApp.
                   </p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-xs font-semibold text-[#0F3B40] mb-1.5">
+                    <label className="block text-xs font-semibold text-[#111819] mb-1.5">
                       Seu Nome ou Nome da Empresa
                     </label>
                     <input
@@ -161,12 +161,12 @@ export function ContactPage() {
                       placeholder="Ex: Dra. Mariana / Clínica Bem Estar"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#0F3B40] focus:outline-none focus:border-[#0F3B40]"
+                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#111819] focus:outline-none focus:border-[#111819]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#0F3B40] mb-1.5">
+                    <label className="block text-xs font-semibold text-[#111819] mb-1.5">
                       Seu Ramo de Atuação / Especialidade
                     </label>
                     <input
@@ -175,18 +175,18 @@ export function ContactPage() {
                       placeholder="Ex: Psicologia, Odontologia, Advocacia, Estética..."
                       value={segment}
                       onChange={(e) => setSegment(e.target.value)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#0F3B40] focus:outline-none focus:border-[#0F3B40]"
+                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#111819] focus:outline-none focus:border-[#111819]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#0F3B40] mb-1.5">
+                    <label className="block text-xs font-semibold text-[#111819] mb-1.5">
                       Plano de Interesse
                     </label>
                     <select
                       value={plan}
                       onChange={(e) => setPlan(e.target.value)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#0F3B40] focus:outline-none focus:border-[#0F3B40]"
+                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#111819] focus:outline-none focus:border-[#111819]"
                     >
                       <option value="Plano Essencial (R$ 997)">Site Essencial - One Page Profissional (R$ 997)</option>
                       <option value="Plano Profissional (R$ 1.397)">Site Profissional - Multipágina até 5 páginas (R$ 1.397)</option>
@@ -198,7 +198,7 @@ export function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#0F3B40] mb-1.5">
+                    <label className="block text-xs font-semibold text-[#111819] mb-1.5">
                       Detalhes adicionais (opcional)
                     </label>
                     <textarea
@@ -206,13 +206,13 @@ export function ContactPage() {
                       placeholder="Ex: Já tenho logo e fotos, preciso do site no ar em 1 semana..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#0F3B40] focus:outline-none focus:border-[#0F3B40]"
+                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#111819] focus:outline-none focus:border-[#111819]"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 px-6 rounded-xl bg-[#F4EFE8] text-[#0F3B40] font-medium text-sm hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-all flex items-center justify-center gap-2 shadow-lg"
+                    className="w-full py-3.5 px-6 rounded-xl bg-[#F4EFE8] text-[#111819] font-medium text-sm hover:bg-[#111819] hover:text-[#F4EFE8] transition-all flex items-center justify-center gap-2 shadow-lg"
                   >
                     <Send className="w-4 h-4" />
                     <span>Enviar e Abrir no WhatsApp</span>

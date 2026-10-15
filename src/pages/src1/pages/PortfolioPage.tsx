@@ -36,27 +36,27 @@ export function PortfolioPage() {
           <div className="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
             <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md border shadow-sm ${
               project.projectType === 'real'
-                ? 'bg-[#F4EFE8]/90 backdrop-blur-md text-[#A8675B] border-[#0F3B40]/40'
-                : 'bg-[#E9E2D8]/90 backdrop-blur-md text-[#3F5557] border-[#DCD2C6]'
+                ? 'bg-[#F4EFE8]/90 backdrop-blur-md text-[#A8675B] border-[#111819]/40'
+                : 'bg-[#E9E2D8]/90 backdrop-blur-md text-[#4A5153] border-[#DCD2C6]'
             }`}>
               {project.badge}
             </span>
           </div>
-          <div className="absolute top-3 right-3 bg-[#0F3B40]/[0.04] text-[#0F3B40] text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
+          <div className="absolute top-3 right-3 bg-[#111819]/[0.04] text-[#111819] text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
             {project.planType}
           </div>
         </div>
 
         <div className="p-6 space-y-3">
           <div className="text-xs text-[#A8675B] font-medium">{project.category}</div>
-          <h3 className="text-2xl font-serif text-[#0F3B40]">{project.client}</h3>
-          <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
+          <h3 className="text-2xl font-serif text-[#111819]">{project.client}</h3>
+          <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
             {project.objective}
           </p>
 
           <div className="pt-2 flex flex-wrap gap-1.5">
             {project.technologies.slice(0, 3).map((tech, i) => (
-              <span key={i} className="text-[10px] bg-[#FBF8F3] text-[#3F5557] px-2 py-0.5 rounded">
+              <span key={i} className="text-[10px] bg-[#FBF8F3] text-[#4A5153] px-2 py-0.5 rounded">
                 {tech}
               </span>
             ))}
@@ -67,7 +67,7 @@ export function PortfolioPage() {
       <div className="p-6 pt-0 flex items-center justify-between border-t border-[#DCD2C6] mt-4">
         <Link
           to={`/portfolio/${project.slug}/`}
-          className="text-xs font-semibold text-[#0F3B40] hover:text-[#A8675B] inline-flex items-center gap-1 transition-colors"
+          className="text-xs font-semibold text-[#111819] hover:text-[#A8675B] inline-flex items-center gap-1 transition-colors"
         >
           <span>Ver Detalhes</span>
           <ArrowRight className="w-3 h-3" />
@@ -77,7 +77,7 @@ export function PortfolioPage() {
           href={project.demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs font-semibold text-[#A8675B] hover:text-[#F4EFE8] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0F3B40]/10 hover:bg-[#0F3B40]/20 border border-[#0F3B40]/30 transition-all"
+          className="text-xs font-semibold text-[#A8675B] hover:text-[#F4EFE8] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#111819]/10 hover:bg-[#111819]/20 border border-[#111819]/30 transition-all"
         >
           <span>Ver projeto</span>
           <ExternalLink className="w-3.5 h-3.5" />
@@ -103,10 +103,10 @@ export function PortfolioPage() {
           <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-3 inline-block">
             EXCELÊNCIA EM CADA DETALHE
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-4">
             Portfólio & Modelos de Referência
           </h1>
-          <p className="text-base text-[#6B7C7D] font-light max-w-2xl mx-auto">
+          <p className="text-base text-[#767D7F] font-light max-w-2xl mx-auto">
             Conheça projetos realizados para clientes e modelos demonstrativos criados pela MLee Digital.
           </p>
 
@@ -117,8 +117,8 @@ export function PortfolioPage() {
               onClick={() => setActiveFilter('TODOS')}
               className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
                 activeFilter === 'TODOS'
-                  ? 'bg-[#F4EFE8] text-[#0F3B40] shadow-sm'
-                  : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
+                  ? 'bg-[#F4EFE8] text-[#111819] shadow-sm'
+                  : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
               }`}
             >
               Todos os Projetos ({projectsData.length})
@@ -129,7 +129,7 @@ export function PortfolioPage() {
               className={`px-4 py-2 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
                 activeFilter === 'REAL'
                   ? 'bg-[#F4EFE8] text-[#A8675B] shadow-sm'
-                  : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
+                  : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
               }`}
             >
               <CheckCircle className="w-3.5 h-3.5 text-[#A8675B]" />
@@ -140,8 +140,8 @@ export function PortfolioPage() {
               onClick={() => setActiveFilter('MODEL')}
               className={`px-4 py-2 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
                 activeFilter === 'MODEL'
-                  ? 'bg-[#F4EFE8] text-[#0F3B40] shadow-sm'
-                  : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
+                  ? 'bg-[#F4EFE8] text-[#111819] shadow-sm'
+                  : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
               }`}
             >
               <Layout className="w-3.5 h-3.5 text-[#A8675B]" />
@@ -164,11 +164,11 @@ export function PortfolioPage() {
                     <CheckCircle className="w-4 h-4 text-[#A8675B]" />
                     <span>Clientes Reais</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl font-serif text-[#0F3B40]">
+                  <h2 className="text-2xl sm:text-3xl font-serif text-[#111819]">
                     Projetos Realizados
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-[#3F5557] mt-2 sm:mt-0 max-w-md">
+                <p className="text-xs sm:text-sm text-[#4A5153] mt-2 sm:mt-0 max-w-md">
                   Sites desenvolvidos e publicados para clientes da MLee Digital.
                 </p>
               </div>
@@ -184,15 +184,15 @@ export function PortfolioPage() {
             <div className="space-y-8">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-[#DCD2C6] pb-4">
                 <div>
-                  <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#6B7C7D] uppercase tracking-wider mb-1">
+                  <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#767D7F] uppercase tracking-wider mb-1">
                     <Layout className="w-4 h-4 text-[#A8675B]" />
                     <span>Estruturas Demonstrativas</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl font-serif text-[#0F3B40]">
+                  <h2 className="text-2xl sm:text-3xl font-serif text-[#111819]">
                     Modelos de Referência
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-[#3F5557] mt-2 sm:mt-0 max-w-md">
+                <p className="text-xs sm:text-sm text-[#4A5153] mt-2 sm:mt-0 max-w-md">
                   Modelos visuais demonstrativos desenvolvidos como referência para novos projetos.
                 </p>
               </div>

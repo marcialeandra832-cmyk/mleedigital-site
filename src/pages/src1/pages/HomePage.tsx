@@ -154,7 +154,7 @@ export function HomePage() {
     .slice(0, 3);
 
   return (
-    <div className="w-full bg-[#F4EFE8] text-[#0F3B40]">
+    <div className="w-full bg-[#F4EFE8] text-[#111819]">
       <SEOHead
         title="MLee Digital | Sites que fazem o cliente escolher você"
         description="Sites sob medida para médicas, dentistas, esteticistas, advogadas e arquitetas, criados pela Márcia do começo ao fim. Prontos em até 7 dias úteis."
@@ -167,16 +167,16 @@ export function HomePage() {
         <div className="luz-mouse absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="luz-janela" style={{ backgroundImage: `url(${luzClaro})` }} />
         </div>
-        <h1 className="hero-titulo relative z-[1] font-serif text-[#0F3B40] text-[clamp(52px,10.4vw,196px)] leading-[0.9] tracking-[-0.035em]" style={{ fontVariationSettings: '"opsz" 96' }}>
+        <h1 className="hero-titulo relative z-[1] font-serif text-[#111819] text-[clamp(52px,10.4vw,196px)] leading-[0.9] tracking-[-0.035em]" style={{ fontVariationSettings: '"opsz" 96' }}>
           <span className="linha-mascara"><span>Sites que</span></span>
           <span className="linha-mascara pl-[clamp(0px,12vw,230px)]"><span>fazem o <span className="inline-block overflow-hidden align-bottom pb-[0.06em] -mb-[0.06em]"><span className="troca-palavra inline-block">cliente</span></span></span></span>
           <span className="linha-mascara"><span>escolher você<span className="text-[#CC8A80]">.</span></span></span>
         </h1>
-        <div className="hero-rodape relative z-[1] mt-10 sm:mt-14 pt-5 border-t border-[#DCD2C6] grid grid-cols-1 md:grid-cols-[1.3fr_1fr_auto] gap-5 md:gap-8 items-end text-[15px] text-[#3F5557]">
-          <p><strong className="font-medium text-[#0F3B40]">MLee Digital.</strong> Sites para médicas, dentistas, esteticistas, advogadas e arquitetas. Feitos por mim, do começo ao fim.</p>
+        <div className="hero-rodape relative z-[1] mt-10 sm:mt-14 pt-5 border-t border-[#DCD2C6] grid grid-cols-1 md:grid-cols-[1.3fr_1fr_auto] gap-5 md:gap-8 items-end text-[15px] text-[#4A5153]">
+          <p><strong className="font-medium text-[#111819]">MLee Digital.</strong> Sites para médicas, dentistas, esteticistas, advogadas e arquitetas. Feitos por mim, do começo ao fim.</p>
           <p>Videira, SC. Do primeiro contato ao site no ar em até 7 dias úteis.</p>
           <div className="flex gap-3 md:mr-16">
-            <a href="#previa" className="inline-flex items-center rounded-full bg-[#0F3B40] text-[#F4EFE8] px-6 py-3 text-[15px] whitespace-nowrap hover:bg-[#0A2C30] transition-colors">Ver como o meu site ficaria</a>
+            <a href="#previa" className="inline-flex items-center rounded-full bg-[#111819] text-[#F4EFE8] px-6 py-3 text-[15px] whitespace-nowrap hover:bg-[#0A0F10] transition-colors">Ver como o meu site ficaria</a>
           </div>
         </div>
       </section>
@@ -191,16 +191,16 @@ export function HomePage() {
             <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Por que ter um site</p>
             <h2 className="font-serif text-[44px] sm:text-[72px] leading-[0.95] tracking-[-0.02em]">O Instagram mostra. O site convence.</h2>
           </div>
-          <p className="lg:col-span-5 text-[17px] text-[#3F5557] leading-relaxed">
+          <p className="lg:col-span-5 text-[17px] text-[#4A5153] leading-relaxed">
             As redes sociais são ótimas para chamar atenção. Mas é o site que passa segurança para o cliente decidir e contratar.
           </p>
         </Reveal>
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 border-t border-[#0F3B40]">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 border-t border-[#111819]">
           {motivos.map((m, i) => (
             <Reveal key={m.n} atraso={i * 110} className={`pt-8 pb-4 md:pr-10 ${i > 0 ? 'md:pl-10 md:border-l border-[#DCD2C6]' : ''} ${i < motivos.length - 1 ? 'border-b md:border-b-0 border-[#DCD2C6] pb-10 md:pb-4' : ''}`}>
               <p className="font-serif text-[64px] leading-none text-[#CC8A80]/60">{m.n}</p>
               <h3 className="mt-5 font-serif text-[28px] leading-tight">{m.titulo}</h3>
-              <p className="mt-3 text-[16px] text-[#3F5557] leading-relaxed">{m.texto}</p>
+              <p className="mt-3 text-[16px] text-[#4A5153] leading-relaxed">{m.texto}</p>
             </Reveal>
           ))}
         </div>
@@ -216,7 +216,7 @@ export function HomePage() {
       <ModelosArea />
 
       {/* COMO FUNCIONA */}
-      <section id="como-funciona" className="bg-[#0F3B40] text-[#F4EFE8] py-24 sm:py-32 scroll-mt-20">
+      <section id="como-funciona" className="bg-[#111819] text-[#F4EFE8] py-24 sm:py-32 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
             <div className="lg:col-span-7">
@@ -232,7 +232,7 @@ export function HomePage() {
             {etapas.map((e, i) => (
               <Reveal as="li" key={e.n} atraso={i * 110} className="relative md:pr-8">
                 <div className="flex items-center gap-4">
-                  <span className="w-3 h-3 rounded-full border border-[#CC8A80] bg-[#0F3B40] relative z-10" />
+                  <span className="w-3 h-3 rounded-full border border-[#CC8A80] bg-[#111819] relative z-10" />
                   {i < etapas.length - 1 && <span className="hidden md:block flex-1 h-px bg-[#F4EFE8]/20" />}
                 </div>
                 <p className="mt-6 font-serif text-[64px] leading-none text-[#F4EFE8]/15">{e.n}</p>
@@ -250,31 +250,31 @@ export function HomePage() {
           <Reveal className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Investimento</p>
             <h2 className="font-serif text-[48px] sm:text-[80px] leading-[0.95] tracking-[-0.02em]">Preço fechado, sem surpresa.</h2>
-            <p className="mt-5 text-[17px] text-[#3F5557] leading-relaxed">
+            <p className="mt-5 text-[17px] text-[#4A5153] leading-relaxed">
               Você paga a criação uma única vez. Depois, uma mensalidade mantém o site no ar, seguro e atualizado.
             </p>
           </Reveal>
 
           <ImagemFlutuante>
-          <div className="mt-16 border-t border-[#0F3B40]">
+          <div className="mt-16 border-t border-[#111819]">
             {planos.map((p, i) => (
               <div key={p.nome} data-img={clientesDestaque[i]?.img}>
               <Reveal atraso={i * 120} className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-12 border-b border-[#DCD2C6]">
                 <div className="lg:col-span-4">
                   {p.destaque && <span className="inline-block mb-3 whitespace-nowrap text-[12px] uppercase tracking-[0.2em] text-[#A8675B]">Mais escolhido</span>}
                   <h3 className="font-serif text-4xl">{p.nome}</h3>
-                  <p className="mt-3 text-[16px] text-[#3F5557] leading-relaxed max-w-xs">{p.resumo}</p>
+                  <p className="mt-3 text-[16px] text-[#4A5153] leading-relaxed max-w-xs">{p.resumo}</p>
                 </div>
                 <div className="lg:col-span-3">
                   <p className="font-serif text-[56px] leading-none"><span className="text-[22px] align-top mr-1">R$</span>{p.preco}</p>
-                  <p className="mt-3 text-[15px] text-[#3F5557]">pagamento único</p>
-                  <p className="mt-1 text-[15px] text-[#3F5557]">+ R$ {p.manut}/mês de manutenção e hospedagem</p>
-                  <p className="mt-4 text-[14px] text-[#0F3B40] border-l-2 border-[#CC8A80] pl-3">{p.prazo}</p>
+                  <p className="mt-3 text-[15px] text-[#4A5153]">pagamento único</p>
+                  <p className="mt-1 text-[15px] text-[#4A5153]">+ R$ {p.manut}/mês de manutenção e hospedagem</p>
+                  <p className="mt-4 text-[14px] text-[#111819] border-l-2 border-[#CC8A80] pl-3">{p.prazo}</p>
                   <div className="mt-6 rounded-xl bg-[#FBF8F3] border border-[#DCD2C6] p-4">
                     <p className="text-[13px] uppercase tracking-[0.15em] text-[#A8675B]">A mensalidade inclui</p>
                     <ul className="mt-3 space-y-1.5">
                       {p.manutItens.map((m) => (
-                        <li key={m} className="text-[14px] text-[#0F3B40] leading-snug">{m}</li>
+                        <li key={m} className="text-[14px] text-[#111819] leading-snug">{m}</li>
                       ))}
                     </ul>
                   </div>
@@ -282,7 +282,7 @@ export function HomePage() {
                 <div className="lg:col-span-5">
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
                     {p.itens.map((it) => (
-                      <li key={it} className="flex gap-2.5 text-[15px] leading-snug text-[#0F3B40]">
+                      <li key={it} className="flex gap-2.5 text-[15px] leading-snug text-[#111819]">
                         <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#CC8A80]" />
                         {it}
                       </li>
@@ -292,7 +292,7 @@ export function HomePage() {
                     href={getWhatsAppLink(`Olá Márcia! Tenho interesse no ${p.nome}.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`mt-8 inline-flex items-center rounded-full px-7 py-3.5 text-[15px] transition-colors ${p.destaque ? 'bg-[#0F3B40] text-[#F4EFE8] hover:bg-[#0A2C30]' : 'border border-[#0F3B40]/30 hover:border-[#0F3B40]'}`}
+                    className={`mt-8 inline-flex items-center rounded-full px-7 py-3.5 text-[15px] transition-colors ${p.destaque ? 'bg-[#111819] text-[#F4EFE8] hover:bg-[#0A0F10]' : 'border border-[#111819]/30 hover:border-[#111819]'}`}
                   >
                     Quero o {p.nome}
                   </a>
@@ -305,18 +305,18 @@ export function HomePage() {
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-10">
             <Reveal>
               <h3 className="font-serif text-3xl">Por que existe a mensalidade?</h3>
-              <p className="mt-4 text-[16px] text-[#3F5557] leading-relaxed">
+              <p className="mt-4 text-[16px] text-[#4A5153] leading-relaxed">
                 Um site não é um arquivo parado. Ele precisa ficar hospedado num servidor, com segurança atualizada e cópias de segurança feitas o tempo todo. A mensalidade cobre tudo isso, e você não precisa se preocupar com nada técnico. Se precisar trocar um texto, uma foto ou um horário, é só me mandar.
               </p>
             </Reveal>
             <Reveal atraso={100}>
               <h3 className="font-serif text-3xl">E o domínio (.com.br)?</h3>
-              <p className="mt-4 text-[16px] text-[#3F5557] leading-relaxed">
+              <p className="mt-4 text-[16px] text-[#4A5153] leading-relaxed">
                 O registro anual é feito por você, no seu CPF ou CNPJ, pela Hostinger ou pelo Registro.br. Assim o endereço é legalmente seu, para sempre. Eu te ajudo no passo a passo e faço toda a configuração sem custo.
               </p>
             </Reveal>
           </div>
-          <p className="mt-10 text-[13px] text-[#3F5557] max-w-2xl">Prazos contados a partir do recebimento de todas as fotos, textos e informações.</p>
+          <p className="mt-10 text-[13px] text-[#4A5153] max-w-2xl">Prazos contados a partir do recebimento de todas as fotos, textos e informações.</p>
         </div>
       </section>
 
@@ -327,14 +327,14 @@ export function HomePage() {
             <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Dúvidas</p>
             <h2 className="font-serif text-[44px] sm:text-[64px] leading-[0.95] tracking-[-0.02em]">Perguntas frequentes</h2>
           </Reveal>
-          <div className="lg:col-span-8 border-t border-[#0F3B40]">
+          <div className="lg:col-span-8 border-t border-[#111819]">
             {perguntas.map((f) => (
               <details key={f.q} className="group border-b border-[#DCD2C6]">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-serif text-[22px] sm:text-[26px] leading-snug [&::-webkit-details-marker]:hidden">
                   {f.q}
                   <span aria-hidden="true" className="shrink-0 text-[#CC8A80] text-3xl leading-none transition-transform group-open:rotate-45">+</span>
                 </summary>
-                <p className="pb-7 pr-10 text-[16px] text-[#3F5557] leading-relaxed max-w-2xl">{f.a}</p>
+                <p className="pb-7 pr-10 text-[16px] text-[#4A5153] leading-relaxed max-w-2xl">{f.a}</p>
               </details>
             ))}
           </div>
@@ -345,7 +345,7 @@ export function HomePage() {
       <section className="grao bg-[#FBF8F3] border-y border-[#DCD2C6] py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <Reveal className="lg:col-span-5">
-            <div className="relative aspect-[4/5] rounded-[28px] overflow-hidden bg-[#0F3B40]">
+            <div className="relative aspect-[4/5] rounded-[28px] overflow-hidden bg-[#111819]">
               {fotoMarcia ? (
                 <img src={fotoMarcia} alt="Márcia, criadora da MLee Digital" className="w-full h-full object-cover" style={{ filter: 'saturate(0.92) sepia(0.06)' }} />
               ) : (
@@ -356,13 +356,13 @@ export function HomePage() {
           <Reveal className="lg:col-span-7" atraso={120}>
             <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Quem faz</p>
             <h2 className="font-serif text-[40px] sm:text-5xl leading-[1.05]">Sou a Márcia. Cada site passa pelas minhas mãos.</h2>
-            <p className="mt-6 text-[18px] text-[#3F5557] leading-relaxed max-w-xl">
+            <p className="mt-6 text-[18px] text-[#4A5153] leading-relaxed max-w-xl">
               Você fala direto comigo, do primeiro contato até o site no ar. Eu cuido do design, dos textos, da tecnologia e da publicação, enquanto você cuida do seu trabalho.
             </p>
             <div className="mt-10 grid grid-cols-3 gap-6 max-w-lg border-t border-[#DCD2C6] pt-6">
-              <div><p className="font-serif text-3xl">1</p><p className="text-[14px] text-[#3F5557] mt-1">pessoa do início ao fim</p></div>
-              <div><p className="font-serif text-3xl">7</p><p className="text-[14px] text-[#3F5557] mt-1">dias úteis, no máximo</p></div>
-              <div><p className="font-serif text-3xl">100%</p><p className="text-[14px] text-[#3F5557] mt-1">do domínio no seu nome</p></div>
+              <div><p className="font-serif text-3xl">1</p><p className="text-[14px] text-[#4A5153] mt-1">pessoa do início ao fim</p></div>
+              <div><p className="font-serif text-3xl">7</p><p className="text-[14px] text-[#4A5153] mt-1">dias úteis, no máximo</p></div>
+              <div><p className="font-serif text-3xl">100%</p><p className="text-[14px] text-[#4A5153] mt-1">do domínio no seu nome</p></div>
             </div>
             <Link to="/sobre/" className="mt-10 inline-flex items-center gap-1 text-[15px] underline decoration-[#CC8A80] underline-offset-4 hover:decoration-2">
               Conhecer minha história <ArrowUpRight className="w-4 h-4" />
@@ -386,7 +386,7 @@ export function HomePage() {
               <Reveal key={a.slug} atraso={i * 100} className={`py-8 border-b border-[#DCD2C6] ${i % 2 === 0 ? 'md:pr-10 md:border-r' : 'md:pl-10'}`}>
                 <Link to={`/apps/${a.slug}/`} className="group block">
                   <h3 className="font-serif text-3xl group-hover:underline decoration-[#CC8A80] underline-offset-[6px] decoration-1">{a.name}</h3>
-                  <p className="mt-3 text-[16px] text-[#3F5557] leading-relaxed max-w-md">{a.tagline}</p>
+                  <p className="mt-3 text-[16px] text-[#4A5153] leading-relaxed max-w-md">{a.tagline}</p>
                 </Link>
               </Reveal>
             ))}
@@ -404,13 +404,13 @@ export function HomePage() {
             </div>
             <Link to="/blog/" className="text-[15px] underline decoration-[#CC8A80] underline-offset-4">Ver todos os artigos</Link>
           </Reveal>
-          <ul className="mt-10 border-t border-[#0F3B40]">
+          <ul className="mt-10 border-t border-[#111819]">
             {artigos.map((a, i) => (
               <Reveal as="li" key={a.slug} atraso={i * 90} className="border-b border-[#DCD2C6]">
                 <Link to={`/blog/${a.slug}/`} className="group grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-8 py-7 items-baseline">
-                  <span className="md:col-span-2 text-[14px] text-[#3F5557]">{a.category}</span>
-                  <span className="md:col-span-8 font-serif text-2xl sm:text-[28px] leading-snug group-hover:text-[#0A2C30] group-hover:underline decoration-[#CC8A80] underline-offset-[6px] decoration-1">{a.title}</span>
-                  <span className="md:col-span-2 text-[14px] text-[#3F5557] md:text-right">{a.readTime}</span>
+                  <span className="md:col-span-2 text-[14px] text-[#4A5153]">{a.category}</span>
+                  <span className="md:col-span-8 font-serif text-2xl sm:text-[28px] leading-snug group-hover:text-[#0A0F10] group-hover:underline decoration-[#CC8A80] underline-offset-[6px] decoration-1">{a.title}</span>
+                  <span className="md:col-span-2 text-[14px] text-[#4A5153] md:text-right">{a.readTime}</span>
                 </Link>
               </Reveal>
             ))}
@@ -426,7 +426,7 @@ export function HomePage() {
         </Reveal>
         <Reveal atraso={120}>
           <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
-            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" data-cursor="Oi!" className="group inline-flex items-center gap-3 self-start rounded-full bg-[#F4EFE8] text-[#0F3B40] px-9 py-5 text-[17px] hover:bg-white transition-colors">
+            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" data-cursor="Oi!" className="group inline-flex items-center gap-3 self-start rounded-full bg-[#F4EFE8] text-[#111819] px-9 py-5 text-[17px] hover:bg-white transition-colors">
               Falar no WhatsApp <span aria-hidden="true" className="transition-transform group-hover:translate-x-1.5">→</span>
             </a>
             <p className="text-[16px] text-[#F4EFE8]/75 max-w-sm leading-relaxed">Me conta sobre o seu trabalho. Quem responde sou eu.</p>

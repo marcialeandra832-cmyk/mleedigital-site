@@ -49,7 +49,7 @@ export function Navbar() {
   useEffect(() => { document.body.style.overflow = aberto ? 'hidden' : ''; }, [aberto]);
 
   const linkCls = ({ isActive }: { isActive: boolean }) =>
-    `relative py-1 transition-colors hover:text-[#0F3B40] ${isActive ? 'text-[#0F3B40] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-[#CC8A80]' : 'text-[#3F5557]'}`;
+    `relative py-1 transition-colors hover:text-[#111819] ${isActive ? 'text-[#111819] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-[#CC8A80]' : 'text-[#4A5153]'}`;
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${rolou ? 'bg-[#F4EFE8]/92 backdrop-blur-md border-b border-[#DCD2C6]' : 'bg-[#F4EFE8] border-b border-transparent'}`}>
@@ -61,7 +61,7 @@ export function Navbar() {
         <nav className="hidden lg:flex items-center gap-8 text-[15px]" aria-label="Principal">
           {principais.map((l) =>
             l.to.startsWith('/#') ? (
-              <a key={l.label} href={l.to} className="py-1 text-[#3F5557] hover:text-[#0F3B40] transition-colors">{l.label}</a>
+              <a key={l.label} href={l.to} className="py-1 text-[#4A5153] hover:text-[#111819] transition-colors">{l.label}</a>
             ) : (
               <NavLink key={l.label} to={l.to} className={linkCls}>{l.label}</NavLink>
             )
@@ -71,20 +71,20 @@ export function Navbar() {
               type="button"
               onClick={() => setMaisAberto((v) => !v)}
               aria-expanded={maisAberto}
-              className="inline-flex items-center gap-1 py-1 text-[#3F5557] hover:text-[#0F3B40] transition-colors"
+              className="inline-flex items-center gap-1 py-1 text-[#4A5153] hover:text-[#111819] transition-colors"
             >
               Mais <ChevronDown className={`w-4 h-4 transition-transform ${maisAberto ? 'rotate-180' : ''}`} />
             </button>
             {maisAberto && (
-              <div className="absolute right-0 top-full mt-4 w-[520px] rounded-2xl bg-[#FBF8F3] border border-[#DCD2C6] shadow-[0_24px_60px_-20px_rgba(15,59,64,0.25)] p-6 grid grid-cols-2 gap-8">
+              <div className="absolute right-0 top-full mt-4 w-[520px] rounded-2xl bg-[#FBF8F3] border border-[#DCD2C6] shadow-[0_24px_60px_-20px_rgba(17,24,25,0.25)] p-6 grid grid-cols-2 gap-8">
                 <div>
                   <p className="text-xs uppercase tracking-[0.25em] text-[#A8675B] mb-3">Mais</p>
                   <ul className="space-y-3">
                     {mais.map((m) => (
                       <li key={m.label}>
                         <Link to={m.to} className="group block">
-                          <span className="block text-[15px] text-[#0F3B40] group-hover:underline decoration-[#CC8A80] underline-offset-4">{m.label}</span>
-                          <span className="block text-[13px] text-[#3F5557]">{m.desc}</span>
+                          <span className="block text-[15px] text-[#111819] group-hover:underline decoration-[#CC8A80] underline-offset-4">{m.label}</span>
+                          <span className="block text-[13px] text-[#4A5153]">{m.desc}</span>
                         </Link>
                       </li>
                     ))}
@@ -95,7 +95,7 @@ export function Navbar() {
                   <ul className="space-y-2">
                     {segmentos.map((s) => (
                       <li key={s.to}>
-                        <Link to={s.to} className="text-[14px] text-[#3F5557] hover:text-[#0F3B40] transition-colors">{s.label}</Link>
+                        <Link to={s.to} className="text-[14px] text-[#4A5153] hover:text-[#111819] transition-colors">{s.label}</Link>
                       </li>
                     ))}
                   </ul>
@@ -110,13 +110,13 @@ export function Navbar() {
             href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center rounded-full bg-[#0F3B40] text-[#F4EFE8] text-[14px] px-5 py-2.5 hover:bg-[#0A2C30] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F3B40]"
+            className="hidden sm:inline-flex items-center rounded-full bg-[#111819] text-[#F4EFE8] text-[14px] px-5 py-2.5 hover:bg-[#0A0F10] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111819]"
           >
             Falar no WhatsApp
           </a>
           <button
             type="button"
-            className="lg:hidden p-2 -mr-2 text-[#0F3B40]"
+            className="lg:hidden p-2 -mr-2 text-[#111819]"
             onClick={() => setAberto((v) => !v)}
             aria-label={aberto ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={aberto}
@@ -132,23 +132,23 @@ export function Navbar() {
             {principais.map((l) => (
               <li key={l.label} className="border-b border-[#DCD2C6]">
                 {l.to.startsWith('/#') ? (
-                  <a href={l.to} onClick={() => setAberto(false)} className="block py-4 font-serif text-3xl text-[#0F3B40]">{l.label}</a>
+                  <a href={l.to} onClick={() => setAberto(false)} className="block py-4 font-serif text-3xl text-[#111819]">{l.label}</a>
                 ) : (
-                  <Link to={l.to} className="block py-4 font-serif text-3xl text-[#0F3B40]">{l.label}</Link>
+                  <Link to={l.to} className="block py-4 font-serif text-3xl text-[#111819]">{l.label}</Link>
                 )}
               </li>
             ))}
           </ul>
           <div className="grid grid-cols-2 gap-x-6 gap-y-3 mt-8 text-[15px]">
             {mais.map((m) => (
-              <Link key={m.to} to={m.to} className="text-[#3F5557]">{m.label}</Link>
+              <Link key={m.to} to={m.to} className="text-[#4A5153]">{m.label}</Link>
             ))}
           </div>
           <a
             href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 flex justify-center rounded-full bg-[#0F3B40] text-[#F4EFE8] py-4 text-[16px]"
+            className="mt-10 flex justify-center rounded-full bg-[#111819] text-[#F4EFE8] py-4 text-[16px]"
           >
             Falar no WhatsApp
           </a>

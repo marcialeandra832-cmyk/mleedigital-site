@@ -7,11 +7,11 @@ export function JanelaNavegador({ endereco, children, className = '' }: { endere
     <div className={`rounded-[10px] sm:rounded-[14px] overflow-hidden bg-[#ECE7DF] shadow-[0_50px_100px_-40px_rgba(0,0,0,0.55)] ${className}`}>
       <div className="flex items-center gap-3 px-3 sm:px-4 h-7 sm:h-9">
         <span className="flex gap-1.5" aria-hidden="true">
-          <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#0F3B40]/25" />
-          <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#0F3B40]/25" />
-          <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#0F3B40]/25" />
+          <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#111819]/25" />
+          <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#111819]/25" />
+          <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#111819]/25" />
         </span>
-        <span className="flex-1 max-w-[280px] mx-auto truncate rounded-full bg-white/80 px-3 py-0.5 text-center text-[10px] sm:text-[12px] text-[#3F5557]">{endereco}</span>
+        <span className="flex-1 max-w-[280px] mx-auto truncate rounded-full bg-white/80 px-3 py-0.5 text-center text-[10px] sm:text-[12px] text-[#4A5153]">{endereco}</span>
         <span className="w-10 sm:w-12" aria-hidden="true" />
       </div>
       {children}
@@ -19,7 +19,7 @@ export function JanelaNavegador({ endereco, children, className = '' }: { endere
   );
 }
 
-export function Celular({ src, alt, className = '', cor = '#0F3B40', proporcao }: { src: string; alt: string; className?: string; cor?: string; proporcao?: string }) {
+export function Celular({ src, alt, className = '', cor = '#111819', proporcao }: { src: string; alt: string; className?: string; cor?: string; proporcao?: string }) {
   // A moldura fica numa camada interna para a borda acompanhar a largura do próprio celular.
   // "proporcao" (ex.: "9 / 16") deixa vários celulares lado a lado com a mesma altura, cortando a sobra de baixo.
   return (

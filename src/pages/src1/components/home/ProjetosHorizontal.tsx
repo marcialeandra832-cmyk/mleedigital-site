@@ -28,8 +28,8 @@ export function ProjetosHorizontal() {
   return (
     <section ref={secao} id="projetos" className="relative overflow-hidden py-24 min-[901px]:py-0 min-[901px]:h-[100svh] min-[901px]:flex min-[901px]:flex-col min-[901px]:justify-center scroll-mt-20">
       <div className="px-5 sm:px-8 lg:px-14 flex items-baseline justify-between mb-10 min-[901px]:mb-12">
-        <h2 className="font-serif text-[52px] sm:text-[88px] lg:text-[120px] leading-[0.92] tracking-[-0.03em] text-[#0F3B40]">Projetos</h2>
-        <span className="font-serif text-2xl text-[#3F5557] tabular-nums">({String(clientesDestaque.length).padStart(2, '0')})</span>
+        <h2 className="font-serif text-[52px] sm:text-[88px] lg:text-[120px] leading-[0.92] tracking-[-0.03em] text-[#111819]">Projetos</h2>
+        <span className="font-serif text-2xl text-[#4A5153] tabular-nums">({String(clientesDestaque.length).padStart(2, '0')})</span>
       </div>
       <div ref={trilho} className="flex flex-col min-[901px]:flex-row gap-14 min-[901px]:gap-12 px-5 sm:px-8 lg:px-14 min-[901px]:w-max">
         {clientesDestaque.map((p, i) => (
@@ -47,14 +47,14 @@ export function ProjetosHorizontal() {
               <div className="flex items-baseline gap-5">
                 <span className="text-[14px] text-[#CC8A80] tabular-nums">{String(i + 1).padStart(2, '0')}</span>
                 <div>
-                  <h3 className="font-serif text-[28px] sm:text-[36px] leading-tight text-[#0F3B40]">{p.cliente}</h3>
-                  <p className="mt-1 text-[15px] text-[#3F5557]">{p.area}</p>
+                  <h3 className="font-serif text-[28px] sm:text-[36px] leading-tight text-[#111819]">{p.cliente}</h3>
+                  <p className="mt-1 text-[15px] text-[#4A5153]">{p.area}</p>
                 </div>
               </div>
               <div className="flex gap-5 text-[14px]">
-                {p.slug && <Link to={`/portfolio/${p.slug}/`} className="text-[#3F5557] hover:text-[#0F3B40]">Como foi feito</Link>}
+                {p.slug && <Link to={`/portfolio/${p.slug}/`} className="text-[#4A5153] hover:text-[#111819]">Como foi feito</Link>}
                 {p.link && (
-                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#0F3B40] underline decoration-[#CC8A80] underline-offset-4">
+                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#111819] underline decoration-[#CC8A80] underline-offset-4">
                     Abrir o site <ArrowUpRight className="w-4 h-4" />
                   </a>
                 )}

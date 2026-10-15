@@ -113,37 +113,37 @@ export function SitesProfissionaisPage() {
       <section className="pt-10 pb-16 sm:pt-16 sm:pb-24 bg-gradient-to-b from-[#FBF8F3] via-[#FBF8F3] to-white border-b border-[#DCD2C6] relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F3B40]/15 border border-[#0F3B40]/30 text-[#A8675B] text-xs font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111819]/15 border border-[#111819]/30 text-[#A8675B] text-xs font-semibold uppercase tracking-wider mb-6">
             <Sparkles className="w-3.5 h-3.5 text-[#A8675B]" />
             <span>ESTRUTURA DIGITAL DE ALTA AUTORIDADE</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#0F3B40] font-normal leading-[1.15] mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#111819] font-normal leading-[1.15] mb-6">
             Criação de sites profissionais
           </h1>
 
-          <p className="text-base sm:text-xl text-[#6B7C7D] font-light leading-relaxed max-w-3xl mx-auto mb-10">
+          <p className="text-base sm:text-xl text-[#767D7F] font-light leading-relaxed max-w-3xl mx-auto mb-10">
             Transforme visitantes em clientes com um site elegante, rápido e preparado para o Google. Escolha a estrutura ideal para o momento do seu negócio: da One Page expressa à plataforma multipágina.
           </p>
 
           {/* Core Offers Summary Pills */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10 text-left">
-            <div className="p-5 rounded-2xl bg-white border border-[#DCD2C6] shadow-sm hover:border-[#0F3B40]/40 transition-colors">
+            <div className="p-5 rounded-2xl bg-white border border-[#DCD2C6] shadow-sm hover:border-[#111819]/40 transition-colors">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#A8675B]">Site Essencial</span>
                 <span className="text-xs font-semibold text-[#16A34A] bg-[#DCFCE7] px-2 py-0.5 rounded">R$ 997</span>
               </div>
-              <p className="text-xs text-[#6B7C7D] leading-relaxed">
+              <p className="text-xs text-[#767D7F] leading-relaxed">
                 <strong>One Page profissional completa</strong> com foco em conversão direta para o WhatsApp, velocidade máxima e presença oficial.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-[#FBF8F3] text-[#0F3B40] border border-[#0F3B40]/30 shadow-md">
+            <div className="p-5 rounded-2xl bg-[#FBF8F3] text-[#111819] border border-[#111819]/30 shadow-md">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#A8675B]">Site Profissional</span>
-                <span className="text-xs font-semibold text-[#F4EFE8] bg-[#0F3B40] px-2 py-0.5 rounded">R$ 1.397</span>
+                <span className="text-xs font-semibold text-[#F4EFE8] bg-[#111819] px-2 py-0.5 rounded">R$ 1.397</span>
               </div>
-              <p className="text-xs text-[#3F5557] leading-relaxed">
+              <p className="text-xs text-[#4A5153] leading-relaxed">
                 <strong>Estrutura multipágina de até 5 páginas</strong> com páginas individuais por serviço, SEO avançado e autoridade máxima.
               </p>
             </div>
@@ -154,7 +154,7 @@ export function SitesProfissionaisPage() {
               href={getWhatsAppLink("Olá Márcia! Gostaria de um orçamento para criar o site profissional do meu negócio.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 py-4 px-8 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-sm font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-all shadow-xl"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 py-4 px-8 rounded-xl bg-[#F4EFE8] text-[#111819] text-sm font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-all shadow-xl"
             >
               <MessageCircle className="w-4 h-4 fill-current text-[#A8675B]" />
               <span>Solicitar Orçamento no WhatsApp</span>
@@ -162,7 +162,7 @@ export function SitesProfissionaisPage() {
 
             <a
               href="#modelos"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-4 px-7 rounded-xl bg-white border border-[#DCD2C6] text-[#0F3B40] text-sm font-medium hover:border-[#0F3B40] hover:text-[#A8675B] transition-colors shadow-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-4 px-7 rounded-xl bg-white border border-[#DCD2C6] text-[#111819] text-sm font-medium hover:border-[#111819] hover:text-[#A8675B] transition-colors shadow-sm"
             >
               <span>Explorar Modelos Visuais</span>
               <ArrowRight className="w-4 h-4" />
@@ -176,17 +176,17 @@ export function SitesProfissionaisPage() {
       <section className="py-14 bg-white border-b border-[#DCD2C6]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-8 sm:p-10 rounded-2xl bg-[#FBF8F3] border border-[#DCD2C6] flex flex-col md:flex-row items-center gap-8">
-            <div className="w-14 h-14 rounded-2xl bg-[#0F3B40]/20 text-[#A8675B] flex items-center justify-center shrink-0">
+            <div className="w-14 h-14 rounded-2xl bg-[#111819]/20 text-[#A8675B] flex items-center justify-center shrink-0">
               <Zap className="w-7 h-7" />
             </div>
             <div className="space-y-3 flex-1">
               <div className="inline-block text-xs font-bold uppercase tracking-wider text-[#A8675B]">
                 Oferta Direta & Sem Complicação
               </div>
-              <h2 className="text-xl sm:text-2xl font-serif text-[#0F3B40]">
+              <h2 className="text-xl sm:text-2xl font-serif text-[#111819]">
                 O Site Essencial já é uma One Page profissional completa
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B7C7D] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
                 Você não precisa contratar uma "landing page" separada. Nosso <strong>Site Essencial</strong> entrega toda a persuasão e velocidade de uma página de alta conversão, somadas à autoridade, institucionalidade, localização e mapa de um site oficial no seu próprio domínio (.com.br).
               </p>
             </div>
@@ -205,13 +205,13 @@ export function SitesProfissionaisPage() {
             <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-2 block">
               ESTRUTURAS & DESIGN
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif text-[#0F3B40]">
+            <h2 className="text-3xl sm:text-4xl font-serif text-[#111819]">
               Modelos Visuais de Referência
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-[#6B7C7D] leading-relaxed">
+            <p className="mt-3 text-sm sm:text-base text-[#767D7F] leading-relaxed">
               Explore estruturas visuais desenhadas para diferentes nichos de mercado. 
               <br className="hidden sm:inline" />
-              <strong className="text-[#0F3B40]">Importante:</strong> <span className="text-[#A8675B]">Modelo</span> é a referência visual do seu nicho; <span className="text-[#A8675B]">Plano</span> é o produto comercial (Essencial R$ 997 ou Profissional R$ 1.397).
+              <strong className="text-[#111819]">Importante:</strong> <span className="text-[#A8675B]">Modelo</span> é a referência visual do seu nicho; <span className="text-[#A8675B]">Plano</span> é o produto comercial (Essencial R$ 997 ou Profissional R$ 1.397).
             </p>
 
             {/* Filter Tabs */}
@@ -221,8 +221,8 @@ export function SitesProfissionaisPage() {
                 onClick={() => setFilterPlan('ALL')}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
                   filterPlan === 'ALL'
-                    ? 'bg-[#F4EFE8] text-[#0F3B40] shadow-md'
-                    : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
+                    ? 'bg-[#F4EFE8] text-[#111819] shadow-md'
+                    : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
                 }`}
               >
                 Todos os Modelos ({projectsData.length})
@@ -233,8 +233,8 @@ export function SitesProfissionaisPage() {
                 onClick={() => setFilterPlan('SITE ESSENCIAL')}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
                   filterPlan === 'SITE ESSENCIAL'
-                    ? 'bg-[#F4EFE8] text-[#0F3B40] shadow-md'
-                    : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
+                    ? 'bg-[#F4EFE8] text-[#111819] shadow-md'
+                    : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
                 }`}
               >
                 Modelos Site Essencial (R$ 997)
@@ -245,8 +245,8 @@ export function SitesProfissionaisPage() {
                 onClick={() => setFilterPlan('SITE PROFISSIONAL')}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
                   filterPlan === 'SITE PROFISSIONAL'
-                    ? 'bg-[#F4EFE8] text-[#0F3B40] shadow-md'
-                    : 'bg-[#FBF8F3] text-[#6B7C7D] hover:bg-[#FBF8F3]'
+                    ? 'bg-[#F4EFE8] text-[#111819] shadow-md'
+                    : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
                 }`}
               >
                 Modelos Site Profissional (R$ 1.397)
@@ -276,15 +276,15 @@ export function SitesProfissionaisPage() {
                     <div className="absolute top-3 left-3">
                       <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm ${
                         project.planType === 'SITE PROFISSIONAL'
-                          ? 'bg-[#F4EFE8] text-[#A8675B] border border-[#0F3B40]/50'
-                          : 'bg-white text-[#0F3B40] border border-[#DCD2C6]'
+                          ? 'bg-[#F4EFE8] text-[#A8675B] border border-[#111819]/50'
+                          : 'bg-white text-[#111819] border border-[#DCD2C6]'
                       }`}>
                         {project.planType === 'SITE PROFISSIONAL' ? 'Plano Profissional • R$ 1.397' : 'Plano Essencial • R$ 997'}
                       </span>
                     </div>
 
                     {/* Category Overlay */}
-                    <div className="absolute bottom-3 left-3 right-3 text-[#0F3B40]">
+                    <div className="absolute bottom-3 left-3 right-3 text-[#111819]">
                       <span className="text-[11px] font-medium text-[#A8675B] uppercase tracking-wider block">
                         {project.category}
                       </span>
@@ -296,15 +296,15 @@ export function SitesProfissionaisPage() {
 
                   {/* Content */}
                   <div className="p-6 space-y-4">
-                    <p className="text-xs text-[#6B7C7D] leading-relaxed line-clamp-2">
+                    <p className="text-xs text-[#767D7F] leading-relaxed line-clamp-2">
                       {project.tagline}
                     </p>
 
                     <div className="pt-2 border-t border-[#DCD2C6] space-y-2">
-                      <div className="text-[11px] font-semibold text-[#0F3B40] uppercase tracking-wide">
+                      <div className="text-[11px] font-semibold text-[#111819] uppercase tracking-wide">
                         Destaques da Estrutura:
                       </div>
-                      <ul className="space-y-1 text-xs text-[#3F5557]">
+                      <ul className="space-y-1 text-xs text-[#4A5153]">
                         {project.structure.slice(0, 3).map((item, idx) => (
                           <li key={idx} className="flex items-start gap-1.5">
                             <Check className="w-3.5 h-3.5 text-[#A8675B] shrink-0 mt-0.5" />
@@ -324,7 +324,7 @@ export function SitesProfissionaisPage() {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-white border border-[#DCD2C6] text-xs font-semibold text-[#0F3B40] hover:border-[#0F3B40] hover:text-[#A8675B] transition-colors"
+                        className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-white border border-[#DCD2C6] text-xs font-semibold text-[#111819] hover:border-[#111819] hover:text-[#A8675B] transition-colors"
                       >
                         <Eye className="w-3.5 h-3.5" />
                         <span>Ver Demo</span>
@@ -333,7 +333,7 @@ export function SitesProfissionaisPage() {
                     
                     <Link
                       to={`/portfolio/${project.slug}/`}
-                      className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-[#FBF8F3] text-xs font-semibold text-[#6B7C7D] hover:bg-[#FBF8F3] transition-colors"
+                      className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-[#FBF8F3] text-xs font-semibold text-[#767D7F] hover:bg-[#FBF8F3] transition-colors"
                     >
                       <span>Ver Estudo</span>
                     </Link>
@@ -343,7 +343,7 @@ export function SitesProfissionaisPage() {
                     href={getWhatsAppLink(`Olá Márcia! Gostei muito do modelo de referência "${project.client}" e gostaria de criar o meu site baseado nessa estrutura.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-xs font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-colors"
                   >
                     <span>Quero um site com essa estrutura</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -362,10 +362,10 @@ export function SitesProfissionaisPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-serif text-[#0F3B40]">
+            <h2 className="text-2xl sm:text-3xl font-serif text-[#111819]">
               Por que depender apenas do Instagram limita suas vendas?
             </h2>
-            <p className="text-xs sm:text-sm text-[#3F5557] mt-2">
+            <p className="text-xs sm:text-sm text-[#4A5153] mt-2">
               Redes sociais atraem atenção, mas é no site oficial que o cliente toma a decisão de compra.
             </p>
           </div>
@@ -375,20 +375,20 @@ export function SitesProfissionaisPage() {
               <div className="w-10 h-10 rounded-xl bg-[#EF4444]/10 text-[#EF4444] flex items-center justify-center font-bold">
                 ✕
               </div>
-              <h3 className="font-serif text-base text-[#0F3B40]">Sem Site Próprio</h3>
-              <ul className="space-y-2 text-xs text-[#3F5557]">
+              <h3 className="font-serif text-base text-[#111819]">Sem Site Próprio</h3>
+              <ul className="space-y-2 text-xs text-[#4A5153]">
                 <li>• Você não aparece quando alguém pesquisa no Google por sua especialidade na cidade.</li>
                 <li>• O cliente se perde entre dezenas de postagens sem saber onde clicar ou agendar.</li>
                 <li>• Percepção de negócio informal ou autônomo iniciante.</li>
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#F4EFE8] text-[#0F3B40] border border-[#0F3B40]/40 space-y-3 shadow-lg">
-              <div className="w-10 h-10 rounded-xl bg-[#0F3B40]/20 text-[#A8675B] flex items-center justify-center font-bold">
+            <div className="p-6 rounded-2xl bg-[#F4EFE8] text-[#111819] border border-[#111819]/40 space-y-3 shadow-lg">
+              <div className="w-10 h-10 rounded-xl bg-[#111819]/20 text-[#A8675B] flex items-center justify-center font-bold">
                 ✓
               </div>
               <h3 className="font-serif text-base text-[#A8675B]">Com Site MLee Digital</h3>
-              <ul className="space-y-2 text-xs text-[#0F3B40]">
+              <ul className="space-y-2 text-xs text-[#111819]">
                 <li>• Domínio próprio (.com.br) que transmite autoridade imediata.</li>
                 <li>• Estrutura clara com catálogo de serviços e botão direto no WhatsApp.</li>
                 <li>• Indexado no Google para captar clientes que estão com intenção de compra agora.</li>
@@ -406,7 +406,7 @@ export function SitesProfissionaisPage() {
             <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-2 block">
               ESPECIALIDADES
             </span>
-            <h2 className="text-2xl sm:text-3xl font-serif text-[#0F3B40]">
+            <h2 className="text-2xl sm:text-3xl font-serif text-[#111819]">
               Veja a estrutura recomendada para o seu segmento
             </h2>
           </div>
@@ -423,12 +423,12 @@ export function SitesProfissionaisPage() {
               <Link
                 key={idx}
                 to={`/${seg.slug}/`}
-                className="p-4 rounded-xl bg-[#FBF8F3] border border-[#DCD2C6] hover:border-[#0F3B40] hover:bg-[#FBF8F3] transition-all group flex flex-col justify-between"
+                className="p-4 rounded-xl bg-[#FBF8F3] border border-[#DCD2C6] hover:border-[#111819] hover:bg-[#FBF8F3] transition-all group flex flex-col justify-between"
               >
-                <span className="text-xs font-semibold text-[#0F3B40] group-hover:text-[#A8675B]">
+                <span className="text-xs font-semibold text-[#111819] group-hover:text-[#A8675B]">
                   {seg.name}
                 </span>
-                <span className="text-[11px] text-[#3F5557] mt-2 inline-flex items-center gap-1">
+                <span className="text-[11px] text-[#4A5153] mt-2 inline-flex items-center gap-1">
                   <span>Ver nicho</span>
                   <ChevronRight className="w-3 h-3 text-[#A8675B]" />
                 </span>

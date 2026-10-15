@@ -16,14 +16,14 @@ export function CabecalhoPortfolio() {
         </Link>
         <nav className="flex items-center gap-5 sm:gap-7 text-[14px] sm:text-[15px]" aria-label="Portfólio">
           {dentroDeProjeto && (
-            <Link to="/portfolio/" className="text-[#3F5557] hover:text-[#0F3B40] transition-colors">Todos os projetos</Link>
+            <Link to="/portfolio/" className="text-[#4A5153] hover:text-[#111819] transition-colors">Todos os projetos</Link>
           )}
-          <Link to="/" className="hidden sm:inline text-[#3F5557] hover:text-[#0F3B40] transition-colors">Site completo</Link>
+          <Link to="/" className="hidden sm:inline text-[#4A5153] hover:text-[#111819] transition-colors">Site completo</Link>
           <a
             href={getWhatsAppLink('Olá Márcia! Vi o seu portfólio e quero conversar sobre o meu site.')}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden min-[420px]:inline-flex items-center rounded-full bg-[#0F3B40] text-[#F4EFE8] px-4 sm:px-5 py-2.5 hover:bg-[#0A2C30] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F3B40]"
+            className="hidden min-[420px]:inline-flex items-center rounded-full bg-[#111819] text-[#F4EFE8] px-4 sm:px-5 py-2.5 hover:bg-[#0A0F10] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111819]"
           >
             Falar no WhatsApp
           </a>

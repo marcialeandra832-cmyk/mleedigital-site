@@ -5,7 +5,7 @@ type Props = { claro?: boolean; tamanho?: number; soMonograma?: boolean; classNa
 
 // Logo oficial da MLee Digital: monograma + nome em Bodoni Moda + "DIGITAL" em Jost.
 export function Logo({ claro = false, tamanho = 36, soMonograma = false, className = '' }: Props) {
-  const cor = claro ? 'text-[#F4EFE8]' : 'text-[#0F3B40]';
+  const cor = claro ? 'text-[#F4EFE8]' : 'text-[#111819]';
   return (
     <span className={`inline-flex items-center ${className}`} style={{ gap: tamanho * 0.42 }}>
       <img

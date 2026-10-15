@@ -32,10 +32,10 @@ export function AppsPage() {
           <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-3 inline-block">
             SISTEMAS PRONTOS • É SÓ NOMEAR E USAR
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F3B40] font-normal leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-4">
             Aplicações Web Próprias com IA
           </h1>
-          <p className="text-base text-[#6B7C7D] font-light max-w-2xl mx-auto">
+          <p className="text-base text-[#767D7F] font-light max-w-2xl mx-auto">
             Sistemas desenvolvidos pela MLee Digital disponíveis para uso imediato ou licenciamento white-label para profissionais e empresas.
           </p>
         </div>
@@ -47,7 +47,7 @@ export function AppsPage() {
           {appsData.map((app, index) => (
             <div 
               key={app.id}
-              className={`flex flex-col lg:flex-row items-center gap-10 p-8 sm:p-12 rounded-3xl border border-[#DCD2C6] bg-[#FBF8F3] hover:border-[#0F3B40]/50 transition-all ${
+              className={`flex flex-col lg:flex-row items-center gap-10 p-8 sm:p-12 rounded-3xl border border-[#DCD2C6] bg-[#FBF8F3] hover:border-[#111819]/50 transition-all ${
                 index % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}
             >
@@ -64,19 +64,19 @@ export function AppsPage() {
 
               {/* Text & Features */}
               <div className="w-full lg:w-1/2 space-y-5">
-                <span className="text-xs font-semibold text-[#A8675B] bg-[#0F3B40]/15 px-3 py-1 rounded-full inline-block">
+                <span className="text-xs font-semibold text-[#A8675B] bg-[#111819]/15 px-3 py-1 rounded-full inline-block">
                   {app.badge}
                 </span>
 
-                <h2 className="text-3xl font-serif text-[#0F3B40]">{app.name}</h2>
+                <h2 className="text-3xl font-serif text-[#111819]">{app.name}</h2>
 
-                <p className="text-sm sm:text-base text-[#6B7C7D] leading-relaxed">
+                <p className="text-sm sm:text-base text-[#767D7F] leading-relaxed">
                   {app.desc}
                 </p>
 
                 <div className="space-y-2.5 pt-2">
                   {app.highlights.map((h, i) => (
-                    <div key={i} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#3F5557]">
+                    <div key={i} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#4A5153]">
                       <CheckCircle2 className="w-4 h-4 text-[#A8675B] shrink-0" />
                       <span>{h}</span>
                     </div>
@@ -86,7 +86,7 @@ export function AppsPage() {
                 <div className="flex flex-col sm:flex-row items-center gap-3 pt-4">
                   <Link
                     to={`/apps/${app.slug}/`}
-                    className="w-full sm:w-auto text-center py-3 px-6 rounded-xl bg-[#F4EFE8] text-[#0F3B40] text-xs font-semibold hover:bg-[#0F3B40] hover:text-[#F4EFE8] transition-all"
+                    className="w-full sm:w-auto text-center py-3 px-6 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-all"
                   >
                     Ver Apresentação Completa
                   </Link>
@@ -95,7 +95,7 @@ export function AppsPage() {
                     href={app.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 py-3 px-6 rounded-xl bg-white border border-[#DCD2C6] text-[#0F3B40] text-xs font-semibold hover:border-[#0F3B40] hover:text-[#A8675B] transition-all"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 py-3 px-6 rounded-xl bg-white border border-[#DCD2C6] text-[#111819] text-xs font-semibold hover:border-[#111819] hover:text-[#A8675B] transition-all"
                   >
                     <span>Testar Demonstração</span>
                     <ExternalLink className="w-3.5 h-3.5" />

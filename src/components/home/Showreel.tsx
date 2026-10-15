@@ -59,7 +59,7 @@ export function Showreel() {
       <div
         ref={quadro}
         data-cursor="Showreel"
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] min-[901px]:w-[44vw] aspect-[16/9] rounded-[18px] overflow-hidden bg-[#0A2C30]"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] min-[901px]:w-[44vw] aspect-[16/9] rounded-[18px] overflow-hidden bg-[#0A0F10]"
       >
         <video
           key={`d-${c.id}`}
@@ -73,17 +73,17 @@ export function Showreel() {
           preload="metadata"
         />
         <div className="absolute left-0 bottom-0 p-4 flex flex-wrap gap-2 text-[13px] text-[#F4EFE8] z-10">
-          <span className="rounded-full bg-[#0A2C30]/80 backdrop-blur px-3.5 py-1.5 tabular-nums">
+          <span className="rounded-full bg-[#0A0F10]/80 backdrop-blur px-3.5 py-1.5 tabular-nums">
             {String(atual + 1).padStart(2, '0')} / {String(clientes.length).padStart(2, '0')}
           </span>
-          <span className="rounded-full bg-[#0A2C30]/80 backdrop-blur px-3.5 py-1.5">{c.nome}</span>
+          <span className="rounded-full bg-[#0A0F10]/80 backdrop-blur px-3.5 py-1.5">{c.nome}</span>
         </div>
       </div>
 
       <div
         ref={celular}
         aria-hidden="true"
-        className="absolute z-20 right-[5vw] bottom-[6vh] min-[901px]:right-[7vw] min-[901px]:bottom-[6vh] w-[30vw] min-[901px]:w-[15vw] max-w-[250px] aspect-[480/816] p-[8px] rounded-[30px] bg-[#0F3B40] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)]"
+        className="absolute z-20 right-[5vw] bottom-[6vh] min-[901px]:right-[7vw] min-[901px]:bottom-[6vh] w-[30vw] min-[901px]:w-[15vw] max-w-[250px] aspect-[480/816] p-[8px] rounded-[30px] bg-[#111819] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)]"
       >
         <div className="w-full h-full rounded-[22px] overflow-hidden bg-white">
           <video

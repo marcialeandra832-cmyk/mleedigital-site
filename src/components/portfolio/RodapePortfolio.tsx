@@ -5,7 +5,7 @@ import { getWhatsAppLink, INSTAGRAM_URL, INSTAGRAM_HANDLE } from '../../data/con
 // Rodapé enxuto das páginas de portfólio.
 export function RodapePortfolio() {
   return (
-    <footer className="bg-[#0A2C30] text-[#F4EFE8]">
+    <footer className="bg-[#0A0F10] text-[#F4EFE8]">
       <div className="px-5 sm:px-8 lg:px-14 py-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
           <Logo claro tamanho={38} />

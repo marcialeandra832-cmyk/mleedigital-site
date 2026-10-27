@@ -3,10 +3,19 @@ export const WA_NUMBER = "5549999619123";
 export const WA_BASE_URL = `https://wa.me/${WA_NUMBER}`;
 export const INSTAGRAM_URL = "https://instagram.com/marcia.mlee";
 export const INSTAGRAM_HANDLE = "@marcia.mlee";
-export const SITE_URL = "https://mleedigital.com.br";
+export const SITE_URL = "https://www.mleedigital.com.br";
 export const AUTHOR_NAME = "Márcia MLee";
 export const AUTHOR_ROLE = "Fundadora & Desenvolvedora na MLee Digital";
 export const AUTHOR_IMG = fotoAutora;
+
+// Atendimento 100% online: o site fala com o Brasil todo, com destaque para as capitais-alvo
+export const AREA_ATENDIDA = [
+  { "@type": "Country", "name": "Brasil" },
+  { "@type": "City", "name": "São Paulo" },
+  { "@type": "City", "name": "Rio de Janeiro" },
+  { "@type": "City", "name": "Goiânia" },
+  { "@type": "City", "name": "Belo Horizonte" },
+];
 
 export const getWhatsAppLink = (customText?: string) => {
   const defaultText = "Olá Marcia! Gostaria de conversar sobre a criação de um site para o meu negócio.";

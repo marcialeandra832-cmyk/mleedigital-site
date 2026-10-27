@@ -12,7 +12,7 @@ export function AppsPage() {
     "@type": "CollectionPage",
     "name": "Aplicativos Web Prontos e Sistemas com IA | MLee Digital",
     "description": "Sistemas prontos para uso imediato: Nail Finance Pro (gestão para estúdios de beleza) e Elastic Fit (treinos de baixo impacto 40+).",
-    "url": "https://mleedigital.com.br/apps/"
+    "url": "https://www.mleedigital.com.br/apps/"
   };
 
   return (

@@ -40,7 +40,7 @@ export function ContactPage() {
     "@type": "ContactPage",
     "name": "Contato | MLee Digital",
     "description": "Entre em contato com a MLee Digital para tirar dúvidas ou solicitar orçamento de criação de sites.",
-    "url": "https://mleedigital.com.br/contato/"
+    "url": "https://www.mleedigital.com.br/contato/"
   };
 
   return (

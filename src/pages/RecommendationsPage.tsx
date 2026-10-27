@@ -28,7 +28,7 @@ export function RecommendationsPage({ customCategory }: RecommendationsPageProps
     "@type": "CollectionPage",
     "name": "Ferramentas & Produtos Recomendados | MLee Digital",
     "description": "Seleção criteriosa de hospedagens, ferramentas de produtividade, ergonomia de home office e equipamentos para criadores.",
-    "url": "https://mleedigital.com.br/recomendados/"
+    "url": "https://www.mleedigital.com.br/recomendados/"
   };
 
   return (

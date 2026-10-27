@@ -212,7 +212,7 @@ export function PreviaSite() {
                 <input
                   value={cidade}
                   onChange={(e) => setCidade(e.target.value)}
-                  placeholder="Videira-SC"
+                  placeholder="São Paulo-SP"
                   maxLength={30}
                   className="w-full rounded-lg bg-white border border-[#DCD2C6] px-4 py-3.5 text-[#111819] placeholder:text-[#9AA0A2] focus:outline-none focus:border-[#111819] focus:ring-1 focus:ring-[#111819]"
                 />

@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Páginas Principais -->
   <url>
-    <loc>https://mleedigital.com.br/</loc>
+    <loc>https://www.mleedigital.com.br/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/sobre/</loc>
+    <loc>https://www.mleedigital.com.br/sobre/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/contato/</loc>
+    <loc>https://www.mleedigital.com.br/contato/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -22,13 +22,13 @@
 
   <!-- Serviços -->
   <url>
-    <loc>https://mleedigital.com.br/sites-profissionais/</loc>
+    <loc>https://www.mleedigital.com.br/sites-profissionais/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/sistemas-web/</loc>
+    <loc>https://www.mleedigital.com.br/sistemas-web/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -36,87 +36,113 @@
 
   <!-- Segmentos / Nichos -->
   <url>
-    <loc>https://mleedigital.com.br/sites-para-clinicas/</loc>
+    <loc>https://www.mleedigital.com.br/sites-para-clinicas/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/sites-para-esteticistas/</loc>
+    <loc>https://www.mleedigital.com.br/sites-para-esteticistas/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/sites-para-advogados/</loc>
+    <loc>https://www.mleedigital.com.br/sites-para-advogados/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/sites-para-arquitetos/</loc>
+    <loc>https://www.mleedigital.com.br/sites-para-arquitetos/</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/catalogo-digital/</loc>
+    <loc>https://www.mleedigital.com.br/catalogo-digital/</loc>
     <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Cidades (atendimento online) -->
+  <url>
+    <loc>https://www.mleedigital.com.br/criacao-de-sites-em-sao-paulo/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mleedigital.com.br/criacao-de-sites-no-rio-de-janeiro/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mleedigital.com.br/criacao-de-sites-em-goiania/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mleedigital.com.br/criacao-de-sites-em-belo-horizonte/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Portfólio -->
   <url>
-    <loc>https://mleedigital.com.br/portfolio/</loc>
+    <loc>https://www.mleedigital.com.br/portfolio/</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/portfolio/dra-soraya-abbud/</loc>
+    <loc>https://www.mleedigital.com.br/portfolio/dra-soraya-abbud/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/portfolio/dra-maria-junqueira/</loc>
+    <loc>https://www.mleedigital.com.br/portfolio/dra-maria-junqueira/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/portfolio/dra-danielle-carvao/</loc>
+    <loc>https://www.mleedigital.com.br/portfolio/dra-danielle-carvao/</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/portfolio/dra-viviane-mengatto/</loc>
+    <loc>https://www.mleedigital.com.br/portfolio/dra-viviane-mengatto/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/portfolio/nicole-bordignon/</loc>
+    <loc>https://www.mleedigital.com.br/portfolio/nicole-bordignon/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/portfolio/matriz-grill/</loc>
+    <loc>https://www.mleedigital.com.br/portfolio/matriz-grill/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/portfolio/carla-figmam-consorcios/</loc>
+    <loc>https://www.mleedigital.com.br/portfolio/carla-figmam-consorcios/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/portfolio/figueiredo-advocacia/</loc>
+    <loc>https://www.mleedigital.com.br/portfolio/figueiredo-advocacia/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -124,19 +150,19 @@
 
   <!-- Aplicativos -->
   <url>
-    <loc>https://mleedigital.com.br/apps/</loc>
+    <loc>https://www.mleedigital.com.br/apps/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/apps/nail-finance-pro/</loc>
+    <loc>https://www.mleedigital.com.br/apps/nail-finance-pro/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/apps/elastic-fit/</loc>
+    <loc>https://www.mleedigital.com.br/apps/elastic-fit/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -144,61 +170,61 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://mleedigital.com.br/blog/</loc>
+    <loc>https://www.mleedigital.com.br/blog/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/blog/seu-paciente-ja-pergunta-para-a-ia/</loc>
+    <loc>https://www.mleedigital.com.br/blog/seu-paciente-ja-pergunta-para-a-ia/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/blog/avaliacoes-no-google-o-novo-boca-a-boca/</loc>
+    <loc>https://www.mleedigital.com.br/blog/avaliacoes-no-google-o-novo-boca-a-boca/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/blog/quem-manda-no-instagram-julgamento-meta/</loc>
+    <loc>https://www.mleedigital.com.br/blog/quem-manda-no-instagram-julgamento-meta/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/blog/quanto-custa-criar-um-site-profissional/</loc>
+    <loc>https://www.mleedigital.com.br/blog/quanto-custa-criar-um-site-profissional/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/blog/site-ou-instagram-qual-sua-empresa-precisa/</loc>
+    <loc>https://www.mleedigital.com.br/blog/site-ou-instagram-qual-sua-empresa-precisa/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/blog/como-aparecer-no-google-com-pequena-empresa/</loc>
+    <loc>https://www.mleedigital.com.br/blog/como-aparecer-no-google-com-pequena-empresa/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/blog/site-one-page-ou-site-completo-qual-escolher/</loc>
+    <loc>https://www.mleedigital.com.br/blog/site-one-page-ou-site-completo-qual-escolher/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/blog/site-para-psicologo-o-que-precisa-ter/</loc>
+    <loc>https://www.mleedigital.com.br/blog/site-para-psicologo-o-que-precisa-ter/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/blog/site-para-clinica-de-estetica-estrutura-ideal/</loc>
+    <loc>https://www.mleedigital.com.br/blog/site-para-clinica-de-estetica-estrutura-ideal/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -206,25 +232,25 @@
 
   <!-- Recomendações -->
   <url>
-    <loc>https://mleedigital.com.br/recomendados/</loc>
+    <loc>https://www.mleedigital.com.br/recomendados/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/recomendados/ferramentas-digitais/</loc>
+    <loc>https://www.mleedigital.com.br/recomendados/ferramentas-digitais/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/recomendados/home-office/</loc>
+    <loc>https://www.mleedigital.com.br/recomendados/home-office/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/recomendados/criadores/</loc>
+    <loc>https://www.mleedigital.com.br/recomendados/criadores/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
@@ -232,13 +258,13 @@
 
   <!-- Legal -->
   <url>
-    <loc>https://mleedigital.com.br/politica-de-privacidade/</loc>
+    <loc>https://www.mleedigital.com.br/politica-de-privacidade/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://mleedigital.com.br/termos-de-uso/</loc>
+    <loc>https://www.mleedigital.com.br/termos-de-uso/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

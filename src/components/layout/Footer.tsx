@@ -22,6 +22,12 @@ const colunas = [
     { label: 'Advocacia', to: '/sites-para-advogados/' },
     { label: 'Catálogo digital', to: '/catalogo-digital/' },
   ] },
+  { titulo: 'Atendo em', links: [
+    { label: 'São Paulo', to: '/criacao-de-sites-em-sao-paulo/' },
+    { label: 'Rio de Janeiro', to: '/criacao-de-sites-no-rio-de-janeiro/' },
+    { label: 'Goiânia', to: '/criacao-de-sites-em-goiania/' },
+    { label: 'Belo Horizonte', to: '/criacao-de-sites-em-belo-horizonte/' },
+  ] },
 ];
 
 export function Footer() {
@@ -29,10 +35,10 @@ export function Footer() {
     <footer className="bg-[#0A0F10] text-[#F4EFE8]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-20 pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <Logo claro tamanho={44} />
             <p className="mt-6 text-[15px] leading-relaxed text-[#F4EFE8]/70 max-w-sm">
-              Sites para médicas, dentistas, esteticistas, advogadas e arquitetas. Feitos por mim, do começo ao fim, em Videira, SC.
+              Sites para médicas, dentistas, esteticistas, advogadas e arquitetas. Feitos por mim, do começo ao fim, com atendimento online para todo o Brasil.
             </p>
             <div className="mt-6 flex flex-col gap-1.5 text-[15px]">
               <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="hover:text-[#CC8A80] transition-colors">WhatsApp (49) 99961-9123</a>

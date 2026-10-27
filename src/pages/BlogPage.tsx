@@ -28,7 +28,7 @@ export function BlogPage() {
     "@type": "Blog",
     "name": "Blog MLee Digital | Estratégia Digital, Sites e Negócios",
     "description": "Artigos práticos sobre criação de sites, presença no Google, marketing para consultórios e ferramentas de produtividade.",
-    "url": "https://mleedigital.com.br/blog/"
+    "url": "https://www.mleedigital.com.br/blog/"
   };
 
   return (

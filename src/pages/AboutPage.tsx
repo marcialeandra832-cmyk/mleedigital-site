@@ -31,7 +31,7 @@ export function AboutPage() {
       "name": AUTHOR_NAME,
       "jobTitle": AUTHOR_ROLE,
       "image": AUTHOR_IMG,
-      "url": "https://mleedigital.com.br/sobre/"
+      "url": "https://www.mleedigital.com.br/sobre/"
     }
   };
 

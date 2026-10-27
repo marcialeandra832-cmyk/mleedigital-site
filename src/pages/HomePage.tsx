@@ -14,7 +14,7 @@ import { clientesDestaque } from '../data/clientesDestaque';
 import monogramaClaro from '../assets/brand/monograma-claro.svg';
 import { appsData } from '../data/apps';
 import { blogPostsData } from '../data/blog';
-import { getWhatsAppLink, AUTHOR_IMG, AUTHOR_NAME, AUTHOR_ROLE } from '../data/constants';
+import { getWhatsAppLink, AUTHOR_IMG, AUTHOR_NAME, AUTHOR_ROLE, AREA_ATENDIDA, INSTAGRAM_URL, SITE_URL } from '../data/constants';
 import luzPetroleo from '../assets/brand/luz-janela-petroleo.webp';
 import luzClaro from '../assets/brand/luz-janela-claro.webp';
 import logoRelevo from '../assets/brand/logo-relevo-petroleo.webp';
@@ -142,9 +142,10 @@ export function HomePage() {
   const homeSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": `${SITE_URL}/#empresa`,
     "name": "MLee Digital",
     "image": AUTHOR_IMG,
-    "url": "https://mleedigital.com.br",
+    "url": `${SITE_URL}/`,
     "telephone": "+5549999619123",
     "priceRange": "R$ 997 - R$ 1397",
     "founder": {
@@ -152,7 +153,10 @@ export function HomePage() {
       "name": AUTHOR_NAME,
       "jobTitle": AUTHOR_ROLE
     },
-    "description": "Criação de sites profissionais de alta conversão e sistemas digitais sob medida para clínicas, especialistas e empresas."
+    "areaServed": AREA_ATENDIDA,
+    "availableLanguage": "pt-BR",
+    "sameAs": [INSTAGRAM_URL],
+    "description": "Criação de sites sob medida para médicas, dentistas, esteticistas, advogadas e arquitetas. Atendimento 100% online para todo o Brasil."
   };
 
   const artigos = [...blogPostsData]
@@ -162,8 +166,8 @@ export function HomePage() {
   return (
     <div className="w-full bg-[#F4EFE8] text-[#111819]">
       <SEOHead
-        title="MLee Digital | Sites que fazem o cliente escolher você"
-        description="Sites sob medida para médicas, dentistas, esteticistas, advogadas e arquitetas, criados pela Márcia do começo ao fim. Prontos em até 7 dias úteis."
+        title="Criação de sites para médicas, dentistas e advogadas | MLee Digital"
+        description="Sites sob medida para médicas, dentistas, esteticistas, advogadas e arquitetas de todo o Brasil. Atendimento 100% online e site no ar em até 7 dias úteis."
         canonicalPath="/"
         schemaJson={homeSchema}
       />
@@ -180,7 +184,7 @@ export function HomePage() {
         </h1>
         <div className="hero-rodape relative z-[1] mt-10 sm:mt-14 pt-5 border-t border-[#DCD2C6] grid grid-cols-1 md:grid-cols-[1.3fr_1fr_auto] gap-5 md:gap-8 items-end text-[15px] text-[#4A5153]">
           <p><strong className="font-medium text-[#111819]">MLee Digital.</strong> Sites para médicas, dentistas, esteticistas, advogadas e arquitetas. Feitos por mim, do começo ao fim.</p>
-          <p>Videira, SC. Do primeiro contato ao site no ar em até 7 dias úteis.</p>
+          <p>Atendimento online para todo o Brasil. Do primeiro contato ao site no ar em até 7 dias úteis.</p>
           <div className="flex gap-3 md:mr-16">
             <a href="#previa" className="inline-flex items-center rounded-full bg-[#111819] text-[#F4EFE8] px-6 py-3 text-[15px] whitespace-nowrap hover:bg-[#0A0F10] transition-colors">Ver como o meu site ficaria</a>
           </div>

@@ -62,7 +62,7 @@ export function PortfolioPage() {
     '@type': 'CollectionPage',
     name: 'Portfólio | MLee Digital',
     description: 'Sites criados e publicados pela MLee Digital para clientes, com as telas e o que foi feito em cada projeto.',
-    url: 'https://mleedigital.com.br/portfolio/',
+    url: 'https://www.mleedigital.com.br/portfolio/',
   };
 
   return (

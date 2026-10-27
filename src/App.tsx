@@ -25,6 +25,7 @@ import { ContactPage } from './pages/ContactPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfUsePage } from './pages/TermsOfUsePage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { CidadePage } from './pages/CidadePage';
 
 // As páginas de portfólio têm cabeçalho e rodapé próprios, mais enxutos,
 // para o link poder ser enviado sozinho a quem pede para ver os trabalhos.
@@ -67,6 +68,12 @@ export function App() {
             <Route path="/sites-para-nail-designers/" element={<Navigate to="/sites-para-esteticistas/" replace />} />
             <Route path="/sites-para-arquitetos-e-corretores/" element={<Navigate to="/sites-para-arquitetos/" replace />} />
             <Route path="/sites-para-prestadores-de-servicos/" element={<Navigate to="/sites-profissionais/" replace />} />
+
+            {/* Páginas por cidade (SEO local, atendimento online) */}
+            <Route path="/criacao-de-sites-em-sao-paulo/" element={<CidadePage slug="criacao-de-sites-em-sao-paulo" />} />
+            <Route path="/criacao-de-sites-no-rio-de-janeiro/" element={<CidadePage slug="criacao-de-sites-no-rio-de-janeiro" />} />
+            <Route path="/criacao-de-sites-em-goiania/" element={<CidadePage slug="criacao-de-sites-em-goiania" />} />
+            <Route path="/criacao-de-sites-em-belo-horizonte/" element={<CidadePage slug="criacao-de-sites-em-belo-horizonte" />} />
 
             {/* Portfolio & Case Studies */}
             <Route path="/portfolio/" element={<PortfolioPage />} />

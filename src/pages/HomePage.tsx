@@ -14,6 +14,7 @@ import { clientesDestaque } from '../data/clientesDestaque';
 import monogramaClaro from '../assets/brand/monograma-claro.svg';
 import { appsData } from '../data/apps';
 import { blogPostsData } from '../data/blog';
+import { planos } from '../data/planos';
 import { getWhatsAppLink, AUTHOR_IMG, AUTHOR_NAME, AUTHOR_ROLE, AREA_ATENDIDA, INSTAGRAM_URL, SITE_URL } from '../data/constants';
 import luzPetroleo from '../assets/brand/luz-janela-petroleo.webp';
 import luzClaro from '../assets/brand/luz-janela-claro.webp';
@@ -42,45 +43,6 @@ const perguntas = [
   { q: 'Como funciona a manutenção mensal?', a: 'A criação é paga uma única vez. Depois que o site vai ao ar, a mensalidade (R$ 127 no Essencial ou R$ 197 no Profissional) cobre a hospedagem, a segurança com cadeado (SSL), as cópias de segurança automáticas, o monitoramento e pequenas alterações de textos e fotos, com suporte direto comigo.' },
   { q: 'O domínio (.com.br) está incluso?', a: 'O registro anual do domínio é feito por você, no seu CPF ou CNPJ, pela Hostinger ou pelo Registro.br. Assim o endereço é legalmente seu. Eu te ajudo no passo a passo e faço toda a configuração técnica sem custo.' },
   { q: 'O site funciona bem no celular?', a: 'Sim. Todo site é pensado primeiro para o celular, que é de onde vem a maioria das visitas: leitura confortável, botões fáceis de tocar e carregamento rápido.' },
-];
-
-const planos = [
-  {
-    nome: 'Site Essencial',
-    resumo: 'Uma página completa, para quem precisa de presença profissional rápida.',
-    preco: '997',
-    manut: '127',
-    manutItens: ['Hospedagem rápida em nuvem', 'Cadeado de segurança (SSL) sempre ativo', 'Cópias de segurança automáticas', 'Pequenas alterações de textos e fotos', 'Suporte direto comigo'],
-    prazo: 'Pronto em até 4 dias úteis',
-    itens: [
-      'Página única, fluida e fácil de navegar',
-      'Design exclusivo, pensado para computador e celular',
-      'Textos escritos para o seu público',
-      'Botão direto para o seu WhatsApp',
-      'Formulário de contato',
-      'Configuração inicial para aparecer no Google',
-      'Mapa e redes sociais integrados',
-      'Domínio próprio e cadeado de segurança configurados',
-    ],
-  },
-  {
-    nome: 'Site Profissional',
-    resumo: 'Para quem tem vários serviços e quer uma página para cada um.',
-    preco: '1.397',
-    manut: '197',
-    manutItens: ['Hospedagem em nuvem de alta performance', 'Monitoramento 24 horas', 'Cópias de segurança automáticas', 'Cadeado de segurança (SSL) sempre ativo', 'Atualizações periódicas de conteúdo', 'Suporte prioritário'],
-    prazo: 'Pronto em até 7 dias úteis',
-    destaque: true,
-    itens: [
-      'Tudo do Essencial',
-      'Até 5 páginas, uma para cada serviço importante',
-      'Perguntas frequentes e depoimentos',
-      'Configuração avançada para o Google',
-      'Métricas de visitas instaladas (Google e Meta)',
-      'Carregamento otimizado',
-      'Suporte prioritário na publicação',
-    ],
-  },
 ];
 
 gsap.registerPlugin(ScrollTrigger);

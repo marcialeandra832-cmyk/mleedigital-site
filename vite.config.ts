@@ -16,6 +16,10 @@ export default defineConfig(({mode}) => {
       },
       dedupe: ['react', 'react-dom'],
     },
+    // O build do prerender empacota tudo, para rodar no Node sem depender de como cada pacote exporta
+    ssr: {
+      noExternal: true,
+    },
     optimizeDeps: {
       include: ['react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime', 'react-router-dom', 'motion/react'],
     },

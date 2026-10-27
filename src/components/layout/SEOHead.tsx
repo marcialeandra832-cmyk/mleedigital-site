@@ -12,6 +12,9 @@ interface SEOHeadProps {
   schemaJson?: object | object[];
 }
 
+// No prerender não existe `document`: o SEOHead guarda os dados aqui para o script do build
+export const seoPrerender: { atual: SEOHeadProps | null } = { atual: null };
+
 export function SEOHead({
   title,
   description,
@@ -22,6 +25,10 @@ export function SEOHead({
   author = 'Márcia MLee',
   schemaJson
 }: SEOHeadProps) {
+  if (typeof window === 'undefined') {
+    seoPrerender.atual = { title, description, canonicalPath, ogType, ogImage, publishedTime, author, schemaJson };
+  }
+
   useEffect(() => {
     // 1. Atualizar Title
     const formattedTitle = title.includes('MLee Digital') ? title : `${title} | MLee Digital`;

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, StaticRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { ScrollToTop } from './components/common/ScrollToTop';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
@@ -38,9 +38,10 @@ function Rodape() {
   return pathname.startsWith('/portfolio') ? <RodapePortfolio /> : <Footer />;
 }
 
-export function App() {
-  return (
-    <Router>
+// `url` só é passado no build, quando cada página é gerada em HTML (prerender)
+export function App({ url }: { url?: string }) {
+  const conteudo = (
+    <>
       <ScrollToTop />
       <SmoothScroll />
       <Cursor />
@@ -105,8 +106,12 @@ export function App() {
         <Rodape />
         <WhatsAppFloat />
       </div>
-    </Router>
+    </>
   );
+
+  return url
+    ? <StaticRouter location={url}>{conteudo}</StaticRouter>
+    : <BrowserRouter>{conteudo}</BrowserRouter>;
 }
 
 export default App;

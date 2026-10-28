@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Ponto } from '../components/home/Detalhes';
+import { TopoInterno, botaoClaro } from '../components/common/TopoInterno';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle2, 
@@ -109,68 +111,31 @@ export function SitesProfissionaisPage() {
 
       <Breadcrumbs items={breadcrumbItems} />
 
-      {/* Hero Section */}
-      <section className="pt-10 pb-16 sm:pt-16 sm:pb-24 bg-gradient-to-b from-[#FBF8F3] via-[#FBF8F3] to-white border-b border-[#DCD2C6] relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111819]/15 border border-[#111819]/30 text-[#A8675B] text-xs font-semibold uppercase tracking-wider mb-6">
-            <Sparkles className="w-3.5 h-3.5 text-[#A8675B]" />
-            <span>ESTRUTURA DIGITAL DE ALTA AUTORIDADE</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#111819] font-normal leading-[1.15] mb-6">
-            Criação de sites profissionais
-          </h1>
-
-          <p className="text-base sm:text-xl text-[#767D7F] font-light leading-relaxed max-w-3xl mx-auto mb-10">
-            Transforme visitantes em clientes com um site elegante, rápido e preparado para o Google. Escolha a estrutura ideal para o momento do seu negócio: da One Page expressa à plataforma multipágina.
-          </p>
-
-          {/* Core Offers Summary Pills */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10 text-left">
-            <div className="p-5 rounded-2xl bg-white border border-[#DCD2C6] shadow-sm hover:border-[#111819]/40 transition-colors">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#A8675B]">Site Essencial</span>
-                <span className="text-xs font-semibold text-[#16A34A] bg-[#DCFCE7] px-2 py-0.5 rounded">R$ 997</span>
-              </div>
-              <p className="text-xs text-[#767D7F] leading-relaxed">
-                <strong>One Page profissional completa</strong> com foco em conversão direta para o WhatsApp, velocidade máxima e presença oficial.
-              </p>
-            </div>
-
-            <div className="p-5 rounded-2xl bg-[#FBF8F3] text-[#111819] border border-[#111819]/30 shadow-md">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#A8675B]">Site Profissional</span>
-                <span className="text-xs font-semibold text-[#F4EFE8] bg-[#111819] px-2 py-0.5 rounded">R$ 1.397</span>
-              </div>
-              <p className="text-xs text-[#4A5153] leading-relaxed">
-                <strong>Estrutura multipágina de até 5 páginas</strong> com páginas individuais por serviço, SEO avançado e autoridade máxima.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={getWhatsAppLink("Olá Márcia! Gostaria de um orçamento para criar o site profissional do meu negócio.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 py-4 px-8 rounded-xl bg-[#F4EFE8] text-[#111819] text-sm font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-all shadow-xl"
-            >
-              <MessageCircle className="w-4 h-4 fill-current text-[#A8675B]" />
-              <span>Solicitar Orçamento no WhatsApp</span>
+      {/* Topo */}
+      <TopoInterno
+        rotulo="Investimento"
+        titulo="Criação de sites profissionais"
+        texto="Transforme visitantes em clientes com um site elegante, rápido e preparado para o Google. Escolha a estrutura ideal para o momento do seu negócio: da página única ao site com várias páginas."
+        acoes={
+          <>
+            <a href={getWhatsAppLink("Olá Márcia! Gostaria de um orçamento para criar o site profissional do meu negócio.")} target="_blank" rel="noopener noreferrer" className={botaoClaro}>
+              Pedir orçamento no WhatsApp <Ponto className="text-[#A8675B]" />
             </a>
-
-            <a
-              href="#modelos"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-4 px-7 rounded-xl bg-white border border-[#DCD2C6] text-[#111819] text-sm font-medium hover:border-[#111819] hover:text-[#A8675B] transition-colors shadow-sm"
-            >
-              <span>Explorar Modelos Visuais</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
+            <a href="#modelos" className="group link-ponto text-[15px]">Ver modelos <Ponto /></a>
+          </>
+        }
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 max-w-2xl border-t border-[#F4EFE8]/15">
+          <div className="pt-6 pb-2 sm:pr-8">
+            <p className="flex items-baseline justify-between gap-4"><span className="text-[12px] uppercase tracking-[0.2em] text-[#CC8A80]">Site Essencial</span><span className="font-serif text-2xl">R$ 997</span></p>
+            <p className="mt-3 text-[14px] text-[#F4EFE8]/70 leading-relaxed">Página única e completa, com foco no contato direto pelo WhatsApp.</p>
           </div>
-
+          <div className="pt-6 pb-2 sm:pl-8 sm:border-l border-[#F4EFE8]/15">
+            <p className="flex items-baseline justify-between gap-4"><span className="text-[12px] uppercase tracking-[0.2em] text-[#CC8A80]">Site Profissional</span><span className="font-serif text-2xl">R$ 1.397</span></p>
+            <p className="mt-3 text-[14px] text-[#F4EFE8]/70 leading-relaxed">Até 5 páginas, uma para cada serviço importante, para aparecer mais no Google.</p>
+          </div>
         </div>
-      </section>
+      </TopoInterno>
 
       {/* CLARITY BOX: POR QUE O SITE ESSENCIAL SUPERA UMA LANDING PAGE BÁSICA */}
       <section className="py-14 bg-white border-b border-[#DCD2C6]">

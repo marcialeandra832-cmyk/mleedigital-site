@@ -12,6 +12,7 @@ export type OpcoesCena = {
   pixelRatio?: number;
   variante?: 'topo' | 'final';
   semPortal?: boolean;
+  transparente?: boolean; // só o portal, sem céu e mar (para imagens recortadas)
 };
 
 const ruido = /* glsl */ `
@@ -157,7 +158,7 @@ function moldura(w: number, h: number, r: number, aro: number, prof: number, bis
 
 export function criarCena(op: OpcoesCena) {
   const periodo = op.periodo ?? 24;
-  const renderer = new THREE.WebGLRenderer({ canvas: op.canvas, antialias: true, alpha: false, powerPreference: 'high-performance', preserveDrawingBuffer: !!op.retrato });
+  const renderer = new THREE.WebGLRenderer({ canvas: op.canvas, antialias: true, alpha: !!op.transparente, powerPreference: 'high-performance', preserveDrawingBuffer: !!op.retrato });
   renderer.setPixelRatio(op.pixelRatio ?? Math.min(window.devicePixelRatio || 1, 1.75));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.05;
@@ -175,7 +176,8 @@ export function criarCena(op: OpcoesCena) {
   const uFundo = { uFase: { value: 0 }, uRes: { value: new THREE.Vector2(1, 1) }, uObj: { value: new THREE.Vector2(0.7, 0.5) }, uScroll: { value: 0 } };
   const fundo = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.ShaderMaterial({ uniforms: uFundo, vertexShader: vertTela, fragmentShader: fundoFrag, depthWrite: false, depthTest: false }));
   fundo.frustumCulled = false; fundo.renderOrder = -1;
-  cena.add(fundo);
+  if (!op.transparente) cena.add(fundo);
+  else renderer.setClearColor(0x000000, 0);
 
   // Luzes
   const chave = new THREE.DirectionalLight(0xfff1ea, 2.4); chave.position.set(-4, 6, 5); cena.add(chave);

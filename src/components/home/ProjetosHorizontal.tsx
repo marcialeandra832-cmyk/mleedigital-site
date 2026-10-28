@@ -34,16 +34,18 @@ export function ProjetosHorizontal() {
       <div ref={trilho} className="flex flex-col min-[901px]:flex-row gap-14 min-[901px]:gap-12 px-5 sm:px-8 lg:px-14 min-[901px]:w-max">
         {clientesDestaque.map((p, i) => (
           <article key={p.cliente} className="w-full min-[901px]:w-[min(56vw,960px)] shrink-0">
+            <div className="moldura-grafite">
             <a
               href={p.link || undefined}
               target={p.link ? '_blank' : undefined}
               rel="noopener noreferrer"
               data-cursor={p.link ? 'Abrir' : undefined}
-              className="group block overflow-hidden rounded-2xl aspect-[16/9] bg-[#E9E2D8]"
+              className="group relative block overflow-hidden rounded-2xl aspect-[16/9] bg-[#E9E2D8]"
             >
               <img src={p.img} alt={`Site de ${p.cliente}`} loading="lazy" className="w-full h-full object-cover scale-[1.06] transition-transform duration-[1.2s] ease-out group-hover:scale-100" />
             </a>
-            <div className="mt-5 flex flex-wrap items-baseline justify-between gap-3">
+            </div>
+            <div className="mt-10 flex flex-wrap items-baseline justify-between gap-3">
               <div className="flex items-baseline gap-5">
                 <span className="text-[14px] text-[#CC8A80] tabular-nums">{String(i + 1).padStart(2, '0')}</span>
                 <div>

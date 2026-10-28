@@ -1,4 +1,5 @@
 import fotoMarciaSobre from '../assets/brand/marcia-em-pe.webp';
+import { TopoInterno, botaoClaro } from '../components/common/TopoInterno';
 import { Link } from 'react-router-dom';
 import { 
   Sparkles, 
@@ -46,20 +47,12 @@ export function AboutPage() {
 
       <Breadcrumbs items={[{ label: "Sobre Nós" }]} />
 
-      {/* Hero Section */}
-      <section className="pt-10 pb-16 bg-gradient-to-b from-[#FBF8F3] to-white border-b border-[#DCD2C6]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-3 inline-block">
-            PROPÓSITO & MÉTODO DE TRABALHO
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-6">
-            Design que encanta, tecnologia que funciona e foco real em resultados.
-          </h1>
-          <p className="text-base sm:text-lg text-[#767D7F] font-light leading-relaxed max-w-2xl mx-auto">
-            A MLee Digital nasceu com o compromisso de oferecer uma experiência digital refinada para quem não tem tempo a perder com burocracias técnicas.
-          </p>
-        </div>
-      </section>
+      {/* Topo */}
+      <TopoInterno
+        rotulo="Propósito e método de trabalho"
+        titulo="Design que encanta, tecnologia que funciona e foco real em resultados."
+        texto="A MLee Digital nasceu com o compromisso de oferecer uma experiência digital refinada para quem não tem tempo a perder com burocracias técnicas."
+      />
 
       {/* Founder Story Breakdown */}
       <section className="py-16 bg-white">

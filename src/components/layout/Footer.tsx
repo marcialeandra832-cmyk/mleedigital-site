@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Logo } from '../brand/Logo';
+import { LinhasPortal } from '../home/Detalhes';
 import { getWhatsAppLink, INSTAGRAM_URL, INSTAGRAM_HANDLE } from '../../data/constants';
 
 const colunas = [
@@ -28,7 +29,8 @@ const colunas = [
 export function Footer() {
   return (
     <footer className="bg-[#0A0F10] text-[#F4EFE8]">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-20 pb-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-16 pb-10">
+        <LinhasPortal escuro className="mb-16" />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-6">
             <Logo claro tamanho={44} />

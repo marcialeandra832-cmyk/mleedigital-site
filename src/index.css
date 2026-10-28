@@ -93,3 +93,14 @@
 /* Fundo de céu e mar das seções escuras */
 .fundo-mar { position: relative; isolation: isolate; background: #121617 url('/hero/mar.jpg') center 40% / cover no-repeat; }
 .fundo-mar::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(14,18,19,.82) 0%, rgba(14,18,19,.42) 45%, rgba(14,18,19,.88) 100%); }
+
+/* Portal flutuando nas páginas internas */
+@keyframes flutua { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(-1.2deg); } }
+
+/* Sombra grafite e prata atrás dos projetos: placa metálica deslocada + sombra macia, como as camadas do portal */
+.moldura-grafite { position: relative; isolation: isolate; }
+.moldura-grafite::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 1rem; transform: translate(16px, 18px);
+  background: linear-gradient(135deg, #161D1E 0%, #2C3436 50%, #6E777A 78%, #B7BDBF 92%, #DADEDF 100%);
+  box-shadow: 0 0 0 1px rgba(205,210,212,.35) inset; }
+.moldura-grafite::after { content: ""; position: absolute; inset: 6% 4% -6% 4%; z-index: -2; border-radius: 2rem; background: rgba(17,24,25,.55); filter: blur(38px); transform: translateY(24px); }
+.moldura-grafite > a { box-shadow: 0 0 0 1px rgba(190,196,198,.7), 0 1px 0 1px rgba(255,255,255,.5); }

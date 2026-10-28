@@ -1,4 +1,6 @@
 import { Link, Navigate } from 'react-router-dom';
+import { Ponto } from '../components/home/Detalhes';
+import { TopoInterno, botaoClaro } from '../components/common/TopoInterno';
 import { MessageCircle, MapPin, Search, Video } from 'lucide-react';
 import { SEOHead } from '../components/layout/SEOHead';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
@@ -74,32 +76,16 @@ export function CidadePage({ slug }: CidadePageProps) {
       <Breadcrumbs items={[{ label: `Sites em ${cidade.nome}` }]} />
 
       {/* Topo */}
-      <section className="pt-10 pb-16 sm:pt-14 sm:pb-20 bg-gradient-to-b from-[#FBF8F3] to-white border-b border-[#DCD2C6]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111819]/15 border border-[#111819]/30 text-[#A8675B] text-xs font-semibold uppercase tracking-wider mb-4">
-            <MapPin className="w-3.5 h-3.5" />
-            <span>{cidade.nome} · {cidade.uf}</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-6">
-            {cidade.h1}
-          </h1>
-
-          <p className="text-base sm:text-lg text-[#6B7C7D] font-light leading-relaxed max-w-2xl mx-auto mb-8">
-            {cidade.heroDesc}
-          </p>
-
-          <a
-            href={getWhatsAppLink(mensagem)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-7 rounded-full bg-[#111819] text-[#F4EFE8] text-sm font-semibold hover:bg-[#0A0F10] transition-all"
-          >
-            <MessageCircle className="w-4 h-4 fill-current" />
-            <span>Pedir orçamento no WhatsApp</span>
+      <TopoInterno
+        rotulo={`${cidade.nome} · ${cidade.uf}`}
+        titulo={cidade.h1}
+        texto={cidade.heroDesc}
+        acoes={
+          <a href={getWhatsAppLink(mensagem)} target="_blank" rel="noopener noreferrer" className={botaoClaro}>
+            Pedir orçamento no WhatsApp <Ponto className="text-[#A8675B]" />
           </a>
-        </div>
-      </section>
+        }
+      />
 
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

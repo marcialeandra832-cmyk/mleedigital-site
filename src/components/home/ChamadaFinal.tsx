@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Reveal } from './Reveal';
-import { Ponto, LinhasPortal } from './Detalhes';
+import { Ponto } from './Detalhes';
 import { getWhatsAppLink } from '../../data/constants';
 
 // Chamada do fim da página: o portal do topo volta para fechar a história.
@@ -64,7 +64,6 @@ export function ChamadaFinal() {
             </a>
           </Reveal>
         </div>
-        <LinhasPortal escuro className="mt-14" />
       </div>
     </section>
   );

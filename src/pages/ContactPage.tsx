@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react';
+import { TopoInterno, botaoClaro } from '../components/common/TopoInterno';
 import { 
   MessageCircle, 
   Instagram, 
@@ -54,20 +55,12 @@ export function ContactPage() {
 
       <Breadcrumbs items={[{ label: "Contato" }]} />
 
-      {/* Header */}
-      <section className="pt-10 pb-16 bg-gradient-to-b from-[#FBF8F3] to-white border-b border-[#DCD2C6] text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-3 inline-block">
-            ATENDIMENTO RÁPIDO & HUMANIZADO
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-4">
-            Vamos conversar sobre o seu projeto?
-          </h1>
-          <p className="text-base text-[#767D7F] font-light max-w-2xl mx-auto">
-            Sem formulários chatos ou robôs de atendimento. Você conversa diretamente comigo pelo canal que preferir.
-          </p>
-        </div>
-      </section>
+      {/* Topo */}
+      <TopoInterno
+        rotulo="Atendimento direto comigo"
+        titulo="Vamos conversar sobre o seu projeto?"
+        texto="Sem formulários chatos ou robôs de atendimento. Você conversa diretamente comigo pelo canal que preferir."
+      />
 
       {/* Contact Channels Grid */}
       <section className="py-16 bg-white">

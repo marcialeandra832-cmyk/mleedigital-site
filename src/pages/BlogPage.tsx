@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { TopoInterno, botaoClaro } from '../components/common/TopoInterno';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Tag, Sparkles, BookOpen } from 'lucide-react';
 import { SEOHead } from '../components/layout/SEOHead';
@@ -42,38 +43,29 @@ export function BlogPage() {
 
       <Breadcrumbs items={[{ label: "Blog" }]} />
 
-      {/* Header */}
-      <section className="pt-10 pb-16 bg-gradient-to-b from-[#FBF8F3] to-white border-b border-[#DCD2C6] text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-3 inline-block">
-            CONHECIMENTO PRÁTICO & ESTRATÉGIA
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-tight mb-4">
-            Blog & Artigos Estratégicos
-          </h1>
-          <p className="text-base text-[#767D7F] font-light max-w-2xl mx-auto">
-            Dicas práticas, análises de mercado e guias descomplicados para fazer o seu negócio crescer na internet.
-          </p>
-
-          {/* Category Tabs */}
-          <div className="flex items-center justify-center gap-2 mt-8 flex-wrap">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
-                  selectedCategory === cat
-                    ? 'bg-[#F4EFE8] text-[#111819] shadow-sm'
-                    : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+      {/* Topo */}
+      <TopoInterno
+        rotulo="Conhecimento prático"
+        titulo="Blog e artigos"
+        texto="Dicas práticas, análises de mercado e guias descomplicados para fazer o seu negócio crescer na internet."
+      >
+        <div className="flex items-center gap-2 flex-wrap">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              type="button"
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-4 py-2 rounded-full text-[13px] border transition-colors ${
+                selectedCategory === cat
+                  ? 'bg-[#F4EFE8] text-[#111819] border-[#F4EFE8]'
+                  : 'border-[#F4EFE8]/25 text-[#F4EFE8]/80 hover:border-[#CC8A80] hover:text-[#F4EFE8]'
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
-      </section>
+      </TopoInterno>
 
       {/* Blog Articles Grid */}
       <section className="py-16 bg-white">

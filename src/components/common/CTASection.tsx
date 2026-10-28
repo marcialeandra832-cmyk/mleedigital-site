@@ -1,5 +1,5 @@
-import { MessageCircle, ArrowRight, CheckCircle2, ExternalLink } from 'lucide-react';
 import { getWhatsAppLink } from '../../data/constants';
+import { Ponto } from '../home/Detalhes';
 
 interface CTASectionProps {
   title?: string;
@@ -12,79 +12,54 @@ interface CTASectionProps {
   highlights?: string[];
 }
 
+// Chamada do fim das páginas internas, na identidade do portal
 export function CTASection({
-  title = "Pronto para ter um site que valoriza o seu trabalho e atrai clientes reais?",
-  subtitle = "Converse diretamente com a Márcia MLee no WhatsApp. Sem formulários longos, sem complicação e com atendimento humanizado.",
-  buttonText = "Iniciar Conversa no WhatsApp",
+  title = 'Vamos criar o seu site?',
+  subtitle = 'Me conta sobre o seu trabalho no WhatsApp. Quem responde sou eu, do primeiro contato até o site no ar.',
+  buttonText = 'Falar no WhatsApp',
   buttonUrl,
   secondaryButtonText,
   secondaryButtonUrl,
   whatsappMessage,
   highlights = [
-    "Orçamento transparente sem compromisso",
-    "Entrega ágil em 4 a 7 dias úteis",
-    "Suporte direto e humanizado"
-  ]
+    'Preço fechado, sem surpresa',
+    'Site no ar em até 7 dias úteis',
+    'Atendimento direto comigo',
+  ],
 }: CTASectionProps) {
   const targetUrl = buttonUrl || getWhatsAppLink(whatsappMessage);
-  const isCustomExternal = Boolean(buttonUrl);
 
   return (
-    <section className="py-20 bg-[#F4EFE8] text-[#111819] relative overflow-hidden">
-      {/* Decorative subtle aura */}
+    <section className="fundo-mar text-[#F4EFE8] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="lg:col-span-8">
+          <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.28em] text-[#CC8A80] mb-6">Próximo passo</p>
+          <h2 className="font-serif text-[clamp(40px,6vw,92px)] leading-[0.95] tracking-[-0.03em] text-balance">{title}</h2>
+          <p className="mt-7 max-w-xl text-[16px] sm:text-[18px] leading-relaxed text-[#F4EFE8]/72">{subtitle}</p>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-4 inline-block">
-          DÊ O PRÓXIMO PASSO
-        </span>
-
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-[#111819] leading-tight mb-6">
-          {title}
-        </h2>
-
-        <p className="text-base sm:text-lg text-[#4A5153] font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-          {subtitle}
-        </p>
-
-        {/* Highlights */}
-        {highlights.length > 0 && (
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10 text-xs sm:text-sm text-[#111819]">
-            {highlights.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#A8675B]" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        )}
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href={targetUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 py-4 px-8 rounded-xl bg-gradient-to-r from-[#111819] to-[#111819] text-[#F4EFE8] font-semibold text-sm sm:text-base hover:brightness-110 transition-all duration-300 shadow-xl"
-          >
-            {isCustomExternal ? (
-              <ExternalLink className="w-5 h-5" />
-            ) : (
-              <MessageCircle className="w-5 h-5 fill-current" />
-            )}
-            <span>{buttonText}</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
-
-          {secondaryButtonText && secondaryButtonUrl && (
-            <a
-              href={secondaryButtonUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-[#111819]/[0.04] border border-[#111819]/10 text-[#111819] font-semibold text-sm sm:text-base hover:bg-[#111819]/[0.04] hover:border-[#111819] transition-all"
-            >
-              <MessageCircle className="w-4 h-4 text-[#25D366]" />
-              <span>{secondaryButtonText}</span>
-            </a>
+          {highlights.length > 0 && (
+            <ul className="mt-9 flex flex-wrap gap-x-8 gap-y-3 text-[14px] text-[#F4EFE8]/80">
+              {highlights.map((item, i) => (
+                <li key={item} className="flex items-baseline gap-2">
+                  <span className="text-[10px] text-[#CC8A80] tabular-nums">{String(i + 1).padStart(2, '0')}</span>{item}
+                </li>
+              ))}
+            </ul>
           )}
+
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+            <a href={targetUrl} target="_blank" rel="noopener noreferrer" data-cursor="Oi!" className="group inline-flex items-center gap-5 rounded-full bg-[#F4EFE8] text-[#111819] pl-8 pr-7 py-4 text-[16px] hover:bg-white transition-colors">
+              {buttonText} <Ponto className="text-[#A8675B]" />
+            </a>
+            {secondaryButtonText && secondaryButtonUrl && (
+              <a href={secondaryButtonUrl} target="_blank" rel="noopener noreferrer" className="group link-ponto text-[15px]">
+                {secondaryButtonText} <Ponto />
+              </a>
+            )}
+          </div>
+        </div>
+        <div className="hidden lg:flex lg:col-span-4 justify-end" aria-hidden="true">
+          <img src="/hero/portal-ml.webp" alt="" width={534} height={523} loading="lazy" className="w-full max-w-[400px] h-auto drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)] motion-safe:animate-[flutua_7s_ease-in-out_infinite]" />
         </div>
       </div>
     </section>

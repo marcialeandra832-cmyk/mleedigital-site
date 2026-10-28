@@ -1,4 +1,3 @@
-import { useEffect, useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -8,6 +7,7 @@ import { Reveal } from '../components/home/Reveal';
 import { PreviaSite } from '../components/home/PreviaSite';
 import { ProjetosHorizontal } from '../components/home/ProjetosHorizontal';
 import { Showreel } from '../components/home/Showreel';
+import { HeroPortal } from '../components/home/HeroPortal';
 import { ModelosArea } from '../components/home/ModelosArea';
 import { ImagemFlutuante } from '../components/motion/ImagemFlutuante';
 import { clientesDestaque } from '../data/clientesDestaque';
@@ -16,7 +16,6 @@ import { blogPostsData } from '../data/blog';
 import { planos } from '../data/planos';
 import { getWhatsAppLink, AUTHOR_IMG, AUTHOR_NAME, AUTHOR_ROLE, AREA_ATENDIDA, INSTAGRAM_URL, SITE_URL } from '../data/constants';
 import luzPetroleo from '../assets/brand/luz-janela-petroleo.webp';
-import luzClaro from '../assets/brand/luz-janela-claro.webp';
 import logoRelevo from '../assets/brand/logo-relevo-petroleo.webp';
 
 import fotoMarcia from '../assets/brand/marcia-notebook.webp';
@@ -47,59 +46,6 @@ const perguntas = [
 gsap.registerPlugin(ScrollTrigger);
 
 export function HomePage() {
-  const heroRef = useRef<HTMLElement>(null);
-
-  useLayoutEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const ctx = gsap.context(() => {
-      gsap.from('.hero-titulo .linha-mascara > span', { yPercent: 110, duration: 1.3, ease: 'expo.out', stagger: 0.12, delay: 0.1 });
-      gsap.from('.hero-rodape > *', { opacity: 0, y: 16, duration: 1, ease: 'power3.out', stagger: 0.08, delay: 0.6 });
-      gsap.to('.hero-titulo', { yPercent: -16, opacity: 0.3, ease: 'none', scrollTrigger: { trigger: heroRef.current, start: 'top top', end: 'bottom top', scrub: true } });
-    }, heroRef);
-
-    // Luz acompanha levemente o mouse (computador)
-    const camada = heroRef.current?.querySelector('.luz-mouse') as HTMLElement | null;
-    const toque = window.matchMedia('(hover: none), (pointer: coarse)').matches;
-    const mover = (e: MouseEvent) => {
-      if (!camada) return;
-      const x = (e.clientX / window.innerWidth - 0.5) * 30, y = (e.clientY / window.innerHeight - 0.5) * 20;
-      camada.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-    };
-    if (!toque) window.addEventListener('mousemove', mover);
-
-    return () => {
-      ctx.revert();
-      window.removeEventListener('mousemove', mover);
-    };
-  }, []);
-
-  // Palavra que troca no título: cliente / paciente.
-  // Roda sempre; para quem desativa animações no computador, troca com um esmaecer simples.
-  useEffect(() => {
-    const palavra = heroRef.current?.querySelector('.troca-palavra') as HTMLElement | null;
-    if (!palavra) return;
-    const reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const palavras = ['cliente', 'paciente'];
-    let ip = 0;
-    const trocar = () => {
-      ip = (ip + 1) % palavras.length;
-      if (reduz) {
-        palavra.style.transition = 'opacity .4s';
-        palavra.style.opacity = '0';
-        window.setTimeout(() => { palavra.textContent = palavras[ip]; palavra.style.opacity = '1'; }, 400);
-        return;
-      }
-      gsap.timeline()
-        .to(palavra, { yPercent: -105, duration: 0.55, ease: 'power3.in' })
-        .call(() => { palavra.textContent = palavras[ip]; })
-        .set(palavra, { yPercent: 105 })
-        .to(palavra, { yPercent: 0, duration: 0.8, ease: 'expo.out' });
-    };
-    let intervalo: number | undefined;
-    const inicio = window.setTimeout(() => { intervalo = window.setInterval(trocar, 3000); }, 1800);
-    return () => { window.clearTimeout(inicio); if (intervalo) window.clearInterval(intervalo); };
-  }, []);
-
   const homeSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -134,23 +80,7 @@ export function HomePage() {
       />
 
       {/* TOPO */}
-      <section ref={heroRef} className="grao relative min-h-[calc(100svh-76px)] flex flex-col justify-end px-5 sm:px-8 lg:px-14 pt-16 pb-10 overflow-hidden">
-        <div className="luz-mouse absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="luz-janela" style={{ backgroundImage: `url(${luzClaro})` }} />
-        </div>
-        <h1 className="hero-titulo relative z-[1] font-serif text-[#111819] text-[clamp(52px,10.4vw,196px)] leading-[0.9] tracking-[-0.035em]" style={{ fontVariationSettings: '"opsz" 96' }}>
-          <span className="linha-mascara"><span>Sites que</span></span>
-          <span className="linha-mascara pl-[clamp(0px,12vw,230px)]"><span>fazem o <span className="inline-block overflow-hidden align-bottom pb-[0.06em] -mb-[0.06em]"><span className="troca-palavra inline-block">cliente</span></span></span></span>
-          <span className="linha-mascara"><span>escolher você<span className="text-[#CC8A80]">.</span></span></span>
-        </h1>
-        <div className="hero-rodape relative z-[1] mt-10 sm:mt-14 pt-5 border-t border-[#DCD2C6] grid grid-cols-1 md:grid-cols-[1.3fr_1fr_auto] gap-5 md:gap-8 items-end text-[15px] text-[#4A5153]">
-          <p><strong className="font-medium text-[#111819]">MLee Digital.</strong> Sites para médicas, dentistas, esteticistas, advogadas e arquitetas. Feitos por mim, do começo ao fim.</p>
-          <p>Atendimento online para todo o Brasil. Do primeiro contato ao site no ar em até 7 dias úteis.</p>
-          <div className="flex gap-3 md:mr-16">
-            <a href="#previa" className="inline-flex items-center rounded-full bg-[#111819] text-[#F4EFE8] px-6 py-3 text-[15px] whitespace-nowrap hover:bg-[#0A0F10] transition-colors">Ver como o meu site ficaria</a>
-          </div>
-        </div>
-      </section>
+      <HeroPortal />
 
       {/* SHOWREEL */}
       <Showreel />

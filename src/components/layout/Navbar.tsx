@@ -49,20 +49,23 @@ export function Navbar() {
   }, []);
   useEffect(() => { document.body.style.overflow = aberto ? 'hidden' : ''; }, [aberto]);
 
+  // Na página inicial, antes de rolar, o menu fica transparente sobre o topo escuro
+  const sobreTopo = pathname === '/' && !rolou && !aberto;
+  const corLink = sobreTopo ? 'text-[#F4EFE8]/70 hover:text-[#F4EFE8]' : 'text-[#4A5153] hover:text-[#111819]';
   const linkCls = ({ isActive }: { isActive: boolean }) =>
-    `relative py-1 transition-colors hover:text-[#111819] ${isActive ? 'text-[#111819] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-[#CC8A80]' : 'text-[#4A5153]'}`;
+    `relative py-1 transition-colors ${sobreTopo ? 'hover:text-[#F4EFE8]' : 'hover:text-[#111819]'} ${isActive ? `${sobreTopo ? 'text-[#F4EFE8]' : 'text-[#111819]'} after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-[#CC8A80]` : (sobreTopo ? 'text-[#F4EFE8]/70' : 'text-[#4A5153]')}`;
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${rolou ? 'bg-[#F4EFE8]/92 backdrop-blur-md border-b border-[#DCD2C6]' : 'bg-[#F4EFE8] border-b border-transparent'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${sobreTopo ? 'bg-transparent border-b border-[#F4EFE8]/10' : rolou ? 'bg-[#F4EFE8]/92 backdrop-blur-md border-b border-[#DCD2C6]' : 'bg-[#F4EFE8] border-b border-transparent'}`}>
       <div className="max-w-7xl mx-auto px-5 sm:px-8 h-[76px] flex items-center justify-between gap-6">
         <Link to="/" aria-label="MLee Digital, página inicial" className="shrink-0">
-          <Logo tamanho={34} />
+          <Logo tamanho={34} claro={sobreTopo} />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8 text-[15px]" aria-label="Principal">
           {principais.map((l) =>
             l.to.startsWith('/#') ? (
-              <a key={l.label} href={l.to} className="py-1 text-[#4A5153] hover:text-[#111819] transition-colors">{l.label}</a>
+              <a key={l.label} href={l.to} className={`py-1 transition-colors ${corLink}`}>{l.label}</a>
             ) : (
               <NavLink key={l.label} to={l.to} className={linkCls}>{l.label}</NavLink>
             )
@@ -72,7 +75,7 @@ export function Navbar() {
               type="button"
               onClick={() => setMaisAberto((v) => !v)}
               aria-expanded={maisAberto}
-              className="inline-flex items-center gap-1 py-1 text-[#4A5153] hover:text-[#111819] transition-colors"
+              className={`inline-flex items-center gap-1 py-1 transition-colors ${corLink}`}
             >
               Mais <ChevronDown className={`w-4 h-4 transition-transform ${maisAberto ? 'rotate-180' : ''}`} />
             </button>
@@ -111,13 +114,13 @@ export function Navbar() {
             href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center rounded-full bg-[#111819] text-[#F4EFE8] text-[14px] px-5 py-2.5 hover:bg-[#0A0F10] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111819]"
+            className={`hidden sm:inline-flex items-center rounded-full text-[14px] px-5 py-2.5 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${sobreTopo ? 'bg-[#F4EFE8] text-[#111819] hover:bg-white focus-visible:outline-[#F4EFE8]' : 'bg-[#111819] text-[#F4EFE8] hover:bg-[#0A0F10] focus-visible:outline-[#111819]'}`}
           >
             Falar no WhatsApp
           </a>
           <button
             type="button"
-            className="lg:hidden p-2 -mr-2 text-[#111819]"
+            className={`lg:hidden p-2 -mr-2 ${sobreTopo ? 'text-[#F4EFE8]' : 'text-[#111819]'}`}
             onClick={() => setAberto((v) => !v)}
             aria-label={aberto ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={aberto}

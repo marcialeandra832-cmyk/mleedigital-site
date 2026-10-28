@@ -61,3 +61,6 @@
   animation: luz-passa 26s ease-in-out infinite alternate; will-change: transform; }
 @keyframes luz-passa { from { transform: translate3d(-6%,-2%,0) rotate(-1deg); } to { transform: translate3d(6%,3%,0) rotate(1.5deg); } }
 @media (prefers-reduced-motion: reduce) { .luz-janela { animation: none; } }
+
+/* Linha "role para ver mais" no topo */
+@keyframes desce { 0% { transform: translateY(-100%); } 60%, 100% { transform: translateY(260%); } }

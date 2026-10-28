@@ -9,8 +9,116 @@ import blogPsicologoSite from '../assets/images/blog-psicologo.webp';
 import blogEsteticaSite from '../assets/images/blog-clinica-estetica.webp';
 import blogIaIndicacao from '../assets/images/blog-ia-indicacao.webp';
 import blogAvaliacoesGoogle from '../assets/images/blog-avaliacoes-google.webp';
+import blogIaRegraCfm from '../assets/images/blog-ia-regra-cfm.webp';
+import blogSiteAdvogadaOab from '../assets/images/blog-site-advogada-oab.webp';
 
 export const blogPostsData: BlogPost[] = [
+  {
+    id: "nova-regra-cfm-inteligencia-artificial",
+    slug: "nova-regra-cfm-inteligencia-artificial",
+    title: "IA no consultório: o que muda com a nova regra do CFM que já está valendo",
+    excerpt: "Desde 26 de agosto, o uso de inteligência artificial na medicina tem regras do CFM. Veja o que vale para quem usa IA no dia a dia e o que muda na relação com o paciente.",
+    coverImage: blogIaRegraCfm,
+    category: "Tecnologia",
+    author: {
+      name: AUTHOR_NAME,
+      role: AUTHOR_ROLE,
+      avatar: AUTHOR_IMG
+    },
+    publishedAt: "27 de Outubro de 2026",
+    readTime: "5 min de leitura",
+    content: ["A inteligência artificial já faz parte da rotina de muitos consultórios. Resumir um relato, organizar o prontuário, apoiar a leitura de um exame, responder mensagens.", "Uma pesquisa da MV Insights com 112 médicos mostrou que 66% já usam IA na prática clínica, de forma regular ou ocasional, principalmente como apoio ao diagnóstico.", "Agora esse uso tem regra própria. A Resolução CFM nº 2.454/2026 está em vigor desde 26 de agosto e diz o que pode, o que não pode e o que precisa ser comunicado ao paciente."],
+    sections: [
+      {
+        heading: "O que é a nova regra",
+        body: "A resolução foi aprovada pelo Conselho Federal de Medicina em fevereiro de 2026 e publicada no Diário Oficial da União em 27 de fevereiro. Os médicos tiveram 180 dias para se adaptar, e ela passou a valer em 26 de agosto.",
+        extra: ["Ela trata do uso de IA como apoio no cuidado com o paciente: diagnóstico, prognóstico, tratamento e registro. Vale para quem trabalha sozinho no consultório e também para clínicas e hospitais, que passam a ter obrigações de controle e avaliação de risco das ferramentas que usam.", "O espírito da norma é simples: a IA pode ajudar, mas quem decide e quem responde continua sendo o médico."]
+      },
+      {
+        heading: "Os pontos principais",
+        body: "Para o médico que atende no dia a dia, estes são os pontos que mais pesam:",
+        list: ["A responsabilidade continua sua. Se a IA sugeriu e você seguiu, a decisão foi sua. O CFM deixa claro que a responsabilidade ética não passa para a ferramenta.", "O paciente precisa saber. Quando a IA for um apoio relevante no cuidado, no diagnóstico ou no tratamento, o paciente deve ser informado de forma clara.", "O paciente pode recusar. Se ele preferir que a IA não seja usada no caso dele, essa escolha deve ser respeitada.", "O uso vai para o prontuário. Quando a IA participou de forma relevante, isso deve ser registrado.", "A IA não comunica diagnóstico sozinha. Diagnóstico, prognóstico e decisão de tratamento não podem ser passados ao paciente pela ferramenta sem a mediação do médico.", "Ferramenta sem segurança, não. É vedado usar sistemas que não ofereçam padrões mínimos de segurança para dados de saúde, que pela LGPD são dados sensíveis."],
+        depois: ["A norma também protege o médico: ele pode recusar uma ferramenta sem validação adequada e não pode ser obrigado a seguir uma recomendação automática."]
+      },
+      {
+        heading: "No dia a dia, o que isso quer dizer",
+        body: "Na prática, três cuidados resolvem boa parte das dúvidas:",
+        list: ["Antes de colar dados de paciente em qualquer ferramenta, confira se ela é feita para uso em saúde e como guarda as informações. Na dúvida, retire nome, documento e tudo o que identifique a pessoa.", "Atendimento automático no WhatsApp pode cuidar de agenda, horário, endereço e preparo para consulta. Orientação clínica, resultado de exame e diagnóstico ficam com você.", "Tenha uma frase pronta para explicar ao paciente quando e como usa IA. Dito com naturalidade, isso passa segurança em vez de desconfiança."],
+        depois: ["A resolução não detalha um modelo de aviso nem um termo específico. Para casos particulares, vale consultar o CRM do seu estado."]
+      },
+      {
+        heading: "Onde o site entra",
+        body: "A nova regra fala de transparência. E transparência começa antes da consulta, quando o paciente ainda está decidindo se vai marcar com você.",
+        extra: ["Um site é o lugar certo para isso. Ali você explica como funciona o seu atendimento, como cuida dos dados de quem te procura e quais canais usa para conversar com o paciente. Não é uma exigência da resolução, mas é o tipo de informação que faz a pessoa chegar confiando em você.", "Nas redes sociais, esse cuidado se perde no meio dos posts. No site, fica organizado e sempre disponível para quem pesquisar o seu nome."]
+      },
+      {
+        heading: "Para fechar",
+        body: "A IA veio para ficar no consultório, e a regra do CFM não proíbe o seu uso. Ela organiza: deixa claro que a ferramenta apoia e que a decisão é do médico.",
+        extra: ["Quem usa IA com critério, avisa o paciente e protege os dados dele sai na frente. Porque, no fim, o que o paciente procura continua sendo o mesmo: um profissional em quem ele possa confiar."]
+      }
+    ],
+    tags: ["Inteligência artificial", "Resolução CFM 2.454/2026", "Ética médica", "LGPD na saúde"],
+    relatedSlugs: ["seu-paciente-ja-pergunta-para-a-ia", "avaliacoes-no-google-o-novo-boca-a-boca"],
+    ctaType: "whatsapp",
+    ctaTitle: "Transparência começa antes da consulta",
+    ctaText: "Eu crio o seu site com as informações que o paciente procura antes de marcar: como você atende, como cuida dos dados dele e como falar com você.",
+    ctaButtonText: "Falar com a Márcia no WhatsApp"
+  },
+  {
+    id: "site-para-advogada-o-que-a-oab-permite",
+    slug: "site-para-advogada-o-que-a-oab-permite",
+    title: "Site para advogada: o que a OAB permite colocar e o que não pode",
+    excerpt: "O marketing jurídico é permitido, mas tem limites claros. Veja o que pode e o que não pode ter no seu site segundo o Provimento 205 da OAB.",
+    coverImage: blogSiteAdvogadaOab,
+    category: "Sites e Google",
+    author: {
+      name: AUTHOR_NAME,
+      role: AUTHOR_ROLE,
+      avatar: AUTHOR_IMG
+    },
+    publishedAt: "27 de Outubro de 2026",
+    readTime: "6 min de leitura",
+    content: ["Muita advogada adia o site com medo de errar na regra da OAB. E acaba ficando só com o Instagram, que tem limites parecidos e organiza muito pior a informação.", "A boa notícia é que o site é, de longe, a forma de presença digital mais compatível com a ética da advocacia. Ele não vai atrás de ninguém: é encontrado por quem já está procurando.", "Basta conhecer o que pode e o que não pode. E as regras são mais claras do que parecem."],
+    sections: [
+      {
+        heading: "A regra que vale hoje",
+        body: "A publicidade na advocacia é regulada pelo Provimento 205/2021 do Conselho Federal da OAB, aprovado em julho de 2021. Ele permite o marketing jurídico, desde que seja informativo, sóbrio e verdadeiro, sem mercantilizar a profissão nem captar clientes.",
+        extra: ["O Conselho Federal vem discutindo uma atualização desse texto. Enquanto não houver um novo provimento publicado, vale o 205.", "Um ponto ajuda muito a entender a lógica: o provimento separa a publicidade ativa, que chega a pessoas que não procuraram por você, da publicidade passiva, que chega a quem buscou a informação. O site, na maior parte do tempo, é publicidade passiva. A pessoa pesquisou, encontrou e entrou."]
+      },
+      {
+        heading: "O que pode ter no seu site",
+        body: "Segundo o provimento, você pode incluir:",
+        list: ["Seu nome e número de inscrição na OAB, além do nome da sociedade, se houver.", "Suas qualificações e títulos, desde que verdadeiros e comprováveis.", "As áreas em que você atua, explicadas de forma informativa.", "Fotos suas, da equipe e do escritório, além da sua logomarca e identidade visual. Só não pode usar a logomarca oficial da OAB.", "Artigos e conteúdo jurídico que expliquem direitos e dúvidas comuns, sem tratar de casos concretos.", "Vídeos e lives com conteúdo informativo.", "Telefone, e-mail, endereço, redes sociais e WhatsApp. O provimento trata esses canais como meios de contato, com sobriedade.", "Um atendimento automático para receber a primeira mensagem, responder dúvidas iniciais ou coletar dados, desde que não substitua o contato pessoal com você."]
+      },
+      {
+        heading: "O que não pode",
+        body: "Estas são as vedações que mais pegam desprevenido quem monta um site:",
+        list: ["Valores de honorários, formas de pagamento, descontos ou atendimento gratuito usados para atrair clientes.", "Promessa de resultado, menção a casos concretos e divulgação de decisões ou vitórias obtidas.", "Frases de autoengrandecimento ou comparação com outros profissionais, como \"o melhor escritório da cidade\".", "Anunciar especialidade sem título certificado ou notória especialização.", "Ostentação de bens, como carros, viagens e hospedagens.", "Respostas automáticas que deem orientação jurídica a qualquer pessoa, de forma indiscriminada."],
+        depois: ["Na dúvida, a pergunta que resolve é esta: o texto informa ou tenta convencer a pessoa a contratar? Se informa, o caminho costuma ser seguro."]
+      },
+      {
+        heading: "E o Google?",
+        body: "O provimento também trata dos anúncios por palavra-chave, como os do Google. Eles são permitidos quando aparecem em resposta a uma busca feita pela própria pessoa, com palavras compatíveis com a ética.",
+        extra: ["O impulsionamento em redes sociais também é permitido, desde que o conteúdo não seja uma oferta de serviços.", "Na prática, isso reforça o papel do site. Quem pesquisa \"advogada de família em Curitiba\" está procurando ativamente. Ter um site organizado, com uma página para cada área de atuação, é a forma ética e eficiente de estar presente nesse momento."]
+      },
+      {
+        heading: "Sóbrio não precisa ser sem graça",
+        body: "Sobriedade é uma regra de conteúdo, não de design. Um site pode ser discreto no texto e ainda assim ter personalidade e transmitir confiança.",
+        list: ["Use uma foto profissional e real sua. As pessoas contratam pessoas.", "Explique cada área de atuação em linguagem simples, sem juridiquês e sem promessas.", "Responda as perguntas que você mais ouve no primeiro contato.", "Deixe o contato fácil de achar, no celular e no computador.", "Mantenha as mesmas informações no site, no Perfil da Empresa no Google e nas redes."]
+      },
+      {
+        heading: "Para fechar",
+        body: "As regras da OAB não impedem a advogada de ter presença digital. Elas pedem que essa presença informe em vez de vender.",
+        extra: ["E é justamente isso que um bom site faz: apresenta quem você é, explica como você trabalha e deixa a decisão com quem está procurando. Para casos específicos, a comissão de ética da sua seccional pode orientar."]
+      }
+    ],
+    tags: ["Marketing jurídico", "Provimento 205/2021", "Site para advogados", "Publicidade na advocacia"],
+    relatedSlugs: ["como-aparecer-no-google-com-pequena-empresa", "site-ou-instagram-qual-sua-empresa-precisa"],
+    ctaType: "whatsapp",
+    ctaTitle: "Um site sóbrio, ético e com a sua cara",
+    ctaText: "Eu crio o seu site seguindo as regras da OAB, com uma página para cada área de atuação e o contato a um toque.",
+    ctaButtonText: "Falar com a Márcia no WhatsApp"
+  },
   {
     id: "seu-paciente-ja-pergunta-para-a-ia",
     slug: "seu-paciente-ja-pergunta-para-a-ia",

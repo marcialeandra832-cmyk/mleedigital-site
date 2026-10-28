@@ -10,11 +10,6 @@ const colunas = [
     { label: 'Blog', to: '/blog/' },
     { label: 'Contato', to: '/contato/' },
   ] },
-  { titulo: 'Também faço', links: [
-    { label: 'Apps', to: '/apps/' },
-    { label: 'Sistemas web', to: '/sistemas-web/' },
-    { label: 'Recomendados', to: '/recomendados/' },
-  ] },
   { titulo: 'Por área', links: [
     { label: 'Clínicas médicas e odontológicas', to: '/sites-para-clinicas/' },
     { label: 'Estética e beleza', to: '/sites-para-esteticistas/' },
@@ -35,7 +30,7 @@ export function Footer() {
     <footer className="bg-[#0A0F10] text-[#F4EFE8]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-20 pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-6">
             <Logo claro tamanho={44} />
             <p className="mt-6 text-[15px] leading-relaxed text-[#F4EFE8]/70 max-w-sm">
               Sites para médicas, dentistas, esteticistas, advogadas e arquitetas. Feitos por mim, do começo ao fim, com atendimento online para todo o Brasil.

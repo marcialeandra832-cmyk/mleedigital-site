@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    { "source": "/apps", "destination": "/", "permanent": true },
+    { "source": "/apps/:path*", "destination": "/", "permanent": true },
+    { "source": "/sistemas-web", "destination": "/", "permanent": true },
+    { "source": "/sistemas-web/:path*", "destination": "/", "permanent": true },
+    { "source": "/recomendados", "destination": "/", "permanent": true },
+    { "source": "/recomendados/:path*", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/app.html" }
   ]

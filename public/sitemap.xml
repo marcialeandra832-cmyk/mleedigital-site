@@ -27,12 +27,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://www.mleedigital.com.br/sistemas-web/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <!-- Segmentos / Nichos -->
   <url>
@@ -149,24 +143,6 @@
   </url>
 
   <!-- Aplicativos -->
-  <url>
-    <loc>https://www.mleedigital.com.br/apps/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.mleedigital.com.br/apps/nail-finance-pro/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.mleedigital.com.br/apps/elastic-fit/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <!-- Blog -->
   <url>
@@ -231,30 +207,6 @@
   </url>
 
   <!-- Recomendações -->
-  <url>
-    <loc>https://www.mleedigital.com.br/recomendados/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mleedigital.com.br/recomendados/ferramentas-digitais/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.mleedigital.com.br/recomendados/home-office/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://www.mleedigital.com.br/recomendados/criadores/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
 
   <!-- Legal -->
   <url>

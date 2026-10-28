@@ -12,7 +12,6 @@ import { ModelosArea } from '../components/home/ModelosArea';
 import { ImagemFlutuante } from '../components/motion/ImagemFlutuante';
 import { clientesDestaque } from '../data/clientesDestaque';
 import monogramaClaro from '../assets/brand/monograma-claro.svg';
-import { appsData } from '../data/apps';
 import { blogPostsData } from '../data/blog';
 import { planos } from '../data/planos';
 import { getWhatsAppLink, AUTHOR_IMG, AUTHOR_NAME, AUTHOR_ROLE, AREA_ATENDIDA, INSTAGRAM_URL, SITE_URL } from '../data/constants';
@@ -340,32 +339,6 @@ export function HomePage() {
               Conhecer minha história <ArrowUpRight className="w-4 h-4" />
             </Link>
           </Reveal>
-        </div>
-      </section>
-
-      {/* APPS */}
-      <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-4">Também crio</p>
-              <h2 className="font-serif text-4xl">Aplicativos próprios</h2>
-            </div>
-            <Link to="/apps/" className="text-[15px] underline decoration-[#CC8A80] underline-offset-4">Ver apps</Link>
-          </Reveal>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 border-t border-[#DCD2C6]">
-            {appsData.map((a, i) => (
-              <Reveal key={a.slug} atraso={i * 100} className={`py-8 border-b border-[#DCD2C6] ${i % 2 === 0 ? 'md:pr-10 md:border-r' : 'md:pl-10'}`}>
-                <Link to={`/apps/${a.slug}/`} className="group block" data-cursor="Ver app">
-                  <div className="mb-6 overflow-hidden rounded-2xl aspect-[16/9] bg-[#E9E2D8] shadow-[0_30px_60px_-35px_rgba(17,24,25,0.5)]">
-                    <img src={a.screenImg} alt={`Tela do ${a.name}`} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]" />
-                  </div>
-                  <h3 className="font-serif text-3xl group-hover:underline decoration-[#CC8A80] underline-offset-[6px] decoration-1">{a.name}</h3>
-                  <p className="mt-3 text-[16px] text-[#4A5153] leading-relaxed max-w-md">{a.tagline}</p>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 

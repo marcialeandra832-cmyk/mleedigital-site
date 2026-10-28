@@ -13,10 +13,11 @@ const principais = [
 ];
 
 const mais = [
-  { label: 'Apps', desc: 'Nail Finance Pro e Elastic Fit', to: '/apps/' },
-  { label: 'Sistemas web', desc: 'Painéis e sistemas sob medida', to: '/sistemas-web/' },
-  { label: 'Recomendados', desc: 'Ferramentas que eu uso', to: '/recomendados/' },
   { label: 'Contato', desc: 'Fale comigo', to: '/contato/' },
+  { label: 'São Paulo', desc: 'Sites para profissionais de SP', to: '/criacao-de-sites-em-sao-paulo/' },
+  { label: 'Rio de Janeiro', desc: 'Sites para profissionais do RJ', to: '/criacao-de-sites-no-rio-de-janeiro/' },
+  { label: 'Goiânia', desc: 'Sites para profissionais de Goiânia', to: '/criacao-de-sites-em-goiania/' },
+  { label: 'Belo Horizonte', desc: 'Sites para profissionais de BH', to: '/criacao-de-sites-em-belo-horizonte/' },
 ];
 
 const segmentos = [

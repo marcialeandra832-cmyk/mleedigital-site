@@ -5,7 +5,7 @@ import { SEOHead } from '../components/layout/SEOHead';
 import { projectsData } from '../data/projects';
 import { clientesDestaque } from '../data/clientesDestaque';
 import { modelosPortfolio } from '../data/modelos';
-import { catalogos, apps } from '../data/tambemFaco';
+import { catalogos } from '../data/tambemFaco';
 import { Celular } from '../components/portfolio/Molduras';
 import { getWhatsAppLink } from '../data/constants';
 import { Project } from '../types';
@@ -92,7 +92,7 @@ export function PortfolioPage() {
         </div>
       </section>
 
-      {/* TAMBÉM FAÇO: catálogos, cardápios e apps */}
+      {/* TAMBÉM FAÇO: catálogos e cardápios */}
       <section className="px-5 sm:px-8 lg:px-14 pb-20 sm:pb-28">
         <h2 className="border-t border-[#111819] pt-8 sm:pt-10 font-serif text-[36px] sm:text-[52px] leading-[1.02] tracking-[-0.02em]">Também faço</h2>
 
@@ -117,25 +117,6 @@ export function PortfolioPage() {
           </ul>
         </div>
 
-        <div className="mt-16 sm:mt-24 pt-10 sm:pt-12 border-t border-[#DCD2C6] grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <div className="lg:col-span-4">
-            <h3 className="font-serif text-[28px] sm:text-[32px] leading-tight">Apps</h3>
-            <p className="mt-3 text-[17px] leading-relaxed text-[#4A5153] max-w-[34ch]">Aplicativos que eu criei do zero, do desenho à publicação.</p>
-          </div>
-          <ul className="lg:col-span-7 lg:col-start-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
-            {apps.map((a) => (
-              <li key={a.slug}>
-                <Link to={`/apps/${a.slug}/`} data-cursor="Ver" className="group block">
-                  <span className="block overflow-hidden rounded-xl aspect-[16/9] bg-[#E9E2D8] border border-[#DCD2C6]">
-                    <img src={a.img} alt={`Tela do app ${a.nome}`} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]" />
-                  </span>
-                  <span className="mt-4 block font-serif text-[22px] leading-snug group-hover:underline decoration-[#CC8A80] decoration-1 underline-offset-[5px]">{a.nome}</span>
-                  <span className="mt-1 block text-[15px] text-[#4A5153]">{a.resumo}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
       </section>
 
       <section className="bg-[#FBF8F3] border-y border-[#DCD2C6] px-5 sm:px-8 lg:px-14 py-20 sm:py-24">

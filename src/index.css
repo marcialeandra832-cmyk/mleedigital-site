@@ -64,3 +64,32 @@
 
 /* Linha "role para ver mais" no topo */
 @keyframes desce { 0% { transform: translateY(-100%); } 60%, 100% { transform: translateY(260%); } }
+
+/* ===== Detalhes do portal levados ao resto do site ===== */
+
+/* Passagem do topo escuro para o off-white */
+.passagem-topo { height: clamp(110px, 16vw, 220px); background: linear-gradient(180deg, #0E1213 0%, #242829 22%, #6f6e6b 52%, #c9c3bb 78%, #F4EFE8 100%); }
+
+/* Linhas laminadas (as camadas do portal) usadas como divisória */
+.linhas-portal { display: grid; gap: 3px; }
+.linhas-portal > span { display: block; height: 1px; background-size: 220% 100%; animation: linhas-brilho 9s ease-in-out infinite alternate; }
+.linhas-portal > span:nth-child(odd) { background-image: linear-gradient(90deg, transparent 0%, #A8675B 18%, #E9BFB2 46%, #CC8A80 62%, #A8675B 82%, transparent 100%); }
+.linhas-portal > span:nth-child(even) { background-image: linear-gradient(90deg, transparent 0%, rgba(17,24,25,.28) 20%, rgba(17,24,25,.45) 50%, rgba(17,24,25,.28) 80%, transparent 100%); }
+.linhas-portal > span:nth-child(2) { animation-delay: -2s; } .linhas-portal > span:nth-child(3) { animation-delay: -4s; }
+.linhas-portal > span:nth-child(4) { animation-delay: -6s; } .linhas-portal > span:nth-child(5) { animation-delay: -8s; }
+.linhas-portal--escuro > span:nth-child(even) { background-image: linear-gradient(90deg, transparent 0%, rgba(244,239,232,.12) 25%, rgba(244,239,232,.22) 50%, rgba(244,239,232,.12) 75%, transparent 100%); }
+@keyframes linhas-brilho { from { background-position: 0% 0; } to { background-position: 100% 0; } }
+@media (prefers-reduced-motion: reduce) { .linhas-portal > span { animation: none; background-position: 50% 0; } }
+
+/* Marcador "linha com ponto" dos links e botões */
+.ponto { position: relative; display: inline-block; width: 1px; height: 16px; background: currentColor; flex-shrink: 0; transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.ponto::before { content: ""; position: absolute; top: -3px; left: -2px; width: 5px; height: 5px; border-radius: 999px; background: currentColor; }
+.group:hover .ponto, .group:focus-visible .ponto { transform: translateY(-4px); }
+
+/* Link no estilo do topo: texto + linha embaixo + marcador */
+.link-ponto { display: inline-flex; align-items: center; gap: 1.1rem; padding-bottom: .65rem; border-bottom: 1px solid currentColor; border-color: color-mix(in srgb, currentColor 30%, transparent); transition: border-color .3s, color .3s; }
+.link-ponto:hover { border-color: #CC8A80; }
+
+/* Fundo de céu e mar das seções escuras */
+.fundo-mar { position: relative; isolation: isolate; background: #121617 url('/hero/mar.jpg') center 40% / cover no-repeat; }
+.fundo-mar::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(14,18,19,.82) 0%, rgba(14,18,19,.42) 45%, rgba(14,18,19,.88) 100%); }

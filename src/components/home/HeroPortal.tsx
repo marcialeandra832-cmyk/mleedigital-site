@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import monogramaClaro from '../../assets/brand/monograma-claro.svg';
+import { Ponto } from './Detalhes';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -176,11 +177,8 @@ export function HeroPortal() {
           <p className="hero-entra mt-7 max-w-[520px] text-[16px] sm:text-[18px] leading-relaxed text-[#F4EFE8]/72">
             Sites sob medida para médicas, dentistas, esteticistas, advogadas e arquitetas. Feitos por mim, do começo ao fim, e no ar em até 7 dias úteis.
           </p>
-          <a href="#previa" className="hero-entra group mt-9 inline-flex items-center gap-5 pb-3 border-b border-[#F4EFE8]/30 hover:border-[#CC8A80] text-[15px] transition-colors">
-            Ver como o meu site ficaria
-            <span className="relative block w-px h-4 bg-[#F4EFE8]/70 group-hover:bg-[#CC8A80] transition-colors" aria-hidden="true">
-              <span className="absolute -top-[3px] -left-[2px] w-[5px] h-[5px] rounded-full bg-current" />
-            </span>
+          <a href="#previa" className="hero-entra group link-ponto mt-9 text-[15px]">
+            Ver como o meu site ficaria <Ponto />
           </a>
         </div>
 

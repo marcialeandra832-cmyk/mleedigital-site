@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from 'react';
+import { Ponto } from './Detalhes';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { clientesDestaque } from '../../data/clientesDestaque';
@@ -54,8 +54,8 @@ export function ProjetosHorizontal() {
               <div className="flex gap-5 text-[14px]">
                 {p.slug && <Link to={`/portfolio/${p.slug}/`} className="text-[#4A5153] hover:text-[#111819]">Como foi feito</Link>}
                 {p.link && (
-                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#111819] underline decoration-[#CC8A80] underline-offset-4">
-                    Abrir o site <ArrowUpRight className="w-4 h-4" />
+                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="group link-ponto text-[#111819]">
+                    Abrir o site <Ponto />
                   </a>
                 )}
               </div>

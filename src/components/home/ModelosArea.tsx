@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import { Reveal } from './Reveal';
+import { Ponto } from './Detalhes';
 import { modelos } from '../../data/modelos';
 import { getWhatsAppLink } from '../../data/constants';
 
@@ -38,9 +39,9 @@ export function ModelosArea() {
                     href={getWhatsAppLink(`Olá Márcia! Gostei do modelo ${m.nome} (${m.area}) e quero um site assim com as minhas informações.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#111819] underline decoration-[#CC8A80] underline-offset-4 hover:decoration-2"
+                    className="group link-ponto text-[#111819]"
                   >
-                    Quero esse com o meu nome
+                    Quero esse com o meu nome <Ponto />
                   </a>
                   {m.link && (
                     <a href={m.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#4A5153] hover:text-[#111819]">

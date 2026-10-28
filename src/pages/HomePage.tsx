@@ -1,21 +1,21 @@
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowUpRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { SEOHead } from '../components/layout/SEOHead';
 import { Reveal } from '../components/home/Reveal';
 import { PreviaSite } from '../components/home/PreviaSite';
 import { ProjetosHorizontal } from '../components/home/ProjetosHorizontal';
 import { Showreel } from '../components/home/Showreel';
 import { HeroPortal } from '../components/home/HeroPortal';
+import { ChamadaFinal } from '../components/home/ChamadaFinal';
+import { LinhasPortal, Ponto } from '../components/home/Detalhes';
 import { ModelosArea } from '../components/home/ModelosArea';
 import { ImagemFlutuante } from '../components/motion/ImagemFlutuante';
 import { clientesDestaque } from '../data/clientesDestaque';
-import monogramaClaro from '../assets/brand/monograma-claro.svg';
 import { blogPostsData } from '../data/blog';
 import { planos } from '../data/planos';
 import { getWhatsAppLink, AUTHOR_IMG, AUTHOR_NAME, AUTHOR_ROLE, AREA_ATENDIDA, INSTAGRAM_URL, SITE_URL } from '../data/constants';
-import luzPetroleo from '../assets/brand/luz-janela-petroleo.webp';
 import logoRelevo from '../assets/brand/logo-relevo-petroleo.webp';
 
 import fotoMarcia from '../assets/brand/marcia-notebook.webp';
@@ -81,6 +81,7 @@ export function HomePage() {
 
       {/* TOPO */}
       <HeroPortal />
+      <div className="passagem-topo" aria-hidden="true" />
 
       {/* SHOWREEL */}
       <Showreel />
@@ -105,6 +106,7 @@ export function HomePage() {
             </Reveal>
           ))}
         </div>
+        <LinhasPortal className="mt-24 sm:mt-32" />
       </section>
 
       {/* PRÉVIA PERSONALIZADA */}
@@ -117,7 +119,7 @@ export function HomePage() {
       <ModelosArea />
 
       {/* COMO FUNCIONA */}
-      <section id="como-funciona" className="bg-[#111819] text-[#F4EFE8] py-24 sm:py-32 scroll-mt-20">
+      <section id="como-funciona" className="fundo-mar text-[#F4EFE8] py-24 sm:py-32 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
             <div className="lg:col-span-7">
@@ -133,15 +135,16 @@ export function HomePage() {
             {etapas.map((e, i) => (
               <Reveal as="li" key={e.n} atraso={i * 110} className="relative md:pr-8">
                 <div className="flex items-center gap-4">
-                  <span className="w-3 h-3 rounded-full border border-[#CC8A80] bg-[#111819] relative z-10" />
+                  <span className="w-3 h-3 rounded-full border border-[#CC8A80] bg-[#CC8A80]/25 relative z-10" />
                   {i < etapas.length - 1 && <span className="hidden md:block flex-1 h-px bg-[#F4EFE8]/20" />}
                 </div>
-                <p className="mt-6 font-serif text-[64px] leading-none text-[#F4EFE8]/15">{e.n}</p>
+                <p className="mt-6 font-serif text-[64px] leading-none text-[#CC8A80]/55">{e.n}</p>
                 <h3 className="mt-3 font-serif text-3xl">{e.titulo}</h3>
                 <p className="mt-3 text-[16px] leading-relaxed text-[#F4EFE8]/70 max-w-[16rem]">{e.texto}</p>
               </Reveal>
             ))}
           </ol>
+          <LinhasPortal escuro className="mt-20" />
         </div>
       </section>
 
@@ -193,9 +196,9 @@ export function HomePage() {
                     href={getWhatsAppLink(`Olá Márcia! Tenho interesse no ${p.nome}.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`mt-8 inline-flex items-center rounded-full px-7 py-3.5 text-[15px] transition-colors ${p.destaque ? 'bg-[#111819] text-[#F4EFE8] hover:bg-[#0A0F10]' : 'border border-[#111819]/30 hover:border-[#111819]'}`}
+                    className={`group mt-8 inline-flex items-center gap-4 rounded-full pl-7 pr-6 py-3.5 text-[15px] transition-colors ${p.destaque ? 'bg-[#111819] text-[#F4EFE8] hover:bg-[#0A0F10]' : 'border border-[#111819]/30 hover:border-[#111819]'}`}
                   >
-                    Quero o {p.nome}
+                    Quero o {p.nome} <Ponto className="text-[#CC8A80]" />
                   </a>
                 </div>
               </Reveal>
@@ -229,10 +232,10 @@ export function HomePage() {
             <h2 className="font-serif text-[44px] sm:text-[64px] leading-[0.95] tracking-[-0.02em]">Perguntas frequentes</h2>
           </Reveal>
           <div className="lg:col-span-8 border-t border-[#111819]">
-            {perguntas.map((f) => (
+            {perguntas.map((f, i) => (
               <details key={f.q} className="group border-b border-[#DCD2C6]">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-serif text-[22px] sm:text-[26px] leading-snug [&::-webkit-details-marker]:hidden">
-                  {f.q}
+                  <span className="flex items-baseline gap-4"><span className="font-sans text-[11px] text-[#CC8A80] tabular-nums">{String(i + 1).padStart(2, '0')}</span>{f.q}</span>
                   <span aria-hidden="true" className="shrink-0 text-[#CC8A80] text-3xl leading-none transition-transform group-open:rotate-45">+</span>
                 </summary>
                 <p className="pb-7 pr-10 text-[16px] text-[#4A5153] leading-relaxed max-w-2xl">{f.a}</p>
@@ -265,8 +268,8 @@ export function HomePage() {
               <div><p className="font-serif text-3xl">7</p><p className="text-[14px] text-[#4A5153] mt-1">dias úteis, no máximo</p></div>
               <div><p className="font-serif text-3xl">100%</p><p className="text-[14px] text-[#4A5153] mt-1">do domínio no seu nome</p></div>
             </div>
-            <Link to="/sobre/" className="mt-10 inline-flex items-center gap-1 text-[15px] underline decoration-[#CC8A80] underline-offset-4 hover:decoration-2">
-              Conhecer minha história <ArrowUpRight className="w-4 h-4" />
+            <Link to="/sobre/" className="group link-ponto mt-10 text-[15px]">
+              Conhecer minha história <Ponto />
             </Link>
           </Reveal>
         </div>
@@ -280,7 +283,7 @@ export function HomePage() {
               <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-4">Blog</p>
               <h2 className="font-serif text-4xl">Para ler com calma</h2>
             </div>
-            <Link to="/blog/" className="text-[15px] underline decoration-[#CC8A80] underline-offset-4">Ver todos os artigos</Link>
+            <Link to="/blog/" className="group link-ponto self-start sm:self-auto text-[15px]">Ver todos os artigos <Ponto /></Link>
           </Reveal>
           <ul className="mt-10 border-t border-[#111819]">
             {artigos.map((a, i) => (
@@ -297,20 +300,7 @@ export function HomePage() {
       </section>
 
       {/* CHAMADA FINAL */}
-      <section className="relative overflow-hidden text-[#F4EFE8] px-5 sm:px-8 lg:px-14 pt-28 sm:pt-40 pb-14" style={{ backgroundImage: `url(${luzPetroleo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <img src={monogramaClaro} alt="" className="hidden md:block absolute right-8 lg:right-14 top-16 w-[clamp(80px,9vw,140px)] opacity-90" />
-        <Reveal>
-          <h2 className="font-serif text-[clamp(60px,12vw,230px)] leading-[0.88] tracking-[-0.04em]">Vamos criar<br />o seu?</h2>
-        </Reveal>
-        <Reveal atraso={120}>
-          <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
-            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" data-cursor="Oi!" className="group inline-flex items-center gap-3 self-start rounded-full bg-[#F4EFE8] text-[#111819] px-9 py-5 text-[17px] hover:bg-white transition-colors">
-              Falar no WhatsApp <span aria-hidden="true" className="transition-transform group-hover:translate-x-1.5">→</span>
-            </a>
-            <p className="text-[16px] text-[#F4EFE8]/75 max-w-sm leading-relaxed">Me conta sobre o seu trabalho. Quem responde sou eu.</p>
-          </div>
-        </Reveal>
-      </section>
+      <ChamadaFinal />
     </div>
   );
 }

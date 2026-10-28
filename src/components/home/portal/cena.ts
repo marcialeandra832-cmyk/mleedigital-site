@@ -10,6 +10,8 @@ export type OpcoesCena = {
   periodo?: number; // segundos para o ciclo completo
   retrato?: boolean; // força enquadramento de celular
   pixelRatio?: number;
+  variante?: 'topo' | 'final';
+  semPortal?: boolean;
 };
 
 const ruido = /* glsl */ `
@@ -217,6 +219,7 @@ export function criarCena(op: OpcoesCena) {
   const liquido = new THREE.Mesh(new THREE.PlaneGeometry(lw, lh), new THREE.ShaderMaterial({ uniforms: uLiq, vertexShader: vertSimples, fragmentShader: liquidoFrag }));
   liquido.position.z = -0.05 - nAneis * 0.04 - 0.01;
   corpo.add(liquido);
+  portal.visible = !op.semPortal;
   cena.add(portal);
 
   let monoPronto: Promise<void> = Promise.resolve();
@@ -255,7 +258,7 @@ export function criarCena(op: OpcoesCena) {
       base.esc = Math.min(1.0, (meiaLarg * 1.05) / W);
       base.x = -meiaLarg * 0.12; base.y = meiaAlt * 0.24;
     } else {
-      base.esc = Math.min(1.25, (meiaAlt * 1.1) / H);
+      base.esc = Math.min(1.25, (meiaAlt * (op.variante === 'final' ? 0.95 : 1.1)) / H);
       base.x = meiaLarg * 0.42; base.y = -meiaAlt * 0.02;
     }
     // posição do portal na tela (para a poça de luz no mar)
@@ -273,7 +276,7 @@ export function criarCena(op: OpcoesCena) {
     portal.scale.setScalar(base.esc);
     portal.rotation.set(
       0.1 + Math.sin(fase + 1) * 0.04 - mouseSuave.y * 0.12 + p * 0.15,
-      (retrato ? -0.55 : -0.72) + Math.sin(fase) * 0.14 + mouseSuave.x * 0.22 + p * 0.55,
+      (retrato ? -0.55 : op.variante === 'final' ? 0.42 : -0.72) + Math.sin(fase) * 0.14 + mouseSuave.x * 0.22 + p * 0.55,
       0.04 + Math.sin(fase * 2) * 0.012,
     );
     renderer.render(cena, camera);

@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react';
+import { Ponto } from '../components/home/Detalhes';
 import { TopoInterno, botaoClaro } from '../components/common/TopoInterno';
 import { 
   MessageCircle, 
@@ -62,159 +63,63 @@ export function ContactPage() {
         texto="Sem formulários chatos ou robôs de atendimento. Você conversa diretamente comigo pelo canal que preferir."
       />
 
-      {/* Contact Channels Grid */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
-            {/* Left: Direct Channels Card */}
-            <div className="lg:col-span-5 space-y-6">
-              
-              <div className="bg-[#FBF8F3] p-8 rounded-2xl border border-[#DCD2C6] space-y-6">
-                <div className="flex items-center gap-3.5 pb-6 border-b border-[#DCD2C6]">
-                  <img 
-                    src={AUTHOR_IMG} 
-                    alt={AUTHOR_NAME} 
-                    className="w-12 h-12 rounded-full object-cover border border-[#111819]/30"
-                  />
-                  <div>
-                    <div className="font-serif text-lg text-[#111819]">{AUTHOR_NAME}</div>
-                    <div className="text-xs text-[#A8675B] font-medium">Fundadora & Desenvolvedora</div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <a
-                    href={getWhatsAppLink()}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3.5 p-4 rounded-xl bg-white border border-[#DCD2C6] hover:border-[#25D366] transition-colors group"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
-                      <MessageCircle className="w-5 h-5 fill-current" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-[#4A5153]">WhatsApp Direto</div>
-                      <div className="text-sm font-semibold text-[#111819] group-hover:text-[#25D366] transition-colors">
-                        (49) 99961-9123
-                      </div>
-                    </div>
-                  </a>
-
-                  <a
-                    href={INSTAGRAM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3.5 p-4 rounded-xl bg-white border border-[#DCD2C6] hover:border-[#E1306C] transition-colors group"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-[#E1306C]/10 text-[#E1306C] flex items-center justify-center shrink-0">
-                      <Instagram className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-[#4A5153]">Instagram Oficial</div>
-                      <div className="text-sm font-semibold text-[#111819] group-hover:text-[#E1306C] transition-colors">
-                        {INSTAGRAM_HANDLE}
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div className="pt-2 flex items-center gap-2 text-xs text-[#4A5153]">
-                  <Clock className="w-4 h-4 text-[#A8675B] shrink-0" />
-                  <span>Atendimento ágil de segunda a sexta, das 09h às 18h.</span>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Right: Quick Inquiry Form -> WhatsApp Generator */}
-            <div className="lg:col-span-7">
-              <div className="bg-[#FBF8F3] p-8 sm:p-10 rounded-3xl border border-[#DCD2C6] shadow-sm">
-                
-                <div className="mb-6">
-                  <span className="text-xs font-bold text-[#A8675B] uppercase tracking-wider block mb-1">
-                    PREFERE ENVIAR UM RESUMO DO SEU PROJETO?
-                  </span>
-                  <h2 className="text-2xl font-serif text-[#111819]">
-                    Simulador Rápido de Orçamento
-                  </h2>
-                  <p className="text-xs sm:text-sm text-[#767D7F] mt-1">
-                    Preencha os campos abaixo e nosso sistema abrirá a mensagem formatada para envio no seu WhatsApp.
-                  </p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-[#111819] mb-1.5">
-                      Seu Nome ou Nome da Empresa
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Ex: Dra. Mariana / Clínica Bem Estar"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#111819] focus:outline-none focus:border-[#111819]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-[#111819] mb-1.5">
-                      Seu Ramo de Atuação / Especialidade
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Ex: Psicologia, Odontologia, Advocacia, Estética..."
-                      value={segment}
-                      onChange={(e) => setSegment(e.target.value)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#111819] focus:outline-none focus:border-[#111819]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-[#111819] mb-1.5">
-                      Plano de Interesse
-                    </label>
-                    <select
-                      value={plan}
-                      onChange={(e) => setPlan(e.target.value)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#111819] focus:outline-none focus:border-[#111819]"
-                    >
-                      <option value="Plano Essencial (R$ 997)">Site Essencial - One Page Profissional (R$ 997)</option>
-                      <option value="Plano Profissional (R$ 1.397)">Site Profissional - Multipágina até 5 páginas (R$ 1.397)</option>
-                      <option value="Sistemas Web & Apps">Sistemas Web Sob Medida & Apps</option>
-                      <option value="Nail Finance Pro">App Nail Finance Pro</option>
-                      <option value="Elastic Fit">App Elastic Fit</option>
-                      <option value="Ainda não sei, quero orientação">Ainda não sei, quero orientação</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-[#111819] mb-1.5">
-                      Detalhes adicionais (opcional)
-                    </label>
-                    <textarea
-                      rows={3}
-                      placeholder="Ex: Já tenho logo e fotos, preciso do site no ar em 1 semana..."
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-white border border-[#DCD2C6] text-sm text-[#111819] focus:outline-none focus:border-[#111819]"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-3.5 px-6 rounded-xl bg-[#F4EFE8] text-[#111819] font-medium text-sm hover:bg-[#111819] hover:text-[#F4EFE8] transition-all flex items-center justify-center gap-2 shadow-lg"
-                  >
-                    <Send className="w-4 h-4" />
-                    <span>Enviar e Abrir no WhatsApp</span>
-                  </button>
-                </form>
-
+      {/* Canais e formulário */}
+      <section className="py-24 sm:py-32 bg-[#F4EFE8]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-16">
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-4">
+              <img src={AUTHOR_IMG} alt={AUTHOR_NAME} className="w-14 h-14 rounded-full object-cover shadow-[0_0_0_1px_rgba(190,196,198,.8)]" />
+              <div>
+                <p className="font-serif text-[22px] leading-tight">{AUTHOR_NAME}</p>
+                <p className="text-[13px] text-[#A8675B]">Fundadora e desenvolvedora</p>
               </div>
             </div>
+            <ul className="mt-10 border-t border-[#111819]">
+              <li className="border-b border-[#DCD2C6]">
+                <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="group flex items-baseline justify-between gap-6 py-6">
+                  <span><span className="block text-[12px] uppercase tracking-[0.2em] text-[#A8675B]">WhatsApp</span><span className="font-serif text-[28px]">(49) 99961-9123</span></span>
+                  <Ponto />
+                </a>
+              </li>
+              <li className="border-b border-[#DCD2C6]">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="group flex items-baseline justify-between gap-6 py-6">
+                  <span><span className="block text-[12px] uppercase tracking-[0.2em] text-[#A8675B]">Instagram</span><span className="font-serif text-[28px]">{INSTAGRAM_HANDLE}</span></span>
+                  <Ponto />
+                </a>
+              </li>
+            </ul>
+            <p className="mt-6 text-[15px] text-[#4A5153]">Atendimento de segunda a sexta, das 9h às 18h.</p>
+          </div>
 
+          <div className="lg:col-span-7">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Prefere mandar um resumo?</p>
+            <h2 className="font-serif text-[40px] sm:text-[52px] leading-[0.98] tracking-[-0.02em]">Conte sobre o seu projeto</h2>
+            <p className="mt-4 text-[16px] text-[#4A5153] leading-relaxed max-w-lg">Preencha os campos e a mensagem abre pronta no seu WhatsApp.</p>
+            <form onSubmit={handleSubmit} className="mt-10 space-y-8">
+              <div>
+                <label className="block text-[12px] uppercase tracking-[0.2em] text-[#A8675B] mb-1">Seu nome ou nome da empresa</label>
+                <input type="text" required placeholder="Ex: Dra. Mariana / Clínica Bem Estar" value={name} onChange={(e) => setName(e.target.value)} className="w-full py-3 bg-transparent border-0 border-b border-[#111819]/25 text-[17px] text-[#111819] placeholder:text-[#4A5153]/60 focus:outline-none focus:border-[#CC8A80] transition-colors" />
+              </div>
+              <div>
+                <label className="block text-[12px] uppercase tracking-[0.2em] text-[#A8675B] mb-1">Sua área de atuação</label>
+                <input type="text" required placeholder="Ex: Odontologia, Advocacia, Estética..." value={segment} onChange={(e) => setSegment(e.target.value)} className="w-full py-3 bg-transparent border-0 border-b border-[#111819]/25 text-[17px] text-[#111819] placeholder:text-[#4A5153]/60 focus:outline-none focus:border-[#CC8A80] transition-colors" />
+              </div>
+              <div>
+                <label className="block text-[12px] uppercase tracking-[0.2em] text-[#A8675B] mb-1">Plano de interesse</label>
+                <select value={plan} onChange={(e) => setPlan(e.target.value)} className="w-full py-3 bg-transparent border-0 border-b border-[#111819]/25 text-[17px] text-[#111819] placeholder:text-[#4A5153]/60 focus:outline-none focus:border-[#CC8A80] transition-colors">
+                  <option value="Plano Essencial (R$ 997)">Site Essencial, página única (R$ 997)</option>
+                  <option value="Plano Profissional (R$ 1.397)">Site Profissional, até 5 páginas (R$ 1.397)</option>
+                  <option value="Ainda não sei, quero orientação">Ainda não sei, quero orientação</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-[12px] uppercase tracking-[0.2em] text-[#A8675B] mb-1">Detalhes (opcional)</label>
+                <textarea rows={3} placeholder="Ex: Já tenho logo e fotos, preciso do site no ar em 1 semana..." value={message} onChange={(e) => setMessage(e.target.value)} className="w-full py-3 bg-transparent border-0 border-b border-[#111819]/25 text-[17px] text-[#111819] placeholder:text-[#4A5153]/60 focus:outline-none focus:border-[#CC8A80] transition-colors resize-none" />
+              </div>
+              <button type="submit" className="group inline-flex items-center gap-4 rounded-full bg-[#111819] text-[#F4EFE8] pl-8 pr-7 py-4 text-[16px] hover:bg-[#0A0F10] transition-colors">
+                Enviar e abrir no WhatsApp <Ponto className="text-[#CC8A80]" />
+              </button>
+            </form>
           </div>
         </div>
       </section>

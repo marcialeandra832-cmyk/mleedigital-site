@@ -1,4 +1,5 @@
 import fotoMarciaSobre from '../assets/brand/marcia-em-pe.webp';
+import { Ponto, LinhasPortal } from '../components/home/Detalhes';
 import { TopoInterno, botaoClaro } from '../components/common/TopoInterno';
 import { Link } from 'react-router-dom';
 import { 
@@ -54,117 +55,57 @@ export function AboutPage() {
         texto="A MLee Digital nasceu com o compromisso de oferecer uma experiência digital refinada para quem não tem tempo a perder com burocracias técnicas."
       />
 
-      {/* Founder Story Breakdown */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Founder Image */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-sm">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#111819]/30 to-[#111819]/20 rounded-3xl transform -rotate-2" />
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#DCD2C6] aspect-[4/5] bg-[#F4EFE8]">
-                  <img 
-                    src={fotoMarciaSobre} 
-                    alt={`${AUTHOR_NAME} - ${AUTHOR_ROLE}`} 
-                    className="w-full h-full object-cover object-top"
-                  />
-                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#F4EFE8] p-4 text-[#111819]">
-                    <div className="text-base font-serif font-medium">{AUTHOR_NAME}</div>
-                    <div className="text-xs text-[#A8675B]">{AUTHOR_ROLE}</div>
-                  </div>
-                </div>
+      {/* Quem faz */}
+      <section className="py-24 sm:py-32 bg-[#F4EFE8]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+          <div className="lg:col-span-5">
+            <div className="moldura-grafite max-w-md">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[#E9E2D8] shadow-[0_0_0_1px_rgba(190,196,198,.7)]">
+                <img src={fotoMarciaSobre} alt={`${AUTHOR_NAME}, ${AUTHOR_ROLE}`} className="w-full h-full object-cover object-top" />
               </div>
             </div>
-
-            {/* Founder Text */}
-            <div className="lg:col-span-7 space-y-5 text-[#111819]">
-              <div>
-                <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-2 block">
-                  FUNDADORA & DESENVOLVEDORA
-                </span>
-                <h2 className="text-3xl sm:text-4xl font-serif text-[#111819]">
-                  Por trás da MLee Digital
-                </h2>
-              </div>
-
-              <p className="text-sm sm:text-base text-[#767D7F] leading-relaxed">
-                Durante anos acompanhando médicos, psicólogos, advogados, donas de estúdios e empreendedores, percebi uma dor constante: profissionais excelentes em suas áreas sentiam-se perdidos em meio a orçamentos exorbitantes de agências tradicionais ou reféns de ferramentas automáticas complicadas que não entregavam nenhum resultado.
-              </p>
-
-              <p className="text-sm sm:text-base text-[#767D7F] leading-relaxed">
-                Na MLee Digital, o processo é direto e acolhedor. Você fala diretamente com quem planeja e programa o seu projeto. Não há intermediários ou termos técnicos incompreensíveis. Cuidamos do código, do design e da otimização para que você possa se dedicar ao que faz de melhor: atender seus clientes.
-              </p>
-
-              <div className="pt-2 flex items-center gap-4">
-                <a
-                  href={getWhatsAppLink("Olá Márcia! Gostaria de conversar sobre um projeto.")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 py-3 px-6 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-all"
-                >
-                  <MessageCircle className="w-4 h-4 fill-current text-[#25D366]" />
-                  <span>Conversar Comigo no WhatsApp</span>
-                </a>
-
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 py-3 px-5 rounded-xl bg-white border border-[#DCD2C6] text-[#111819] text-xs font-semibold hover:text-[#A8675B] transition-all"
-                >
-                  <Instagram className="w-4 h-4 text-[#E1306C]" />
-                  <span>Instagram</span>
-                </a>
-              </div>
+          </div>
+          <div className="lg:col-span-7">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Fundadora e desenvolvedora</p>
+            <h2 className="font-serif text-[40px] sm:text-[60px] leading-[0.98] tracking-[-0.02em]">Por trás da MLee Digital</h2>
+            <p className="mt-7 text-[17px] text-[#4A5153] leading-relaxed max-w-xl">
+              Durante anos acompanhando médicos, psicólogos, advogados, donas de estúdios e empreendedores, percebi uma dor constante: profissionais excelentes em suas áreas sentiam-se perdidos em meio a orçamentos exorbitantes de agências tradicionais ou reféns de ferramentas automáticas complicadas que não entregavam nenhum resultado.
+            </p>
+            <p className="mt-5 text-[17px] text-[#4A5153] leading-relaxed max-w-xl">
+              Na MLee Digital, o processo é direto e acolhedor. Você fala diretamente com quem planeja e programa o seu projeto. Não há intermediários ou termos técnicos incompreensíveis. Eu cuido do código, do design e da otimização para que você possa se dedicar ao que faz de melhor: atender seus clientes.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+              <a href={getWhatsAppLink("Olá Márcia! Gostaria de conversar sobre um projeto.")} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-4 rounded-full bg-[#111819] text-[#F4EFE8] pl-7 pr-6 py-3.5 text-[15px] hover:bg-[#0A0F10] transition-colors">
+                Conversar comigo no WhatsApp <Ponto className="text-[#CC8A80]" />
+              </a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="group link-ponto text-[15px]">Instagram <Ponto /></a>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Values & Principles */}
-      <section className="py-16 bg-[#FBF8F3] border-t border-[#DCD2C6]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-2 block">
-              NOSSOS PILARES
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-serif text-[#111819]">
-              Como garantimos excelência em cada entrega
-            </h2>
+      {/* Pilares */}
+      <section className="pb-24 sm:pb-32 bg-[#F4EFE8]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <LinhasPortal className="mb-24 sm:mb-32" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+            <div className="lg:col-span-7">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Pilares</p>
+              <h2 className="font-serif text-[40px] sm:text-[60px] leading-[0.98] tracking-[-0.02em]">Como cada entrega é feita</h2>
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#111819]/15 text-[#A8675B] flex items-center justify-center font-bold">
-                1
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 border-t border-[#111819]">
+            {[
+              { t: 'Transparência e respeito', d: 'Preços fixos, prazos cumpridos à risca e zero surpresas ou taxas escondidas. Você sabe exatamente o que vai receber.' },
+              { t: 'Estética de alto padrão', d: 'Nada de templates genéricos ou layouts poluídos. Cada projeto é pensado com tipografia nobre e hierarquia visual harmoniosa.' },
+              { t: 'Velocidade e Google', d: 'Sites que abrem rápido no celular e seguem as regras do Google para aparecer nas buscas.' },
+            ].map((p, i) => (
+              <div key={p.t} className={`pt-8 pb-6 md:pr-10 ${i > 0 ? 'md:pl-10 md:border-l border-[#DCD2C6]' : ''} border-b md:border-b-0 border-[#DCD2C6]`}>
+                <p className="font-serif text-[64px] leading-none text-[#CC8A80]/60">{String(i + 1).padStart(2, '0')}</p>
+                <h3 className="mt-5 font-serif text-[28px] leading-tight">{p.t}</h3>
+                <p className="mt-3 text-[16px] text-[#4A5153] leading-relaxed">{p.d}</p>
               </div>
-              <h3 className="text-lg font-serif text-[#111819]">Transparência e Respeito</h3>
-              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
-                Preços fixos, prazos cumpridos à risca e zero surpresas ou taxas escondidas. Você sabe exatamente o que vai receber.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#111819]/15 text-[#A8675B] flex items-center justify-center font-bold">
-                2
-              </div>
-              <h3 className="text-lg font-serif text-[#111819]">Estética de Alto Padrão</h3>
-              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
-                Nada de templates genéricos ou layouts poluídos. Cada projeto é calibrado com tipografia nobre e hierarquia visual harmoniosa.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl border border-[#DCD2C6] space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#111819]/15 text-[#A8675B] flex items-center justify-center font-bold">
-                3
-              </div>
-              <h3 className="text-lg font-serif text-[#111819]">Velocidade e SEO Técnico</h3>
-              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
-                Código moderno em React e Tailwind que abre instantaneamente em celulares e segue todas as diretrizes de indexação do Google.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

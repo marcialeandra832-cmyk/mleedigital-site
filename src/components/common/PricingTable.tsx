@@ -2,6 +2,7 @@ import { Check } from 'lucide-react';
 import { getWhatsAppLink } from '../../data/constants';
 import { planos } from '../../data/planos';
 import { Reveal } from '../home/Reveal';
+import { Ponto } from '../home/Detalhes';
 
 // Mesmo texto e mesmo visual do bloco de preços da página inicial.
 export function PricingTable() {
@@ -51,9 +52,9 @@ export function PricingTable() {
                   href={getWhatsAppLink(`Olá Márcia! Tenho interesse no ${p.nome}.`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`mt-8 inline-flex items-center rounded-full px-7 py-3.5 text-[15px] transition-colors ${p.destaque ? 'bg-[#111819] text-[#F4EFE8] hover:bg-[#0A0F10]' : 'border border-[#111819]/30 hover:border-[#111819]'}`}
+                  className={`group mt-8 inline-flex items-center gap-4 rounded-full pl-7 pr-6 py-3.5 text-[15px] transition-colors ${p.destaque ? 'bg-[#111819] text-[#F4EFE8] hover:bg-[#0A0F10]' : 'border border-[#111819]/30 hover:border-[#111819]'}`}
                 >
-                  Quero o {p.nome}
+                  Quero o {p.nome} <Ponto className="text-[#CC8A80]" />
                 </a>
               </div>
             </Reveal>

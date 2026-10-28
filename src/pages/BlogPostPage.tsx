@@ -71,11 +71,11 @@ export function BlogPostPage() {
       <Breadcrumbs items={breadcrumbItems} />
 
       {/* Article Header */}
-      <header className="pt-6 pb-12 bg-white">
+      <header className="pt-10 pb-12 bg-[#F4EFE8]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex items-center gap-2 mb-4">
-            <span className="text-xs font-semibold text-[#A8675B] bg-[#111819]/15 px-2.5 py-1 rounded-md">
+            <span className="text-[12px] uppercase tracking-[0.2em] text-[#A8675B]">
               {post.category}
             </span>
             <span className="text-xs text-[#4A5153]">•</span>
@@ -85,16 +85,16 @@ export function BlogPostPage() {
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#111819] font-normal leading-[1.2] mb-6">
+          <h1 className="font-serif text-[clamp(36px,5vw,64px)] text-[#111819] leading-[1.02] tracking-[-0.02em] mb-6 text-balance">
             {post.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-[#767D7F] font-light leading-relaxed mb-6">
+          <p className="text-[18px] text-[#4A5153] leading-relaxed mb-8">
             {post.excerpt}
           </p>
 
           {/* Author Meta */}
-          <div className="flex items-center gap-3 py-4 border-y border-[#DCD2C6]">
+          <div className="flex items-center gap-3 py-5 border-t border-[#111819] border-b border-b-[#DCD2C6]">
             <img 
               src={post.author.avatar} 
               alt={post.author.name} 

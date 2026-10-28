@@ -87,85 +87,85 @@ export function CidadePage({ slug }: CidadePageProps) {
         }
       />
 
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 sm:py-32 bg-[#F4EFE8]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            <div className="lg:col-span-7">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">O mercado em {cidade.nome}</p>
+              <h2 className="font-serif text-[40px] sm:text-[60px] leading-[0.98] tracking-[-0.02em]">{cidade.mercado.titulo}</h2>
+            </div>
+            <p className="lg:col-span-5 text-[17px] text-[#4A5153] leading-relaxed">{cidade.mercado.texto}</p>
+          </div>
+          <ul className="mt-14 grid grid-cols-1 md:grid-cols-2 border-t border-[#111819]">
+            {cidade.mercado.pontos.map((pt, i) => (
+              <li key={pt} className={`flex gap-5 py-6 border-b border-[#DCD2C6] text-[16px] leading-relaxed ${i % 2 === 1 ? 'md:pl-10 md:border-l' : 'md:pr-10'}`}>
+                <span className="font-serif text-[28px] leading-none text-[#CC8A80]/70 tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+                <span>{pt}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-          {/* Mercado da cidade */}
-          <div className="bg-[#FBF8F3] rounded-2xl p-8 sm:p-10 border border-[#DCD2C6] mb-12">
-            <h2 className="text-2xl font-serif text-[#111819] mb-4">{cidade.mercado.titulo}</h2>
-            <p className="text-sm sm:text-base text-[#6B7C7D] leading-relaxed mb-6">{cidade.mercado.texto}</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {cidade.mercado.pontos.map((pt) => (
-                <div key={pt} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#3F5557]">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#111819] mt-2 shrink-0" />
-                  <span>{pt}</span>
-                </div>
-              ))}
+      <section className="fundo-mar text-[#F4EFE8] py-24 sm:py-32">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            <div className="lg:col-span-7">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#CC8A80] mb-5">Como procuram</p>
+              <h2 className="font-serif text-[40px] sm:text-[60px] leading-[0.98] tracking-[-0.02em]">{cidade.busca.titulo}</h2>
+            </div>
+            <p className="lg:col-span-5 text-[17px] text-[#F4EFE8]/72 leading-relaxed">{cidade.busca.texto}</p>
+          </div>
+          <ul className="mt-14 grid grid-cols-1 md:grid-cols-3 border-t border-[#F4EFE8]/25">
+            {cidade.busca.exemplos.map((ex, i) => (
+              <li key={ex} className={`pt-8 pb-4 md:pr-8 ${i > 0 ? 'md:pl-8 md:border-l border-[#F4EFE8]/15' : ''}`}>
+                <p className="text-[11px] text-[#CC8A80] tabular-nums">{String(i + 1).padStart(2, '0')}</p>
+                <p className="mt-3 font-serif text-[26px] leading-snug">"{ex}"</p>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 border-t border-[#F4EFE8]/25">
+            <div className="pt-8 md:pr-10">
+              <h3 className="font-serif text-[30px]">Tudo online, do começo ao fim</h3>
+              <p className="mt-3 text-[16px] text-[#F4EFE8]/72 leading-relaxed">Conversa pelo WhatsApp, reuniões por videochamada e aprovação pelo celular. Você fala direto comigo em todas as etapas, e o site fica no ar em até 7 dias úteis.</p>
+            </div>
+            <div className="pt-8 md:pl-10 md:border-l border-[#F4EFE8]/15">
+              <h3 className="font-serif text-[30px]">Atendo profissionais de toda {cidade.nome}</h3>
+              <p className="mt-3 text-[16px] text-[#F4EFE8]/72 leading-relaxed">Incluindo {cidade.bairros.slice(0, -1).join(', ')} e {cidade.bairros[cidade.bairros.length - 1]}.</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Como as pessoas buscam */}
-          <div className="mb-12">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-serif text-[#111819]">{cidade.busca.titulo}</h2>
-              <p className="text-sm text-[#3F5557] mt-2 max-w-2xl mx-auto">{cidade.busca.texto}</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {cidade.busca.exemplos.map((ex) => (
-                <div key={ex} className="p-5 rounded-xl bg-white border border-[#DCD2C6] flex items-start gap-3">
-                  <Search className="w-4 h-4 text-[#A8675B] mt-0.5 shrink-0" />
-                  <span className="text-sm text-[#111819]">"{ex}"</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Atendimento online + bairros */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="p-7 rounded-2xl border border-[#DCD2C6] bg-white">
-              <Video className="w-5 h-5 text-[#A8675B] mb-3" />
-              <h2 className="text-xl font-serif text-[#111819] mb-2">Tudo online, do começo ao fim</h2>
-              <p className="text-sm text-[#3F5557] leading-relaxed">
-                Conversa pelo WhatsApp, reuniões por videochamada e aprovação pelo celular. Você fala direto comigo em todas as etapas, e o site fica no ar em até 7 dias úteis.
-              </p>
-            </div>
-            <div className="p-7 rounded-2xl border border-[#DCD2C6] bg-white">
-              <MapPin className="w-5 h-5 text-[#A8675B] mb-3" />
-              <h2 className="text-xl font-serif text-[#111819] mb-2">Atendo profissionais de toda {cidade.nome}</h2>
-              <p className="text-sm text-[#3F5557] leading-relaxed">
-                Incluindo {cidade.bairros.slice(0, -1).join(', ')} e {cidade.bairros[cidade.bairros.length - 1]}.
-              </p>
-            </div>
-          </div>
-
-          {/* Links para as áreas */}
-          <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#A8675B] mb-4">Veja por área</p>
-            <div className="flex flex-wrap justify-center gap-2.5">
-              {areas.map((a) => (
-                <Link key={a.to} to={a.to} className="px-4 py-2 rounded-full border border-[#DCD2C6] text-sm text-[#111819] hover:bg-[#FBF8F3] transition-colors">
-                  {a.label}
+      <section className="py-24 sm:py-32 bg-[#F4EFE8]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Veja por área</p>
+          <ul className="border-t border-[#111819]">
+            {[...areas, { label: 'Projetos entregues', to: '/portfolio/' }].map((a, i) => (
+              <li key={a.to} className="border-b border-[#DCD2C6]">
+                <Link to={a.to} className="group flex items-baseline justify-between gap-6 py-6">
+                  <span className="flex items-baseline gap-5">
+                    <span className="text-[12px] text-[#CC8A80] tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="font-serif text-[26px] sm:text-[32px] leading-tight group-hover:text-[#A8675B] transition-colors">{a.label}</span>
+                  </span>
+                  <Ponto />
                 </Link>
-              ))}
-              <Link to="/portfolio/" className="px-4 py-2 rounded-full border border-[#DCD2C6] text-sm text-[#111819] hover:bg-[#FBF8F3] transition-colors">
-                Projetos entregues
-              </Link>
-            </div>
-          </div>
-
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <PricingTable />
 
-      <section className="py-16 bg-[#FBF8F3]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 sm:py-32 bg-[#F4EFE8]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <FAQAccordion items={cidade.faq} title="Perguntas frequentes" />
-          <p className="mt-10 text-center text-sm text-[#3F5557]">
+          <p className="mt-14 text-[15px] text-[#4A5153]">
             Também atendo em{' '}
             {outrasCidades.map((c, i) => (
               <span key={c.slug}>
-                <Link to={`/${c.slug}/`} className="underline underline-offset-4 hover:text-[#A8675B]">{c.nome}</Link>
+                <Link to={`/${c.slug}/`} className="underline decoration-[#CC8A80] underline-offset-4 hover:text-[#111819]">{c.nome}</Link>
                 {i < outrasCidades.length - 1 ? ', ' : ' '}
               </span>
             ))}

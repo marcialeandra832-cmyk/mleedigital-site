@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Ponto } from '../components/home/Detalhes';
+import { Ponto, LinhasPortal } from '../components/home/Detalhes';
 import { TopoInterno, botaoClaro } from '../components/common/TopoInterno';
 import { Link } from 'react-router-dom';
 import { 
@@ -137,281 +137,137 @@ export function SitesProfissionaisPage() {
         </div>
       </TopoInterno>
 
-      {/* CLARITY BOX: POR QUE O SITE ESSENCIAL SUPERA UMA LANDING PAGE BÁSICA */}
-      <section className="py-14 bg-white border-b border-[#DCD2C6]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 sm:p-10 rounded-2xl bg-[#FBF8F3] border border-[#DCD2C6] flex flex-col md:flex-row items-center gap-8">
-            <div className="w-14 h-14 rounded-2xl bg-[#111819]/20 text-[#A8675B] flex items-center justify-center shrink-0">
-              <Zap className="w-7 h-7" />
-            </div>
-            <div className="space-y-3 flex-1">
-              <div className="inline-block text-xs font-bold uppercase tracking-wider text-[#A8675B]">
-                Oferta Direta & Sem Complicação
-              </div>
-              <h2 className="text-xl sm:text-2xl font-serif text-[#111819]">
-                O Site Essencial já é uma One Page profissional completa
-              </h2>
-              <p className="text-xs sm:text-sm text-[#767D7F] leading-relaxed">
-                Você não precisa contratar uma "landing page" separada. Nosso <strong>Site Essencial</strong> entrega toda a persuasão e velocidade de uma página de alta conversão, somadas à autoridade, institucionalidade, localização e mapa de um site oficial no seu próprio domínio (.com.br).
-              </p>
-            </div>
+      {/* O Essencial já é completo */}
+      <section className="pt-24 sm:pt-32 bg-[#F4EFE8]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div className="lg:col-span-7">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Sem complicação</p>
+            <h2 className="font-serif text-[40px] sm:text-[60px] leading-[0.98] tracking-[-0.02em]">O Site Essencial já é uma página única completa.</h2>
           </div>
+          <p className="lg:col-span-5 text-[17px] text-[#4A5153] leading-relaxed">
+            Você não precisa contratar uma "landing page" separada. O Site Essencial entrega a força de uma página de vendas, somada à credibilidade, localização e mapa de um site oficial no seu próprio domínio (.com.br).
+          </p>
         </div>
       </section>
 
-      {/* PRICING & PLANS SECTION */}
       <PricingTable />
 
-      {/* MODELOS & ESTRUTURAS VISUAIS DE REFERÊNCIA */}
-      <section id="modelos" className="py-20 bg-white border-y border-[#DCD2C6]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-2 block">
-              ESTRUTURAS & DESIGN
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-serif text-[#111819]">
-              Modelos Visuais de Referência
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-[#767D7F] leading-relaxed">
-              Explore estruturas visuais desenhadas para diferentes nichos de mercado. 
-              <br className="hidden sm:inline" />
-              <strong className="text-[#111819]">Importante:</strong> <span className="text-[#A8675B]">Modelo</span> é a referência visual do seu nicho; <span className="text-[#A8675B]">Plano</span> é o produto comercial (Essencial R$ 997 ou Profissional R$ 1.397).
-            </p>
-
-            {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
-              <button
-                type="button"
-                onClick={() => setFilterPlan('ALL')}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-                  filterPlan === 'ALL'
-                    ? 'bg-[#F4EFE8] text-[#111819] shadow-md'
-                    : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
-                }`}
-              >
-                Todos os Modelos ({projectsData.length})
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setFilterPlan('SITE ESSENCIAL')}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-                  filterPlan === 'SITE ESSENCIAL'
-                    ? 'bg-[#F4EFE8] text-[#111819] shadow-md'
-                    : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
-                }`}
-              >
-                Modelos Site Essencial (R$ 997)
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setFilterPlan('SITE PROFISSIONAL')}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-                  filterPlan === 'SITE PROFISSIONAL'
-                    ? 'bg-[#F4EFE8] text-[#111819] shadow-md'
-                    : 'bg-[#FBF8F3] text-[#767D7F] hover:bg-[#FBF8F3]'
-                }`}
-              >
-                Modelos Site Profissional (R$ 1.397)
-              </button>
+      {/* Modelos */}
+      <section id="modelos" className="py-24 sm:py-32 bg-[#F4EFE8] scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <LinhasPortal className="mb-24 sm:mb-32" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            <div className="lg:col-span-7">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Modelos de referência</p>
+              <h2 className="font-serif text-[40px] sm:text-[60px] leading-[0.98] tracking-[-0.02em]">Este modelo pode ser o seu.</h2>
             </div>
+            <p className="lg:col-span-5 text-[17px] text-[#4A5153] leading-relaxed">
+              Modelo é a referência visual da sua área. Plano é o que você contrata: Essencial (R$ 997) ou Profissional (R$ 1.397). Qualquer modelo é adaptado com o seu nome, fotos e cores.
+            </p>
           </div>
 
-          {/* Models Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <div 
-                key={project.id}
-                className="bg-[#FBF8F3] rounded-2xl border border-[#DCD2C6] overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300 group"
-              >
-                <div>
-                  {/* Image Preview */}
-                  <div className="relative aspect-video overflow-hidden bg-[#FBF8F3]">
-                    <img 
-                      src={project.img} 
-                      alt={project.client} 
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    
-                    {/* Plan Badge */}
-                    <div className="absolute top-3 left-3">
-                      <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm ${
-                        project.planType === 'SITE PROFISSIONAL'
-                          ? 'bg-[#F4EFE8] text-[#A8675B] border border-[#111819]/50'
-                          : 'bg-white text-[#111819] border border-[#DCD2C6]'
-                      }`}>
-                        {project.planType === 'SITE PROFISSIONAL' ? 'Plano Profissional • R$ 1.397' : 'Plano Essencial • R$ 997'}
-                      </span>
-                    </div>
-
-                    {/* Category Overlay */}
-                    <div className="absolute bottom-3 left-3 right-3 text-[#111819]">
-                      <span className="text-[11px] font-medium text-[#A8675B] uppercase tracking-wider block">
-                        {project.category}
-                      </span>
-                      <h3 className="text-base font-serif font-medium line-clamp-1">
-                        {project.client}
-                      </h3>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 space-y-4">
-                    <p className="text-xs text-[#767D7F] leading-relaxed line-clamp-2">
-                      {project.tagline}
-                    </p>
-
-                    <div className="pt-2 border-t border-[#DCD2C6] space-y-2">
-                      <div className="text-[11px] font-semibold text-[#111819] uppercase tracking-wide">
-                        Destaques da Estrutura:
-                      </div>
-                      <ul className="space-y-1 text-xs text-[#4A5153]">
-                        {project.structure.slice(0, 3).map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-1.5">
-                            <Check className="w-3.5 h-3.5 text-[#A8675B] shrink-0 mt-0.5" />
-                            <span className="line-clamp-1">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Card Footer Actions */}
-                <div className="p-6 pt-0 space-y-2">
-                  <div className="grid grid-cols-2 gap-2">
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-white border border-[#DCD2C6] text-xs font-semibold text-[#111819] hover:border-[#111819] hover:text-[#A8675B] transition-colors"
-                      >
-                        <Eye className="w-3.5 h-3.5" />
-                        <span>Ver Demo</span>
-                      </a>
-                    )}
-                    
-                    <Link
-                      to={`/portfolio/${project.slug}/`}
-                      className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-[#FBF8F3] text-xs font-semibold text-[#767D7F] hover:bg-[#FBF8F3] transition-colors"
-                    >
-                      <span>Ver Estudo</span>
-                    </Link>
-                  </div>
-
-                  <a
-                    href={getWhatsAppLink(`Olá Márcia! Gostei muito do modelo de referência "${project.client}" e gostaria de criar o meu site baseado nessa estrutura.`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl bg-[#F4EFE8] text-[#111819] text-xs font-semibold hover:bg-[#111819] hover:text-[#F4EFE8] transition-colors"
-                  >
-                    <span>Quero um site com essa estrutura</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-
-              </div>
+          <div className="mt-10 flex flex-wrap gap-2">
+            {([['ALL', `Todos (${projectsData.length})`], ['SITE ESSENCIAL', 'Essencial'], ['SITE PROFISSIONAL', 'Profissional']] as const).map(([id, rotulo]) => (
+              <button
+                  key={id}
+                  type="button"
+                  onClick={() => setFilterPlan(id)}
+                  className={`px-4 py-2 rounded-full text-[13px] border transition-colors ${filterPlan === id ? 'bg-[#111819] text-[#F4EFE8] border-[#111819]' : 'border-[#111819]/20 text-[#4A5153] hover:border-[#111819]'}`}
+                >
+                  {rotulo}
+                </button>
             ))}
           </div>
 
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            {filteredProjects.map((project, i) => (
+              <article key={project.id}>
+                <a href={project.demo || `/portfolio/${project.slug}/`} target={project.demo ? '_blank' : undefined} rel="noopener noreferrer" data-cursor="Ver" className="group block overflow-hidden rounded-2xl aspect-[16/10] bg-[#E9E2D8] shadow-[0_0_0_1px_rgba(190,196,198,.7),0_30px_50px_-30px_rgba(17,24,25,.55)]">
+                  <img src={project.img} alt={project.client} referrerPolicy="no-referrer" loading="lazy" className="w-full h-full object-cover object-top scale-[1.04] group-hover:scale-100 transition-transform duration-[1.2s] ease-out" />
+                </a>
+                <p className="mt-6 flex items-baseline gap-3 text-[12px] uppercase tracking-[0.2em] text-[#A8675B]">
+                  <span className="tabular-nums tracking-normal">{String(i + 1).padStart(2, '0')}</span>{project.category}
+                </p>
+                <h3 className="mt-2 font-serif text-[28px] leading-tight">{project.client}</h3>
+                <p className="mt-2 text-[15px] text-[#4A5153] leading-relaxed line-clamp-2">{project.tagline}</p>
+                <p className="mt-3 text-[13px] text-[#4A5153]">{project.planType === 'SITE PROFISSIONAL' ? 'Plano Profissional · R$ 1.397' : 'Plano Essencial · R$ 997'}</p>
+                <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3 text-[15px]">
+                  <a href={getWhatsAppLink(`Olá Márcia! Gostei muito do modelo de referência "${project.client}" e gostaria de criar o meu site baseado nessa estrutura.`)} target="_blank" rel="noopener noreferrer" className="group link-ponto text-[#111819]">Quero esse com o meu nome <Ponto /></a>
+                  <Link to={`/portfolio/${project.slug}/`} className="text-[#4A5153] hover:text-[#111819]">Ver estudo</Link>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* WHY A DEDICATED WEBSITE IS ESSENTIAL */}
-      <section className="py-16 bg-[#FBF8F3]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-serif text-[#111819]">
-              Por que depender apenas do Instagram limita suas vendas?
-            </h2>
-            <p className="text-xs sm:text-sm text-[#4A5153] mt-2">
-              Redes sociais atraem atenção, mas é no site oficial que o cliente toma a decisão de compra.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="p-6 rounded-2xl bg-white border border-[#DCD2C6] space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#EF4444]/10 text-[#EF4444] flex items-center justify-center font-bold">
-                ✕
-              </div>
-              <h3 className="font-serif text-base text-[#111819]">Sem Site Próprio</h3>
-              <ul className="space-y-2 text-xs text-[#4A5153]">
-                <li>• Você não aparece quando alguém pesquisa no Google por sua especialidade na cidade.</li>
-                <li>• O cliente se perde entre dezenas de postagens sem saber onde clicar ou agendar.</li>
-                <li>• Percepção de negócio informal ou autônomo iniciante.</li>
-              </ul>
+      {/* Instagram x site */}
+      <section className="fundo-mar text-[#F4EFE8] py-24 sm:py-32">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            <div className="lg:col-span-7">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#CC8A80] mb-5">Por que ter um site</p>
+              <h2 className="font-serif text-[40px] sm:text-[60px] leading-[0.98] tracking-[-0.02em]">Só o Instagram limita as suas vendas.</h2>
             </div>
-
-            <div className="p-6 rounded-2xl bg-[#F4EFE8] text-[#111819] border border-[#111819]/40 space-y-3 shadow-lg">
-              <div className="w-10 h-10 rounded-xl bg-[#111819]/20 text-[#A8675B] flex items-center justify-center font-bold">
-                ✓
-              </div>
-              <h3 className="font-serif text-base text-[#A8675B]">Com Site MLee Digital</h3>
-              <ul className="space-y-2 text-xs text-[#111819]">
-                <li>• Domínio próprio (.com.br) que transmite autoridade imediata.</li>
-                <li>• Estrutura clara com catálogo de serviços e botão direto no WhatsApp.</li>
-                <li>• Indexado no Google para captar clientes que estão com intenção de compra agora.</li>
-              </ul>
-            </div>
+            <p className="lg:col-span-5 text-[17px] text-[#F4EFE8]/72 leading-relaxed">Redes sociais atraem atenção, mas é no site oficial que o cliente toma a decisão.</p>
           </div>
-
-        </div>
-      </section>
-
-      {/* SEGMENTS LINKING */}
-      <section className="py-16 bg-white border-y border-[#DCD2C6]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-[#A8675B] font-semibold text-xs tracking-widest uppercase mb-2 block">
-              ESPECIALIDADES
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-serif text-[#111819]">
-              Veja a estrutura recomendada para o seu segmento
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 border-t border-[#F4EFE8]/25">
             {[
-              { name: "Clínicas médicas e odontológicas", slug: "sites-para-clinicas" },
-              { name: "Estética e beleza", slug: "sites-para-esteticistas" },
-              { name: "Arquitetura", slug: "sites-para-arquitetos" },
-              { name: "Advocacia", slug: "sites-para-advogados" },
-              { name: "Catálogo digital", slug: "catalogo-digital" }
-            ].map((seg, idx) => (
-              <Link
-                key={idx}
-                to={`/${seg.slug}/`}
-                className="p-4 rounded-xl bg-[#FBF8F3] border border-[#DCD2C6] hover:border-[#111819] hover:bg-[#FBF8F3] transition-all group flex flex-col justify-between"
-              >
-                <span className="text-xs font-semibold text-[#111819] group-hover:text-[#A8675B]">
-                  {seg.name}
-                </span>
-                <span className="text-[11px] text-[#4A5153] mt-2 inline-flex items-center gap-1">
-                  <span>Ver nicho</span>
-                  <ChevronRight className="w-3 h-3 text-[#A8675B]" />
-                </span>
-              </Link>
+              { t: 'Sem site próprio', itens: ['Você não aparece quando alguém pesquisa no Google pela sua especialidade na cidade.', 'O cliente se perde entre dezenas de postagens sem saber onde clicar ou agendar.', 'Passa a impressão de um negócio informal ou iniciante.'] },
+              { t: 'Com site da MLee Digital', itens: ['Domínio próprio (.com.br), que transmite autoridade na hora.', 'Estrutura clara com os seus serviços e botão direto para o WhatsApp.', 'Aparece no Google para quem está procurando o seu serviço agora.'] },
+            ].map((c, i) => (
+              <div key={c.t} className={`pt-8 pb-4 ${i === 1 ? 'md:pl-10 md:border-l border-[#F4EFE8]/15' : 'md:pr-10'}`}>
+                <h3 className={`font-serif text-[30px] ${i === 1 ? 'text-[#F4EFE8]' : 'text-[#F4EFE8]/55'}`}>{c.t}</h3>
+                <ul className="mt-5 space-y-3">
+                  {c.itens.map((it) => (
+                    <li key={it} className="flex gap-3 text-[16px] leading-relaxed text-[#F4EFE8]/75">
+                      <span className={`mt-[0.55em] w-1.5 h-1.5 rounded-full shrink-0 ${i === 1 ? 'bg-[#CC8A80]' : 'bg-[#F4EFE8]/30'}`} />{it}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 bg-[#FBF8F3]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FAQAccordion items={faqItems} title="Perguntas Frequentes sobre Nossos Sites" />
+      {/* Áreas */}
+      <section className="py-24 sm:py-32 bg-[#F4EFE8]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#A8675B] mb-5">Por área</p>
+          <h2 className="font-serif text-[40px] sm:text-[60px] leading-[0.98] tracking-[-0.02em] max-w-3xl">Veja a estrutura recomendada para a sua área</h2>
+          <ul className="mt-14 border-t border-[#111819]">
+            {[
+              { name: 'Clínicas médicas e odontológicas', slug: 'sites-para-clinicas' },
+              { name: 'Estética e beleza', slug: 'sites-para-esteticistas' },
+              { name: 'Arquitetura', slug: 'sites-para-arquitetos' },
+              { name: 'Advocacia', slug: 'sites-para-advogados' },
+              { name: 'Catálogo digital', slug: 'catalogo-digital' },
+            ].map((seg, i) => (
+              <li key={seg.slug} className="border-b border-[#DCD2C6]">
+                <Link to={`/${seg.slug}/`} className="group flex items-baseline justify-between gap-6 py-6">
+                  <span className="flex items-baseline gap-5">
+                    <span className="text-[12px] text-[#CC8A80] tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="font-serif text-[26px] sm:text-[32px] leading-tight group-hover:text-[#A8675B] transition-colors">{seg.name}</span>
+                  </span>
+                  <Ponto className="text-[#111819]" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Perguntas */}
+      <section className="pb-24 sm:pb-32 bg-[#F4EFE8]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <FAQAccordion items={faqItems} title="Perguntas frequentes" />
         </div>
       </section>
 
       {/* CTA Section */}
       <CTASection 
-        title="Pronto para ter seu site profissional no ar?"
+        title="Pronto para ter o seu site no ar?"
         subtitle="Escolha entre o Site Essencial (R$ 997) ou Site Profissional (R$ 1.397) e receba seu projeto pronto com entrega ágil."
         whatsappMessage="Olá Márcia! Gostaria de contratar a criação de um site profissional para o meu negócio."
       />

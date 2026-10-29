@@ -10,7 +10,7 @@ export function RodapePortfolio() {
         <div>
           <Logo claro tamanho={38} />
           <p className="mt-5 text-[15px] leading-relaxed text-[#F4EFE8]/70 max-w-sm">
-            Sites feitos por mim, Márcia, do começo ao fim. Videira, SC.
+            Sites feitos por mim, Márcia, do começo ao fim. Atendo todo o Brasil, online.
           </p>
         </div>
         <div className="flex flex-col gap-1.5 text-[15px]">

@@ -354,7 +354,7 @@ export const segmentsData: Record<string, SegmentInfo> = {
       { step: "01", title: "Definição dos Serviços", desc: "Listamos o que você faz e os bairros/cidades onde você atende." },
       { step: "02", title: "Criação da Página", desc: "Montamos um site rápido e direto focado em gerar contatos." },
       { step: "03", title: "SEO da sua Região", desc: "Colocamos as palavras-chave que as pessoas pesquisam na sua cidade." },
-      { step: "04", title: "Entrega em até 4 Dias", desc: "Tudo configurado para você receber orçamentos pelo WhatsApp." }
+      { step: "04", title: "Entrega em até 5 Dias", desc: "Tudo configurado para você receber orçamentos pelo WhatsApp." }
     ],
     faq: [
       { q: "Eu não entendo nada de tecnologia, vou conseguir usar?", a: "Sim! Cuidamos de 100% da configuração técnica (apontamento do domínio, hospedagem em nuvem e programação). O registro anual do domínio é por conta do cliente no seu CPF/CNPJ (indicamos fazer pela Hostinger ou Registro.br), e nós te auxiliamos em cada etapa. Você só precisa atender os clientes que chegarem no seu WhatsApp." },

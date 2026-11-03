@@ -43,7 +43,7 @@ export const servicesData: Record<string, ServiceDetail> = {
       { step: "04", title: "Revisão, Publicação & Suporte", desc: "Ajustamos detalhes finais, conectamos seu domínio próprio e colocamos seu site no ar." }
     ],
     faq: [
-      { q: "Quanto tempo leva para o site ficar pronto?", a: "Para o plano Essencial o prazo é de até 4 dias úteis e para o Profissional até 7 dias úteis, contados após o envio de todo o material necessário." },
+      { q: "Quanto tempo leva para o site ficar pronto?", a: "Para o plano Essencial o prazo é de até 5 dias úteis e para o Profissional até 7 dias úteis, contados após o envio de todo o material necessário." },
       { q: "Eu preciso já ter domínio e hospedagem contratados?", a: "Não se preocupe! O registro do domínio próprio (.com.br) é por conta do cliente (indicamos a Hostinger ou Registro.br) para assegurar que a titularidade fique 100% no seu CPF ou CNPJ. Nós auxiliamos no passo a passo da escolha e cuidamos de toda a configuração técnica de hospedagem, DNS e certificado de segurança SSL." },
       { q: "O site vai funcionar bem no celular?", a: "Com certeza. Todo projeto é desenvolvido no modelo Mobile-First, garantindo fluidez e leitura perfeita em qualquer aparelho." },
       { q: "Como funciona a manutenção após a entrega?", a: "O desenvolvimento é um investimento único. Após a publicação, o plano de manutenção & hospedagem mensal (R$ 127/mês no Essencial ou R$ 197/mês no Profissional) garante a continuidade da infraestrutura em nuvem, backups, segurança SSL e suporte para atualizações de fotos e textos." }

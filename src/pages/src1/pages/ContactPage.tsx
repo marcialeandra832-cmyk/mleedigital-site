@@ -31,6 +31,7 @@ export function ContactPage() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     const text = `Olá Márcia! Meu nome é ${name}. Trabalho no ramo de ${segment}. Tenho interesse no ${plan}. Mensagem: ${message}`;
+    try { (window as any).va?.('pageview', { route: '/clique/whatsapp-formulario', path: '/clique/whatsapp-formulario' }); } catch {}
     window.open(getWhatsAppLink(text), '_blank');
     setFormSent(true);
   };

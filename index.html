@@ -45,6 +45,20 @@
   <body class="bg-[#F4EFE8] text-[#111819] antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Contagem de visitas (Vercel Analytics) + cliques em WhatsApp, Ligar, Instagram e Como chegar -->
+<script>
+window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href]'); if(!a) return;
+  var h=a.getAttribute('href')||'', p=null;
+  if(h.indexOf('wa.me/')>-1||h.indexOf('whatsapp.com')>-1) p='/clique/whatsapp';
+  else if(h.indexOf('tel:')===0) p='/clique/ligar';
+  else if(h.indexOf('instagram.com')>-1) p='/clique/instagram';
+  else if(h.indexOf('google.com/maps')>-1||h.indexOf('maps.app.goo.gl')>-1||h.indexOf('goo.gl/maps')>-1) p='/clique/como-chegar';
+  if(p){ try{ window.va('pageview',{route:p,path:p}); }catch(err){} }
+},true);
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
 </html>
 

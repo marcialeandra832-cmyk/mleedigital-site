@@ -51,7 +51,7 @@ export function PricingTable() {
                   <span className="text-xs text-[#4A5153] font-medium">desenvolvimento (pagamento único)</span>
                 </div>
                 <div className="text-xs text-[#4ADE80] font-medium flex items-center gap-1">
-                  <Sparkles className="w-3.5 h-3.5" /> Entrega expressa em até 4 dias úteis*
+                  <Sparkles className="w-3.5 h-3.5" /> Entrega expressa em até 5 dias úteis*
                 </div>
               </div>
 

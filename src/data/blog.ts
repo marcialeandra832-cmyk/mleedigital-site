@@ -454,7 +454,7 @@ export const blogPostsData: BlogPost[] = [
         heading: "1. O que é um Site One Page (Plano Essencial)?",
         body: "No formato One Page, todo o conteúdo é organizado em uma única página contínua. O menu superior utiliza links de rolagem suave (scroll) que levam o visitante diretamente para as seções de Sobre, Serviços, Diferenciais, Localização e Contato.",
         list: [
-          "Vantagens: Leitura rápida e dinâmica, altíssima taxa de conversão no celular, entrega mais rápida (até 4 dias úteis) e menor custo de investimento.",
+          "Vantagens: Leitura rápida e dinâmica, altíssima taxa de conversão no celular, entrega mais rápida (até 5 dias úteis) e menor custo de investimento.",
           "Para quem é indicado: Profissionais autônomos, consultórios individuais, prestadores de serviços com foco em um carro-chefe ou empresas que desejam uma presença rápida e elegante."
         ]
       },

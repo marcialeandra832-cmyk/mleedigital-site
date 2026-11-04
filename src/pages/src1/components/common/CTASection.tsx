@@ -22,7 +22,7 @@ export function CTASection({
   whatsappMessage,
   highlights = [
     "Orçamento transparente sem compromisso",
-    "Entrega ágil em 4 a 7 dias úteis",
+    "Entrega ágil em 5 a 7 dias úteis",
     "Suporte direto e humanizado"
   ]
 }: CTASectionProps) {

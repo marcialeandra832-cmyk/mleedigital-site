@@ -38,7 +38,7 @@ const perguntas = [
   { q: 'O Essencial substitui uma landing page?', a: 'Sim. Ele tem o foco em levar a pessoa até o contato, como uma landing page, com a credibilidade de um site oficial com domínio próprio.' },
   { q: 'O que é modelo e o que é plano?', a: 'Plano é o que você contrata: Essencial ou Profissional. Modelo é uma referência visual para a sua área. Qualquer modelo pode ser feito dentro do plano que atende a sua necessidade, sempre adaptado com as suas informações.' },
   { q: 'Em quanto tempo o site fica pronto?', a: 'Até 7 dias úteis, nos dois planos, contados a partir do envio completo das fotos, textos e informações.' },
-  { q: 'Como funciona a manutenção mensal?', a: 'A criação é paga uma única vez. Depois que o site vai ao ar, a mensalidade (R$ 127 no Essencial ou R$ 197 no Profissional) cobre a hospedagem, a segurança com cadeado (SSL), as cópias de segurança automáticas, o monitoramento e pequenas alterações de textos e fotos, com suporte direto comigo.' },
+  { q: 'Como funciona a manutenção mensal?', a: 'A criação é paga uma única vez. Depois que o site vai ao ar, a mensalidade (R$ 127 no Essencial ou R$ 197 no Profissional) cobre a hospedagem, a segurança com cadeado (SSL), as cópias de segurança automáticas, o monitoramento e pequenas alterações de textos e fotos. O suporte é pelo WhatsApp, de segunda a sexta, das 10h às 18h, com resposta em até 1 dia útil. Se o site sair do ar, a prioridade é total.' },
   { q: 'O domínio (.com.br) está incluso?', a: 'O registro anual do domínio é feito por você, no seu CPF ou CNPJ, pela Hostinger ou pelo Registro.br. Assim o endereço é legalmente seu. Eu te ajudo no passo a passo e faço toda a configuração técnica sem custo.' },
   { q: 'O site funciona bem no celular?', a: 'Sim. Todo site é pensado primeiro para o celular, que é de onde vem a maioria das visitas: leitura confortável, botões fáceis de tocar e carregamento rápido.' },
 ];
@@ -215,7 +215,7 @@ export function HomePage() {
             <Reveal>
               <h3 className="font-serif text-3xl">Por que existe a mensalidade?</h3>
               <p className="mt-4 text-[16px] text-[#4A5153] leading-relaxed">
-                Um site não é um arquivo parado. Ele precisa ficar hospedado num servidor, com segurança atualizada e cópias de segurança feitas o tempo todo. A mensalidade cobre tudo isso, e você não precisa se preocupar com nada técnico. Se precisar trocar um texto, uma foto ou um horário, é só me mandar.
+                Um site não é um arquivo parado. Ele precisa ficar hospedado num servidor, com segurança atualizada e cópias de segurança feitas o tempo todo. A mensalidade cobre tudo isso, e você não precisa se preocupar com nada técnico. Se precisar trocar um texto, uma foto ou um horário, é só me mandar. O suporte é pelo WhatsApp, de segunda a sexta, das 10h às 18h, com resposta em até 1 dia útil. Se o site sair do ar, a prioridade é total.
               </p>
             </Reveal>
             <Reveal atraso={100}>

@@ -34,7 +34,7 @@ export function TermsOfUsePage() {
 
           <h2 className="text-xl font-serif text-[#111819] pt-4">3. Domínio e Hospedagem</h2>
           <p>
-            O registro e a anuidade do domínio próprio (ex: suanome.com.br na Hostinger, Registro.br ou registrador de preferência) é de responsabilidade e contratação direta por conta do cliente. Isso garante que a titularidade, posse e controle legal do domínio fiquem sempre e exclusivamente em nome do cliente (CPF ou CNPJ). A MLee Digital oferece assessoria e configuração técnica gratuita de DNS para publicação. A infraestrutura de hospedagem e manutenção contínua é regida pelo plano mensal contratado.
+            O registro e a anuidade do domínio próprio (ex: suanome.com.br na Hostinger, Registro.br ou registrador de preferência) é de responsabilidade e contratação direta por conta do cliente. Isso garante que a titularidade, posse e controle legal do domínio fiquem sempre e exclusivamente em nome do cliente (CPF ou CNPJ). A MLee Digital oferece assessoria e configuração técnica gratuita de DNS para publicação. A infraestrutura de hospedagem e manutenção contínua é regida pelo plano mensal contratado. O suporte é feito pelo WhatsApp, de segunda a sexta, das 10h às 18h (horário de Brasília), com resposta em até 1 dia útil. Mensagens enviadas fora desse horário são respondidas no próximo dia útil. Se o site sair do ar, o atendimento tem prioridade.
           </p>
 
           <h2 className="text-xl font-serif text-[#111819] pt-4">4. Propriedade Intelectual e Conteúdo</h2>

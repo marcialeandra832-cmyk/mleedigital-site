@@ -88,7 +88,7 @@ export function SitesProfissionaisPage() {
     },
     {
       q: "Como funciona a manutenção e hospedagem mensal?",
-      a: "O desenvolvimento do site é um investimento único. Após a publicação, o plano mensal (R$ 127/mês no Essencial ou R$ 197/mês no Profissional) garante a continuidade da infraestrutura, hospedagem em nuvem de alta velocidade, backups automáticos, segurança com certificado SSL, monitoramento e pequenas alterações de textos e fotos com suporte dedicado."
+      a: "O desenvolvimento do site é um investimento único. Após a publicação, o plano mensal (R$ 127/mês no Essencial ou R$ 197/mês no Profissional) garante a continuidade da infraestrutura, hospedagem em nuvem de alta velocidade, backups automáticos, segurança com certificado SSL, monitoramento e pequenas alterações de textos e fotos. O suporte é pelo WhatsApp, de segunda a sexta, das 10h às 18h, com resposta em até 1 dia útil. Se o site sair do ar, a prioridade é total."
     },
     {
       q: "O registro do domínio (.com.br) está incluso no valor do plano?",

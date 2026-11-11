@@ -22,7 +22,7 @@ export const planos: Plano[] = [
     garantia: 'Em até 30 dias, quem pesquisar seu nome no Google te encontra. Se não encontrar, eu continuo ajustando sem custo até encontrar.',
     preco: '997',
     manut: '127',
-    manutItens: ['Relatório mensal de visitas e cliques no WhatsApp', 'Hospedagem rápida em nuvem', 'Cadeado de segurança (SSL) sempre ativo', 'Cópias de segurança automáticas', 'Pequenas alterações de textos e fotos', 'Suporte direto comigo'],
+    manutItens: ['Relatório mensal de visitas e cliques no WhatsApp', 'Hospedagem rápida em nuvem', 'Cadeado de segurança (SSL) sempre ativo', 'Cópias de segurança automáticas', 'Pequenas alterações de textos e fotos', 'Suporte pelo WhatsApp de segunda a sexta, das 10h às 18h, com resposta em até 1 dia útil'],
     prazo: 'Pronto em até 7 dias úteis',
     itens: [
       'Página única, fluida e fácil de navegar',
@@ -44,7 +44,7 @@ export const planos: Plano[] = [
     garantia: 'Em até 60 dias, quando perguntarem ao ChatGPT sobre você pelo nome e pela cidade, ele te encontra e mostra seu contato. Se não encontrar, eu continuo ajustando sem custo até encontrar.',
     preco: '1.397',
     manut: '197',
-    manutItens: ['Relatório mensal de visitas e cliques no WhatsApp', 'Hospedagem em nuvem de alta performance', 'Monitoramento 24 horas', 'Cópias de segurança automáticas', 'Cadeado de segurança (SSL) sempre ativo', 'Atualizações periódicas de conteúdo', 'Suporte prioritário'],
+    manutItens: ['Relatório mensal de visitas e cliques no WhatsApp', 'Hospedagem em nuvem de alta performance', 'Monitoramento automático do site 24 horas', 'Cópias de segurança automáticas', 'Cadeado de segurança (SSL) sempre ativo', 'Atualizações periódicas de conteúdo', 'Suporte pelo WhatsApp de segunda a sexta, das 10h às 18h, com resposta em até 1 dia útil'],
     prazo: 'Pronto em até 7 dias úteis',
     destaque: true,
     itens: [

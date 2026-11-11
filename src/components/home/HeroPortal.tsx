@@ -175,7 +175,7 @@ export function HeroPortal() {
             <span className="linha-mascara"><span>escolher você<span className="text-[#CC8A80]">.</span></span></span>
           </h1>
           <p className="hero-entra mt-7 max-w-[520px] text-[16px] sm:text-[18px] leading-relaxed text-[#F4EFE8]/72">
-            Sites sob medida para médicas, dentistas, esteticistas, advogadas e arquitetas. Feitos por mim, do começo ao fim, e no ar em até 7 dias úteis.
+            Você me diz como quer ser encontrada. Eu cuido de tudo para o seu nome aparecer no Google, no Maps e no ChatGPT e chegar no seu WhatsApp. Você não precisa entender nada de internet.
           </p>
           <a href="#previa" className="hero-entra group link-ponto mt-9 text-[15px]">
             Ver como o meu site ficaria <Ponto />

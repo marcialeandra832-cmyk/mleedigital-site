@@ -23,6 +23,7 @@ export function PricingTable() {
               <div className="lg:col-span-4">
                 {p.destaque && <span className="inline-block mb-3 whitespace-nowrap text-[12px] uppercase tracking-[0.2em] text-[#A8675B]">Mais escolhido</span>}
                 <h3 className="font-serif text-4xl">{p.nome}</h3>
+                  <p className="mt-2 font-serif text-[22px] leading-snug text-[#A8675B]">{p.resultado}</p>
                 <p className="mt-3 text-[16px] text-[#4A5153] leading-relaxed max-w-xs">{p.resumo}</p>
               </div>
               <div className="lg:col-span-3">
@@ -48,6 +49,10 @@ export function PricingTable() {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-7 rounded-xl border border-[#CC8A80]/50 bg-[#FBF8F3] p-4">
+                  <p className="text-[13px] uppercase tracking-[0.15em] text-[#A8675B]">Garantia</p>
+                  <p className="mt-2 text-[15px] leading-relaxed text-[#111819]">{p.garantia}</p>
+                </div>
                 <a
                   href={getWhatsAppLink(`Olá Márcia! Tenho interesse no ${p.nome}.`)}
                   target="_blank"

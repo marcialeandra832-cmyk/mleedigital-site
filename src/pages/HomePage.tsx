@@ -37,7 +37,7 @@ const perguntas = [
   { q: 'Qual a diferença entre o Essencial e o Profissional?', a: 'O Essencial é uma página única e completa, com todas as informações em sequência: apresentação, serviços, sobre, localização e contato. É ideal para quem quer presença profissional rápida e contato direto pelo WhatsApp. O Profissional tem até 5 páginas, uma para cada serviço importante, o que ajuda a aparecer no Google para cada procedimento ou área de atuação.' },
   { q: 'O Essencial substitui uma landing page?', a: 'Sim. Ele tem o foco em levar a pessoa até o contato, como uma landing page, com a credibilidade de um site oficial com domínio próprio.' },
   { q: 'O que é modelo e o que é plano?', a: 'Plano é o que você contrata: Essencial ou Profissional. Modelo é uma referência visual para a sua área. Qualquer modelo pode ser feito dentro do plano que atende a sua necessidade, sempre adaptado com as suas informações.' },
-  { q: 'Em quanto tempo o site fica pronto?', a: 'Até 4 dias úteis no Essencial e até 7 dias úteis no Profissional, contados a partir do envio completo das fotos, textos e informações.' },
+  { q: 'Em quanto tempo o site fica pronto?', a: 'Até 5 dias úteis no Essencial e até 7 dias úteis no Profissional, contados a partir do envio completo das fotos, textos e informações.' },
   { q: 'Como funciona a manutenção mensal?', a: 'A criação é paga uma única vez. Depois que o site vai ao ar, a mensalidade (R$ 127 no Essencial ou R$ 197 no Profissional) cobre a hospedagem, a segurança com cadeado (SSL), as cópias de segurança automáticas, o monitoramento e pequenas alterações de textos e fotos, com suporte direto comigo.' },
   { q: 'O domínio (.com.br) está incluso?', a: 'O registro anual do domínio é feito por você, no seu CPF ou CNPJ, pela Hostinger ou pelo Registro.br. Assim o endereço é legalmente seu. Eu te ajudo no passo a passo e faço toda a configuração técnica sem custo.' },
   { q: 'O site funciona bem no celular?', a: 'Sim. Todo site é pensado primeiro para o celular, que é de onde vem a maioria das visitas: leitura confortável, botões fáceis de tocar e carregamento rápido.' },
@@ -167,6 +167,7 @@ export function HomePage() {
                 <div className="lg:col-span-4">
                   {p.destaque && <span className="inline-block mb-3 whitespace-nowrap text-[12px] uppercase tracking-[0.2em] text-[#A8675B]">Mais escolhido</span>}
                   <h3 className="font-serif text-4xl">{p.nome}</h3>
+                  <p className="mt-2 font-serif text-[22px] leading-snug text-[#A8675B]">{p.resultado}</p>
                   <p className="mt-3 text-[16px] text-[#4A5153] leading-relaxed max-w-xs">{p.resumo}</p>
                 </div>
                 <div className="lg:col-span-3">
@@ -192,6 +193,10 @@ export function HomePage() {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-7 rounded-xl border border-[#CC8A80]/50 bg-[#FBF8F3] p-4">
+                    <p className="text-[13px] uppercase tracking-[0.15em] text-[#A8675B]">Garantia</p>
+                    <p className="mt-2 text-[15px] leading-relaxed text-[#111819]">{p.garantia}</p>
+                  </div>
                   <a
                     href={getWhatsAppLink(`Olá Márcia! Tenho interesse no ${p.nome}.`)}
                     target="_blank"

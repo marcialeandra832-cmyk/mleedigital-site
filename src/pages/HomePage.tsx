@@ -18,7 +18,7 @@ import { planos } from '../data/planos';
 import { getWhatsAppLink, AUTHOR_IMG, AUTHOR_NAME, AUTHOR_ROLE, AREA_ATENDIDA, INSTAGRAM_URL, SITE_URL } from '../data/constants';
 import logoRelevo from '../assets/brand/logo-relevo-petroleo.webp';
 
-import fotoMarcia from '../assets/brand/marcia-notebook.webp';
+import fotoMarcia from '../assets/brand/marcia-escritorio.webp';
 
 const etapas = [
   { n: '01', titulo: 'Conversa', texto: 'Você me chama no WhatsApp e me conta sobre o seu trabalho e o que precisa.' },

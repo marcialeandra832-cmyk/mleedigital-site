@@ -29,7 +29,7 @@ export function TermsOfUsePage() {
 
           <h2 className="text-xl font-serif text-[#111819] pt-4">2. Prazos e Entrega</h2>
           <p>
-            Os prazos informados (ex: até 5 dias úteis para o Plano Essencial e até 7 dias úteis para o Plano Profissional) são contabilizados a partir da data de envio completo pelo cliente de todos os materiais necessários (textos, fotos, credenciais de domínio/hospedagem).
+            Os prazos informados (até 7 dias úteis para os planos Essencial e Profissional) são contabilizados a partir da data de envio completo pelo cliente de todos os materiais necessários (textos, fotos, credenciais de domínio/hospedagem).
           </p>
 
           <h2 className="text-xl font-serif text-[#111819] pt-4">3. Domínio e Hospedagem</h2>

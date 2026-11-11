@@ -23,7 +23,7 @@ export const planos: Plano[] = [
     preco: '997',
     manut: '127',
     manutItens: ['Relatório mensal de visitas e cliques no WhatsApp', 'Hospedagem rápida em nuvem', 'Cadeado de segurança (SSL) sempre ativo', 'Cópias de segurança automáticas', 'Pequenas alterações de textos e fotos', 'Suporte direto comigo'],
-    prazo: 'Pronto em até 5 dias úteis',
+    prazo: 'Pronto em até 7 dias úteis',
     itens: [
       'Página única, fluida e fácil de navegar',
       'Design exclusivo, pensado para computador e celular',

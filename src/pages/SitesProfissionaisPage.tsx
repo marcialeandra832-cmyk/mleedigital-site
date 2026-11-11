@@ -84,7 +84,7 @@ export function SitesProfissionaisPage() {
     },
     {
       q: "Quanto tempo leva para o site ficar pronto?",
-      a: "O prazo para o Site Essencial é de até 5 dias úteis e para o Site Profissional de até 7 dias úteis, contados a partir do envio completo das informações, fotos e textos pelo cliente."
+      a: "O prazo é de até 7 dias úteis para o Site Essencial e para o Site Profissional, contados a partir do envio completo das informações, fotos e textos pelo cliente."
     },
     {
       q: "Como funciona a manutenção e hospedagem mensal?",

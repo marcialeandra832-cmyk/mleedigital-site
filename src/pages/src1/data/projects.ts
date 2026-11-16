@@ -60,7 +60,7 @@ export const projectsData: Project[] = [
     style: "Design sofisticado em tons neutros quentes, bege refinado e dourado champagne, tipografia elegante e sensação de cuidado exclusivo e personalizado.",
     results: "Site publicado com apresentação impecável da autoridade biomédica, destaque para o método autoral CRIO 4D e conversão de avaliações via WhatsApp.",
     img: draMariaJunqueiraMockup,
-    demo: "https://dramariajunqueira.vercel.app/",
+    demo: "https://dramariajunqueira.mleedigital.com.br/",
     technologies: ["React", "Tailwind CSS", "Método CRIO 4D", "SEO para Estética", "WhatsApp Integration"],
     featured: true
   },

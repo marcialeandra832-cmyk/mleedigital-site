@@ -20,7 +20,7 @@ export function SEOHead({
   description,
   canonicalPath = '',
   ogType = 'website',
-  ogImage = 'https://i.ibb.co/RkWvc5JV/Chat-GPT-Image-15-12-2025-11-43-25.png',
+  ogImage = 'https://www.mleedigital.com.br/og-mlee.png',
   publishedTime,
   author = 'Márcia MLee',
   schemaJson

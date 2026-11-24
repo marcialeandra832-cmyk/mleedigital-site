@@ -6,6 +6,7 @@ import danielleCarvao from '../assets/clientes/danielle-carvao.webp';
 import vivianeMengatto from '../assets/clientes/viviane-mengatto.webp';
 import nicoleBordignon from '../assets/clientes/nicole-bordignon.webp';
 import matrizGrill from '../assets/clientes/matriz-grill.webp';
+import resenhaEBrasa from '../assets/clientes/resenha-e-brasa.webp';
 
 export type ClienteDestaque = {
   cliente: string;
@@ -22,4 +23,5 @@ export const clientesDestaque: ClienteDestaque[] = [
   { cliente: 'Dra. Viviane Mengatto', area: 'Estética avançada', img: vivianeMengatto, link: 'https://www.dravivianemengatto.com.br/', slug: 'dra-viviane-mengatto' },
   { cliente: 'Nicole Bordignon', area: 'Sobrancelhas e maquiagem', img: nicoleBordignon, link: 'https://nicolebordignon.mleedigital.com.br/', slug: 'nicole-bordignon' },
   { cliente: 'Matriz Grill', area: 'Restaurante e bar', img: matrizGrill, link: 'https://www.matrizgrillvideira.com.br/', slug: 'matriz-grill' },
+  { cliente: 'Resenha e Brasa', area: 'Cardápio digital e sistema de pedidos', img: resenhaEBrasa, link: 'https://resenhaebrasa.vercel.app/', slug: 'resenha-e-brasa' },
 ];

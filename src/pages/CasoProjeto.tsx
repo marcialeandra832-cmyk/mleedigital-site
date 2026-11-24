@@ -185,6 +185,11 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
             <h2 className={`${h2} lg:col-span-4`}>{caso.sistema.titulo}</h2>
             <div className="lg:col-span-7 lg:col-start-6 space-y-5 text-[19px] sm:text-[21px] leading-relaxed text-[#F4EFE8]/90">
               {caso.sistema.texto.map((p) => <p key={p}>{p}</p>)}
+              {caso.sistema.demo && (
+                <a href={caso.sistema.demo} target="_blank" rel="noopener noreferrer" data-cursor="Testar" className="!mt-8 inline-flex items-center gap-2 rounded-full bg-[#F4EFE8] text-[#111819] px-7 py-3.5 text-[16px] hover:bg-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F4EFE8]">
+                  Testar a demonstração <ArrowUpRight className="w-4 h-4" />
+                </a>
+              )}
             </div>
           </div>
           <div className="mt-12 sm:mt-16 max-w-6xl mx-auto">
@@ -201,6 +206,7 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
                 preload="metadata"
               />
             </JanelaNavegador>
+            {caso.sistema.legenda && <p className="mt-4 text-[15px] text-[#F4EFE8]/65">{caso.sistema.legenda}</p>}
           </div>
           <ul className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 border-t border-[#F4EFE8]/25">
             {caso.sistema.destaques.map((d) => (

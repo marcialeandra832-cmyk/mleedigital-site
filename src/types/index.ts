@@ -15,6 +15,8 @@ export interface Caso {
     titulo: string;
     texto: string[];
     endereco: string;                           // texto da barra do navegador (sem link real)
+    demo?: string;                              // link da demonstração com dados inventados
+    legenda?: string;                           // aviso embaixo do vídeo
     video: { src: string; poster: string };
     destaques: string[];
     telas: { img: string; titulo: string; texto: string }[];

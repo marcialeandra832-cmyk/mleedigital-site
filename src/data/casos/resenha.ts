@@ -1,5 +1,5 @@
 // Estudo de caso do Resenha e Brasa (página /portfolio/resenha-e-brasa/).
-// O vídeo do sistema foi cortado antes da tela de configurações para não mostrar a chave Pix da cliente.
+// O vídeo e as telas do sistema vêm da demonstração (dados inventados), não do sistema em uso pela cliente.
 import { Caso } from '../../types';
 import telaCardapio from '../../assets/casos/resenha/tela-cardapio.webp';
 import telaComo from '../../assets/casos/resenha/tela-como.webp';
@@ -83,6 +83,8 @@ export const casoResenha: Caso = {
       'O cliente só recebe a confirmação depois que a equipe aprova, com o Pix copia e cola já na mensagem. No fim do dia, o fechamento mostra quanto entrou em cada forma de pagamento e o que sobrou.',
     ],
     endereco: 'Painel da equipe · Resenha e Brasa',
+    demo: '/demonstracao/sistema-de-pedidos/#/painel',
+    legenda: 'Vídeo e telas da demonstração, com pedidos e clientes inventados.',
     video: { src: '/showreel/resenha-sistema.mp4', poster: '/showreel/resenha-sistema.jpg' },
     destaques: [
       'Pedidos separados em aguardando, confirmado e entregue',

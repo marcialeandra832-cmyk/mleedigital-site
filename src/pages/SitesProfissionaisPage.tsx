@@ -39,9 +39,11 @@ export function SitesProfissionaisPage() {
     { label: "Sites Profissionais" }
   ];
 
+  // Esta página mostra só sites; o sistema do Resenha e Brasa aparece no portfólio.
+  const sitesData = projectsData.filter(p => p.planType !== 'SISTEMA WEB');
   const filteredProjects = filterPlan === 'ALL' 
-    ? projectsData 
-    : projectsData.filter(p => p.planType === filterPlan);
+    ? sitesData 
+    : sitesData.filter(p => p.planType === filterPlan);
 
   const serviceSchema = {
     "@context": "https://schema.org",

@@ -11,6 +11,14 @@ export interface Caso {
   telas: { img: string; titulo: string; texto: string }[];
   celular: { texto: string; fundo: string; proporcao?: string; telas: { img: string; legenda: string }[] };
   entregas: string[];
+  sistema?: {                                   // sistema interno entregue junto com o site (opcional)
+    titulo: string;
+    texto: string[];
+    endereco: string;                           // texto da barra do navegador (sem link real)
+    video: { src: string; poster: string };
+    destaques: string[];
+    telas: { img: string; titulo: string; texto: string }[];
+  };
 }
 
 export interface Project {

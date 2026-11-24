@@ -6,12 +6,14 @@ import { casoMaria } from './casos/maria';
 import { casoDanielle } from './casos/danielle';
 import { casoNicole } from './casos/nicole';
 import { casoMatriz } from './casos/matriz';
+import { casoResenha } from './casos/resenha';
 import vanguardaMockup from '../assets/modelos/figueiredo-advocacia.webp';
 import draMariaJunqueiraMockup from '../assets/clientes/maria-junqueira.webp';
 import draDanielleCarvaoMockup from '../assets/clientes/danielle-carvao.webp';
 import vivianeMengattoMockup from '../assets/clientes/viviane-mengatto.webp';
 import nicoleBordignonCapa from '../assets/clientes/nicole-bordignon.webp';
 import matrizGrillMockup from '../assets/clientes/matriz-grill.webp';
+import resenhaMockup from '../assets/clientes/resenha-e-brasa.webp';
 import carlaFigmamMockup from '../assets/images/carla_figmam_preview_1786812678656.jpg';
 
 export const projectsData: Project[] = [
@@ -184,6 +186,33 @@ export const projectsData: Project[] = [
     technologies: ["Agenda de shows", "Cardápio por categoria", "Delivery AiPede", "WhatsApp direto", "Domínio próprio"],
     featured: true,
     caso: casoMatriz
+  },
+  {
+    id: "resenha-e-brasa",
+    slug: "resenha-e-brasa",
+    client: "Resenha e Brasa",
+    category: "Cardápio digital e sistema de pedidos",
+    planType: "SISTEMA WEB",
+    projectType: "real",
+    badge: "PROJETO REALIZADO • CLIENTE REAL",
+    tagline: "Comida caseira no sábado e churrasco no domingo, com pedido online e estoque que baixa sozinho.",
+    objective: "Cardápio digital e sistema de pedidos para o Resenha e Brasa, delivery de fim de semana em Videira, SC.",
+    challenge: "Os pedidos chegavam todos pelo WhatsApp e eram anotados, separados e cobrados à mão, sem saber o que já tinha acabado.",
+    solution: "Cardápio por dia com pedido pronto para o WhatsApp e um painel da equipe onde cada pedido baixa do estoque, é confirmado com Pix copia e cola e entra no fechamento do dia.",
+    structure: [
+      "Cardápio de sábado e domingo com fotos e preços",
+      "Pedido online enviado pronto para o WhatsApp",
+      "Painel com pedidos, balcão, estoque e entregas",
+      "Confirmação com Pix copia e cola",
+      "Fechamento do dia por forma de pagamento"
+    ],
+    style: "Madeira escura e laranja de brasa, com títulos em letra de placa antiga.",
+    results: "Cardápio no ar e sistema em uso todo fim de semana, com pedidos reais.",
+    img: resenhaMockup,
+    demo: "https://resenhaebrasa.vercel.app/",
+    technologies: ["Cardápio digital", "Sistema de pedidos", "Controle de estoque", "Pix copia e cola", "WhatsApp"],
+    featured: true,
+    caso: casoResenha
   },
 
   // MODELOS DE REFERÊNCIA — DEMONSTRATIVOS

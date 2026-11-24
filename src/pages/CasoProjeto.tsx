@@ -178,6 +178,51 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
         </ul>
       </section>
 
+      {/* SISTEMA (opcional) */}
+      {caso.sistema && (
+        <section className="px-5 sm:px-8 lg:px-14 py-20 sm:py-28 text-[#F4EFE8]" style={{ background: caso.palco.fundo }}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <h2 className={`${h2} lg:col-span-4`}>{caso.sistema.titulo}</h2>
+            <div className="lg:col-span-7 lg:col-start-6 space-y-5 text-[19px] sm:text-[21px] leading-relaxed text-[#F4EFE8]/90">
+              {caso.sistema.texto.map((p) => <p key={p}>{p}</p>)}
+            </div>
+          </div>
+          <div className="mt-12 sm:mt-16 max-w-6xl mx-auto">
+            <JanelaNavegador endereco={caso.sistema.endereco}>
+              <video
+                className="block w-full aspect-[1600/866] object-cover bg-black"
+                src={caso.sistema.video.src}
+                poster={caso.sistema.video.poster}
+                muted
+                playsInline
+                loop
+                autoPlay={!reduz}
+                controls={reduz}
+                preload="metadata"
+              />
+            </JanelaNavegador>
+          </div>
+          <ul className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 border-t border-[#F4EFE8]/25">
+            {caso.sistema.destaques.map((d) => (
+              <li key={d} className="py-4 border-b border-[#F4EFE8]/15 text-[17px] sm:text-[18px] leading-snug">{d}</li>
+            ))}
+          </ul>
+          <div className="mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-14">
+            {caso.sistema.telas.map((t) => (
+              <figure key={t.titulo}>
+                <JanelaNavegador endereco={caso.sistema!.endereco}>
+                  <img src={t.img} alt={`${t.titulo} no sistema de ${project.client}`} loading="lazy" width={1600} height={1000} className="block w-full h-auto" />
+                </JanelaNavegador>
+                <figcaption className="mt-6">
+                  <h3 className="font-serif text-[26px] sm:text-[30px] leading-tight">{t.titulo}</h3>
+                  <p className="mt-2 text-[17px] text-[#F4EFE8]/75 leading-relaxed max-w-[46ch]">{t.texto}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* O QUE FOI ENTREGUE */}
       <section className="px-5 sm:px-8 lg:px-14 py-20 sm:py-28 grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-4">
@@ -210,10 +255,10 @@ export function CasoProjeto({ project, caso }: { project: Project; caso: Caso })
 
       {/* CHAMADA FINAL */}
       <section className="text-[#F4EFE8] px-5 sm:px-8 lg:px-14 pt-24 sm:pt-32 pb-16" style={{ backgroundColor: '#111819', backgroundImage: `url(${luzPetroleo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <h2 className="font-serif text-[clamp(48px,9vw,160px)] leading-[0.9] tracking-[-0.035em]">Quer um site assim?</h2>
+        <h2 className="font-serif text-[clamp(48px,9vw,160px)] leading-[0.9] tracking-[-0.035em]">{caso.sistema ? 'Quer algo assim no seu negócio?' : 'Quer um site assim?'}</h2>
         <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
           <a
-            href={getWhatsAppLink(`Olá Márcia! Vi o projeto ${project.client} no seu portfólio e quero conversar sobre o meu site.`)}
+            href={getWhatsAppLink(`Olá Márcia! Vi o projeto ${project.client} no seu portfólio e quero conversar sobre o meu ${caso.sistema ? 'projeto' : 'site'}.`)}
             target="_blank"
             rel="noopener noreferrer"
             data-cursor="Oi!"

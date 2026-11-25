@@ -1,6 +1,6 @@
 // Projeto em destaque de cada página de área (rodapé "Por área").
 // Para trocar o projeto de uma área, edite o item com o endereço da página.
-import helenaMartins from '../assets/modelos/helena-martins.webp';
+import danielleCarvao from '../assets/clientes/danielle-carvao.webp';
 import cleanArquitetura from '../assets/modelos/clean-arquitetura.webp';
 import figueiredoAdvocacia from '../assets/modelos/figueiredo-advocacia.webp';
 import vivianeMengatto from '../assets/clientes/viviane-mengatto.webp';
@@ -17,12 +17,12 @@ export type DestaqueArea = {
 
 export const destaquesArea: Record<string, DestaqueArea> = {
   'sites-para-clinicas': {
-    nome: 'Dra. Helena Martins',
-    area: 'Ginecologia e saúde da mulher',
-    link: 'https://site-ginecologia-menopausa.vercel.app/',
-    tipo: 'modelo',
-    descricao: 'Site para ginecologista, com os tratamentos explicados de forma clara, apresentação da médica e agendamento direto pelo WhatsApp.',
-    img: helenaMartins,
+    nome: 'Dra. Danielle Carvão',
+    area: 'Odontologia e rejuvenescimento facial',
+    link: 'https://dradanicarvao.com.br/',
+    tipo: 'real',
+    descricao: 'Site da Dra. Danielle, dentista no Rio de Janeiro: o Método DC Renova 360 e os tratamentos explicados com clareza, e agendamento direto pelo WhatsApp do consultório.',
+    img: danielleCarvao,
     formato: 'computador',
   },
   'sites-para-esteticistas': {
